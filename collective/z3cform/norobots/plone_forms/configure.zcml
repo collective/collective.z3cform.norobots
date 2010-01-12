@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.z3cform.norobots">
+
+    <browser:page
+        for="Products.CMFPlone.Portal.PloneSite"
+        name="z3cform-contact-info"
+        class=".contact_info.ContactInfoView"
+        permission="zope2.View"
+        />
+
+    <!-- Norobots validator -->
+    <adapter
+        factory=".contact_info.NorobotsValidator"
+        />
+
+</configure>

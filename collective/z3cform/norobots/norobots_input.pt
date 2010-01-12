@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      tal:define="question view/get_question"
+      i18n:domain="collective.z3cform.norobots"
+      tal:omit-tag="">
+
+  <input type="hidden" name="question_id" value=""
+         tal:attributes="value python:question['id']" />
+  <input type="hidden" name="id_check" value=""
+         tal:attributes="value python:question['id_check']" />
+
+  <strong><span i18n:translate="">Question</span></strong>:
+  <span  i18n:translate=""
+         tal:content="python:question['title']" /><br />
+
+  <strong><span i18n:translate="">Your answer</span></strong>:
+  <input type="text" id="" name="" class="" style="" title="" lang=""
+         tabindex="" accesskey="" size="" maxlength="" value=""
+         tal:attributes="id view/id;
+                         name view/name;
+                         class view/klass;
+                         style view/style;
+                         title view/title;
+                         lang view/lang;
+                         value view/value;
+                         tabindex view/tabindex;
+                         accesskey view/accesskey;
+                         size view/size;
+                         maxlength view/maxlength" />
+
+</html>

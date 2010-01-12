@@ -1,0 +1,12 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.z3cform.norobots">
+
+    <include file="meta.zcml" package="Products.GenericSetup"/>
+
+    <include package="plone.z3cform" file="testing.zcml" />
+    <include package="collective.z3cform.norobots" file="configure.zcml" />
+
+</configure>

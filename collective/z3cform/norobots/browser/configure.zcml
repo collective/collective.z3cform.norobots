@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.z3cform.norobots">
+
+  <browser:view
+      name="norobots"
+      for="*"
+      permission="zope2.Public"
+      provides=".interfaces.INorobotsView"
+      class=".norobots.Norobots" />
+
+</configure>
