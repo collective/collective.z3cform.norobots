@@ -23,7 +23,7 @@ classifiers = [
 
 setup(
     name='collective.z3cform.norobots',
-    namespace_packages=['collective', 'collective.z3cform', 'collective.z3cform.norobots',],
+    namespace_packages=['collective', 'collective.z3cform',],
     version=version,
     description='Human readable captcha for z3cform',
     long_description=long_description,
