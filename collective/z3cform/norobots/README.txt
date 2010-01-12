@@ -7,8 +7,8 @@ questions/answers.
 A z3cform implementation for the Plone contact form is available in
 browser/plone_forms .
 
-    >>> from collective.z3cform.norobots import NorobotsFieldWidget
-    >>> from collective.z3cform.norobots import NorobotsWidget
+    >>> from collective.z3cform.norobots.widget import NorobotsFieldWidget
+    >>> from collective.z3cform.norobots.widget import NorobotsWidget
     >>> from collective.z3cform.norobots.validator import NorobotsValidator
 
 First, set up a simple test form and context:
@@ -87,7 +87,7 @@ Note that the returned question is selected randomly from the available
 question, but we actually have only one question, so:
 
     >>> foo_form.widgets['norobots'].render()
-    u'\n\n  <input type="hidden" name="question_id" value="question1" />\n  <input type="hidden" name="id_check"\n         value="741a211ffff0a652efa89fb89c790fc6" />\n\n  <strong><span /></strong>:\n  <span>What is 10 +4 ?</span><br />\n\n  <strong><span /></strong>:\n  <input type="text" id="form-widgets-norobots"\n         name="form.widgets.norobots"\n         class="text-widget required textline-field"\n         size="30" maxlength="200" value="" />\n\n\n'
+    u'\n\n  <input type="hidden" name="question_id" value="question1" />\n  <input type="hidden" name="id_check"\n         value="741a211ffff0a652efa89fb89c790fc6" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 +4 ?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots"\n         name="form.widgets.norobots"\n         class="text-widget required textline-field"\n         size="30" maxlength="200" value="" />\n\n\n'
 
 Submit the form with a bad answer:
 
