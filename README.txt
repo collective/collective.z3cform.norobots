@@ -35,6 +35,7 @@ Add a new question
 ===================
 
 In the Plone Property Sheet "norobots_properties" (portal_properties/norobots_properties), add a new property:
+::
 
    Name: The question id (ex: "question4")
    Value: your_question::the_answer (ex: "What is 10 + 12 ?::22")
