@@ -31,6 +31,15 @@ a specific project's buildout, by having a buildout configuration such as: ::
 
 In portal_setup, apply the profile collective.z3cform.norobots:default.
 
+Add a new question
+===================
+
+In the Plone Property Sheet "norobots_properties" (portal_properties/norobots_properties), add a new property:
+
+   Name: The question id (ex: "question4")
+   Value: your_question::the_answer (ex: "What is 10 + 12 ?::22")
+   Type: string
+
 Usage
 =====
 You can use this widget setting the "widgetFactory" property of a form field:
