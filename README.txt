@@ -4,7 +4,7 @@ Introduction
 collective.z3cform.norobots provides a "human" captcha widget based on a list of
 questions/answers.
 
-The widget is based on TextLinesWidget (plone.z3cform.textlines).
+The widget is based on z3c.form.TextWidget.
 
 Requirements
 ------------
@@ -28,6 +28,8 @@ a specific project's buildout, by having a buildout configuration such as: ::
         zcml =
             collective.z3cform.norobots
 
+
+In portal_setup, apply the profile collective.z3cform.norobots:default.
 
 Usage
 =====
