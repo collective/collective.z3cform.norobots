@@ -75,5 +75,10 @@ msgid "What is 10 + 4 ?"
 msgstr ""
 
 msgid """Write "five" cipher."""
-msgstr """"""
+msgstr ""
+
+msgid """Please correct the indicated errors and don't forget to fill in the field "Are you a human ?"."""
+msgstr ""
+
+
 

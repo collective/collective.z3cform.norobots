@@ -11,7 +11,6 @@ def read(*rnames):
 
 long_description = "\n\n".join(
     [read('README.txt'),
-     read('docs', 'INSTALL.txt'),
      read('docs', 'HISTORY.txt'),
     ]
 )

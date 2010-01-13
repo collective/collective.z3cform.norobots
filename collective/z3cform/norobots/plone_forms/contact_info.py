@@ -78,7 +78,11 @@ class ContactInfoForm(form.Form):
     def handle_send(self, action):
         data, errors = self.extractData()
 
-        if not errors:
+        if errors:
+            portal_msg = _(u"""Please correct the indicated errors and don't forget to fill in the field "Are you a human ?".""")
+            self.context.plone_utils.addPortalMessage(portal_msg, 'error')
+
+        else:
             context = self.context
             REQUEST = self.request
             mtool = getToolByName(self.context, 'portal_membership')

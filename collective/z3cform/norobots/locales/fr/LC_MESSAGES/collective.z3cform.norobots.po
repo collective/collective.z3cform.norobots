@@ -77,6 +77,7 @@ msgstr "Combien font 10 + 4 ?"
 msgid """Write "five" cipher."""
 msgstr """Ecrire "cinq" en chiffre."""
 
-
+msgid """Please correct the indicated errors and don't forget to fill in the field "Are you a human ?"."""
+msgstr """Merci de corriger les erreurs indiquées et n'oubliez pas de remplir le champ "Etes-vous un être humain ?"."""
 
 
