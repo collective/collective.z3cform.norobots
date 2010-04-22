@@ -71,3 +71,14 @@ You can use this widget setting the "widgetFactory" property of a form field:
 
 for more information see contact_info.py in the plone_forms directory in the
 package.
+
+Credits
+========
+|makinacom|_
+
+* `Planet Makina Corpus <http://www.makina-corpus.org>`_
+* `Contact us <mailto:python@makina-corpus.org>`_
+
+.. |makinacom| image:: http://depot.makina-corpus.org/public/logo.gif
+.. _makinacom:  http://www.makina-corpus.com
+
