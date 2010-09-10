@@ -45,8 +45,13 @@ class Norobots(BrowserView):
                 'title': q_title,
                 'id_check': id_check}
 
-    def verify(self, input, question_id, id_check):
+    def verify(self, input):
         # See interfaces/INorobotsView
+
+        form = self.request.form
+        question_id = form['question_id']
+        id_check = form['id_check']
+
         questions = self._get_questions_dict()
         title, answer = questions[question_id]
         if not (md5.new(title).hexdigest() == id_check and answer == input):
