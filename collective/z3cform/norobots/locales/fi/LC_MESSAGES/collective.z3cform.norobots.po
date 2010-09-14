@@ -23,40 +23,40 @@ msgid "Name"
 msgstr "Nimi"
 
 msgid "Please enter your full name."
-msgstr ""
+msgstr "Ole hyvä ja anna koko nimesi."
 
 msgid "E-Mail"
-msgstr ""
+msgstr "Sähköpostiosoite"
 
 msgid "Please enter your e-mail address."
-msgstr ""
+msgstr "Ole hyvä ja anna sähköpostiosoitteesi."
 
 msgid "Subject"
 msgstr "Aihe"
 
 msgid "Please enter the subject of the message you want to send."
-msgstr ""
+msgstr "Anna viestillesi otsikko"
 
 msgid "Message"
 msgstr "Viesti"
 
 msgid "Please enter the message you want to send."
-msgstr ""
+msgstr "Kirjoita sisältö viestille jonka haluat lähettää"
 
 msgid "Mail sent"
-msgstr ""
+msgstr "Viesti lähetetty"
 
 msgid "Send"
-msgstr ""
+msgstr "Lähetä"
 
 msgid "Unable to send mail: ${exception}"
-msgstr ""
+msgstr "Viestiä ei voitu lähettää: ${exception}"
 
 msgid "Are you a human ?"
-msgstr ""
+msgstr "Varmistuskysymys"
 
 msgid "In order to avoid spam, please answer the question below."
-msgstr ""
+msgstr "Olethan ihminen etkä roskapostitin? Varmistaaksemme asian, ole hyvä ja vastaa allaolevaan kysymykseen."
 
 msgid "Question"
 msgstr "Kysymys"
@@ -65,7 +65,7 @@ msgid "Your answer"
 msgstr "Vastauksesi"
 
 msgid "You entered a wrong answer, please answer the new question below."
-msgstr ""
+msgstr "Vastauksesi oli virheellinen, ole hyvä ja yritä uudestaan."
 
 msgid "What is 4 + 4 ?"
 msgstr "Paljonko on 4 + 4?"
@@ -74,7 +74,7 @@ msgid "What is 10 + 4 ?"
 msgstr "Paljonko on 10 + 4?"
 
 msgid "Write \"five\" cipher."
-msgstr ""
+msgstr "Kirjoita \"viisi\" numerona."
 
 msgid "Please correct the indicated errors and don't forget to fill in the field \"Are you a human ?\"."
-msgstr ""
+msgstr "Ole hyvä ja korjaa osoitetut virheet. Muista myös vastata varmistuskysymykseen."
