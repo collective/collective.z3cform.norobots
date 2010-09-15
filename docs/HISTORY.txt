@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1 - 2009-09-15
+1.1 - 2010-09-15
 ----------------
 
 - Support for using as a plone.app.discussiom captcha plugin (Plone 4) [Petri Savolainen]
