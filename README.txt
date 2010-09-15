@@ -4,15 +4,31 @@ Introduction
 collective.z3cform.norobots provides a "human" captcha widget based on a list of
 questions/answers.
 
+This captcha can be used as a plone.app.discussiom captcha plugin.
+
 The widget is based on z3c.form.TextWidget.
 
+.. contents::
+
+Credits
+===============
+|makinacom|_
+
+* `Planet Makina Corpus <http://www.makina-corpus.org>`_
+* `Contact us <mailto:python@makina-corpus.org>`_
+
+.. |makinacom| image:: http://depot.makina-corpus.org/public/logo.gif
+.. _makinacom:  http://www.makina-corpus.com
+
 Requirements
-------------
- * tested with Plone 3.3.2
+============
+
+ * tested with Plone 4.0 as a plugin for plone.app.discussion, should work with Plone 3
  * plone.app.z3cform
 
 Installation
 ============
+
 Just a simple easy_install collective.z3cform.norobots is enough.
 
 Alternatively, buildout users can install collective.z3cform.norobots as part of
@@ -43,6 +59,7 @@ In the Plone Property Sheet "norobots_properties" (portal_properties/norobots_pr
 
 Usage
 =====
+
 You can use this widget setting the "widgetFactory" property of a form field:
 ::
 
@@ -71,14 +88,3 @@ You can use this widget setting the "widgetFactory" property of a form field:
 
 for more information see contact_info.py in the plone_forms directory in the
 package.
-
-Credits
-========
-|makinacom|_
-
-* `Planet Makina Corpus <http://www.makina-corpus.org>`_
-* `Contact us <mailto:python@makina-corpus.org>`_
-
-.. |makinacom| image:: http://depot.makina-corpus.org/public/logo.gif
-.. _makinacom:  http://www.makina-corpus.com
-
