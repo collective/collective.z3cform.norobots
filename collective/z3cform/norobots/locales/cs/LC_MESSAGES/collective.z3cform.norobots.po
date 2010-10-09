@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: nocaptcha\n"
+"POT-Creation-Date: 2010-01-11 14:17+0000\n"
+"PO-Revision-Date: 2010-10-09 12:32+0100\n"
+"Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
+"Language-Team: Czech <info@dms4u.cz>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: cs\n"
+"Language-Name: Czech\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.z3cform.norobots\n"
+
+msgid "Contact form"
+msgstr "Kontaktní formulář"
+
+msgid "Name"
+msgstr "Jméno"
+
+msgid "Please enter your full name."
+msgstr "Zadejte prosím vaše jméno"
+
+msgid "E-Mail"
+msgstr "E-Mail"
+
+msgid "Please enter your e-mail address."
+msgstr "Zadejte prosím vaši email adresu"
+
+msgid "Subject"
+msgstr "Předmět"
+
+msgid "Please enter the subject of the message you want to send."
+msgstr "Zadejte prosím předmět zprávy, kterou chcete odeslat."
+
+msgid "Message"
+msgstr "Zpráva"
+
+msgid "Please enter the message you want to send."
+msgstr "Zadejte prosím zprávu."
+
+msgid "Mail sent"
+msgstr "Email byl odeslán"
+
+msgid "Send"
+msgstr "Odeslat"
+
+msgid "Unable to send mail: ${exception}"
+msgstr "Nepodařilo se odeslat email: ${exception}"
+
+msgid "Are you a human ?"
+msgstr "Jste člověk?"
+
+msgid "In order to avoid spam, please answer the question below."
+msgstr "Zadejte prosím odpověď na níže uvedenou otázku. Jedná se o ochranu proti nevyžádaným příspěvkům."
+
+msgid "Question"
+msgstr "Otázka"
+
+msgid "Your answer"
+msgstr "Vaše odpověď"
+
+msgid "You entered a wrong answer, please answer the new question below."
+msgstr "Nesprávná odpověď. Odpovězte prosím na další otázku."
+
+msgid "What is 4 + 4 ?"
+msgstr "Kolik je 4+4 ?"
+
+msgid "What is 10 + 4 ?"
+msgstr "Kolik je 10 + 4?"
+
+msgid "Write \"five\" cipher."
+msgstr "Zapište číslici \"pět\"."
+
+msgid "Please correct the indicated errors and don't forget to fill in the field \"Are you a human ?\"."
+msgstr "Opravte prosím vyznačené chyby a nezapoměňte vyplnit pole \"Jste člověk?\""
+
