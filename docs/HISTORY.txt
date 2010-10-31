@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.2dev (Unreleased)
--------------------
+1.2 (2010-10-31)
+----------------
 
 - Fix tests for Plone 4
   [sylvainb]
