@@ -1,6 +1,7 @@
 import unittest
 
 import zope.testing
+import zope.testing.doctest
 import zope.component
 from zope.app.testing import setup
 

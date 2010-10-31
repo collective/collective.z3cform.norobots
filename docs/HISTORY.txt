@@ -1,14 +1,24 @@
 Changelog
 =========
 
+1.2dev (Unreleased)
+-------------------
+
+- Fix tests for Plone 4
+  [sylvainb]
+
 1.1 - 2010-09-15
 ----------------
 
-- Support for using as a plone.app.discussiom captcha plugin (Plone 4) [Petri Savolainen]
-- Finnish translations [Petri Savolainen]
+- Support for using as a plone.app.discussiom captcha plugin (Plone 4)
+  [Petri Savolainen]
+
+- Finnish translations
+  [Petri Savolainen]
 
 1.0
 ----------------
 
-- Initial release [Sylvain Boureliou]
+- Initial release
+  [sylvainb]
 

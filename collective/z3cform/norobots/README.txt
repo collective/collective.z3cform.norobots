@@ -1,6 +1,9 @@
 NoRobots widget
 ================
 
+A "human" captcha widget
+------------------------
+
 collective.z3cform.norobots provides a "human" captcha widget based on a list of
 questions/answers.
 
@@ -86,8 +89,12 @@ Render the widget:
 Note that the returned question is selected randomly from the available
 question, but we actually have only one question, so:
 
-    >>> foo_form.widgets['norobots'].render()
-    u'\n\n  <input type="hidden" name="question_id" value="question1" />\n  <input type="hidden" name="id_check"\n         value="741a211ffff0a652efa89fb89c790fc6" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 +4 ?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots"\n         name="form.widgets.norobots"\n         class="text-widget required textline-field"\n         size="30" maxlength="200" value="" />\n\n\n'
+    # In Plone 4 with plone.app.z3cform 0.5.0 the widget is rendered differently but it is always the same (this is the second one in the list bellow)
+    >>> foo_form.widgets['norobots'].render() in [
+    ...       u'\n\n  <input type="hidden" name="question_id" value="question1" />\n  <input type="hidden" name="id_check"\n         value="741a211ffff0a652efa89fb89c790fc6" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 +4 ?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots"\n         name="form.widgets.norobots"\n         class="text-widget required textline-field"\n         size="30" maxlength="200" value="" />\n\n\n',
+    ...       u'\n\n  <input type="hidden" name="question_id" value="question1" />\n  <input type="hidden" name="id_check" value="741a211ffff0a652efa89fb89c790fc6" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 +4 ?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n\n\n'
+    ...       ]
+    True
 
 Submit the form with a bad answer:
 
@@ -160,3 +167,14 @@ Test that the rendered question is not always the same:
 
     >>> len(L) > 1
     True
+
+
+Possible problems
+-----------------
+
+  * I have the following error: "We already have: zope.schema 3.5.4 but z3c.form 2.4.1 requires 'zope.schema>=3.6.0'."
+    => You should add this extra version restriction to your buildout: http://good-py.appspot.com/release/plone.app.z3cform/0.5.0
+
+  * I have the following error when launching the tests: "ImportError: No module named lxml.html"
+    => In order to run the tests you need lxml. You can add for example 
+    "z3c.form [test]" to your buildout. See http://plone.293351.n2.nabble.com/Custom-Dexterity-Widgets-td5594532.html for more details.
