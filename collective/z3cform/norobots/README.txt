@@ -1,9 +1,6 @@
 NoRobots widget
 ================
 
-A "human" captcha widget
-------------------------
-
 collective.z3cform.norobots provides a "human" captcha widget based on a list of
 questions/answers.
 
@@ -168,13 +165,3 @@ Test that the rendered question is not always the same:
     >>> len(L) > 1
     True
 
-
-Possible problems
------------------
-
-  * I have the following error: "We already have: zope.schema 3.5.4 but z3c.form 2.4.1 requires 'zope.schema>=3.6.0'."
-    => You should add this extra version restriction to your buildout: http://good-py.appspot.com/release/plone.app.z3cform/0.5.0
-
-  * I have the following error when launching the tests: "ImportError: No module named lxml.html"
-    => In order to run the tests you need lxml. You can add for example 
-    "z3c.form [test]" to your buildout. See http://plone.293351.n2.nabble.com/Custom-Dexterity-Widgets-td5594532.html for more details.
