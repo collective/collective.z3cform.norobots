@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.z3cform.norobots\n"
+"POT-Creation-Date: 2010-01-11 14:17+0000\n"
+"PO-Revision-Date: 2010-11-05 08:13+0100\n"
+"Last-Translator: Peter Mathis <peter.mathis@kombinat.at>\n"
+"Language-Team: petschki @ kombinat <peter.mathis@kombinat.at>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: de\n"
+"Language-Name: German\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: Austria\n"
+
+msgid "Are you a human ?"
+msgstr "Sind Sie ein Mensch?"
+
+msgid "Contact form"
+msgstr "Kontaktformular"
+
+msgid "E-Mail"
+msgstr "E-Mail"
+
+msgid "In order to avoid spam, please answer the question below."
+msgstr "Beantworten Sie folgende Frage um Spam zu vermeiden."
+
+msgid "Mail sent"
+msgstr "E-Mail versendet"
+
+msgid "Message"
+msgstr "Nachricht"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Please correct the indicated errors and don't forget to fill in the field \"Are you a human ?\"."
+msgstr "Fehler bei der Eingabe. Prüfen Sie die Felder und geben Sie die richtige Antwort im Feld \"Sind Sie ein Mensch?\" an"
+
+msgid "Please enter the message you want to send."
+msgstr "Geben Sie Ihre Nachricht ein"
+
+msgid "Please enter the subject of the message you want to send."
+msgstr "Geben Sie einen Betreff für Ihre Nachricht an"
+
+msgid "Please enter your e-mail address."
+msgstr "Geben Sie Ihre E-Mail Adresse an"
+
+msgid "Please enter your full name."
+msgstr "Geben Sie Ihren vollständigen Namen an"
+
+msgid "Question"
+msgstr "Frage"
+
+msgid "Send"
+msgstr "Senden"
+
+msgid "Subject"
+msgstr "Betreff"
+
+msgid "Unable to send mail: ${exception}"
+msgstr "E-Mail konnte nicht versendet werden: ${exception}"
+
+msgid "What is 10 + 4 ?"
+msgstr "Wieviel ist 10 + 4?"
+
+msgid "What is 4 + 4 ?"
+msgstr "Wieviel ist 4 + 4?"
+
+msgid "Write \"five\" cipher."
+msgstr "Schreiben Sie die Zahl \"5\""
+
+msgid "You entered a wrong answer, please answer the new question below."
+msgstr "Ihre Antwort war leider falsch, bitte beantworten Sie nachstehend die neue Frage."
+
+msgid "Your answer"
+msgstr "Ergebnis"
+
