@@ -4,7 +4,7 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- added german translation
+- Added german translation
   [petschki]
 
 
