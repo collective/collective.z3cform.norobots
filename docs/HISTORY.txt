@@ -4,7 +4,8 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- added german translation
+  [petschki]
 
 
 1.2 (2010-10-31)
@@ -16,7 +17,7 @@ Changelog
 1.1 - 2010-09-15
 ----------------
 
-- Support for using as a plone.app.discussiom captcha plugin (Plone 4)
+- Support for using as a plone.app.discussion captcha plugin (Plone 4)
   [Petri Savolainen]
 
 - Finnish translations
