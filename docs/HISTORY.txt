@@ -20,6 +20,9 @@ Changelog
 - Fix tests for Plone 4
   [sylvainb]
 
+- Added Czech translation
+  [naro]
+
 1.1 - 2010-09-15
 ----------------
 
