@@ -4,7 +4,8 @@ Changelog
 1.3dev (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Added danish translation
+  [tmog]
 
 
 1.2.1 (2010-11-05)
