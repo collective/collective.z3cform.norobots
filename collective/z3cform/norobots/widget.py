@@ -7,6 +7,7 @@ from z3c.form import widget
 
 from interfaces import INorobotsWidget
 
+
 class NorobotsWidget(text.TextWidget):
     maxlength = 200
     size = 30

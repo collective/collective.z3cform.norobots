@@ -165,3 +165,51 @@ Test that the rendered question is not always the same:
     >>> len(L) > 1
     True
 
+Let's define a question in different formats which supports more than one answer per question.
+Answers must be semicolon delimited and are case-normalized to lowercase before validation.
+Example: "What is 5+5?::10; ten".
+
+    >>> question_id = 'question2'
+    >>> question = 'What is 5+5 ?'
+    >>> 
+    >>> answer = '10; ten'
+    >>> props.manage_addProperty(question_id, '%s::%s'%(question, answer), 'string')
+
+    >>> request = TestRequest(form={
+    ...     'question_id': 'question2',
+    ...     'id_check': 'd18f7fcb669087ae51905a05875e94f3',
+    ...     'form.widgets.norobots': u'10'}
+    ...     )
+    >>> alsoProvides(request, IAttributeAnnotatable)
+    >>> foo_form = FooForm(portal, request)
+    >>> foo_form.update()
+
+    >>> data, errors = foo_form.extractData()
+    >>> errors
+    ()
+
+    >>> request = TestRequest(form={
+    ...     'question_id': 'question2',
+    ...     'id_check': 'd18f7fcb669087ae51905a05875e94f3',
+    ...     'form.widgets.norobots': u'ten'}
+    ...     )
+    >>> alsoProvides(request, IAttributeAnnotatable)
+    >>> foo_form = FooForm(portal, request)
+    >>> foo_form.update()
+
+    >>> data, errors = foo_form.extractData()
+    >>> errors
+    ()
+
+    >>> request = TestRequest(form={
+    ...     'question_id': 'question2',
+    ...     'id_check': 'd18f7fcb669087ae51905a05875e94f3',
+    ...     'form.widgets.norobots': u'TEN'}
+    ...     )
+    >>> alsoProvides(request, IAttributeAnnotatable)
+    >>> foo_form = FooForm(portal, request)
+    >>> foo_form.update()
+
+    >>> data, errors = foo_form.extractData()
+    >>> errors
+    ()

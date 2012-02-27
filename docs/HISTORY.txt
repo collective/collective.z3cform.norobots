@@ -4,6 +4,9 @@ Changelog
 1.3dev (unreleased)
 -------------------
 
+- Multiple answer feature
+  [naro]
+
 - Added danish translation
   [tmog]
 

@@ -1,8 +1,9 @@
-import os, sys
+import os
 
 from setuptools import setup, find_packages
 
 version = '1.3dev'
+
 
 def read(*rnames):
     return open(
@@ -15,14 +16,18 @@ long_description = "\n\n".join(
     ]
 )
 
+tests_require = ['zope.app.testing',
+                 'Products.PloneTestCase',
+                 'lxml']
+
 classifiers = [
     "Programming Language :: Python",
     "Topic :: Software Development",
-    "Topic :: Software Development :: Libraries :: Python Modules",]
+    "Topic :: Software Development :: Libraries :: Python Modules"]
 
 setup(
     name='collective.z3cform.norobots',
-    namespace_packages=['collective', 'collective.z3cform',],
+    namespace_packages=['collective', 'collective.z3cform'],
     version=version,
     description='Human readable captcha for z3cform',
     long_description=long_description,
@@ -40,9 +45,15 @@ setup(
         # -*- Extra requirements: -*-
         'plone.app.z3cform',
     ],
+    tests_require=tests_require,
+    extras_require={
+        'tests': tests_require,
+    },
     # define there your console scripts
     entry_points="""
-    # -*- Entry points: -*-
-    """,
+      # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
+      """,
 
 )

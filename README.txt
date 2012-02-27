@@ -45,6 +45,13 @@ In the Plone Property Sheet "norobots_properties" (portal_properties/norobots_pr
    Value: your_question::the_answer (ex: "What is 10 + 12 ?::22")
    Type: string
 
+Answer can contain multiple values delimited by semicolon:
+::
+
+   Name: The question id (ex: "question8")
+   Value: your_question::the_answer;another_answer (ex: "What is 5 + 5 ?::10;ten")
+   Type: string
+
 Usage
 =====
 

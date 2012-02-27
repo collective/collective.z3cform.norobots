@@ -32,6 +32,7 @@ optionflags = (zope.testing.doctest.REPORT_ONLY_FIRST_FAILURE |
                zope.testing.doctest.NORMALIZE_WHITESPACE
                )
 
+
 def test_suite():
     return unittest.TestSuite((
         ztc.FunctionalDocFileSuite(

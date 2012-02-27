@@ -1,5 +1,6 @@
 from zope.interface import Interface
 
+
 class INorobotsView(Interface):
     """Norobots question generating and verifying view
 
