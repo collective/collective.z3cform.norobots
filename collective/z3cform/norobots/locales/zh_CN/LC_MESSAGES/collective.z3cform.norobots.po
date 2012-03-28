@@ -1,0 +1,83 @@
+# Simplified Chinese translation for collective.z3cform.norobots.
+# Jian Aijun <jianaijun@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.z3cform.norobots\n"
+"POT-Creation-Date: 2010-01-11 14:17+0000\n"
+"PO-Revision-Date: 2012-03-27 17:27 +0800\n"
+"Last-Translator: Jian Aijun <jianaijun@gmail.com>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sf.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: zh_CN\n"
+"Language-Name: Simplified Chinese\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.z3cform.norobots\n"
+
+msgid "Contact form"
+msgstr "联系表"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Please enter your full name."
+msgstr "请输入您的全名。"
+
+msgid "E-Mail"
+msgstr "电子邮件"
+
+msgid "Please enter your e-mail address."
+msgstr "请输入您的电子邮件地址。"
+
+msgid "Subject"
+msgstr "主题"
+
+msgid "Please enter the subject of the message you want to send."
+msgstr "请输入您要发送的内容的主题。"
+
+msgid "Message"
+msgstr "内容"
+
+msgid "Please enter the message you want to send."
+msgstr "请输入您要发送的内容。"
+
+msgid "Mail sent"
+msgstr "发送邮件"
+
+msgid "Send"
+msgstr "发送"
+
+msgid "Unable to send mail: ${exception}"
+msgstr "无法发送邮件： ${exception}"
+
+msgid "Are you a human ?"
+msgstr "您是人类吗？"
+
+msgid "In order to avoid spam, please answer the question below."
+msgstr "为了避免垃圾邮件，请回答以下问题。"
+
+msgid "Question"
+msgstr "问题"
+
+msgid "Your answer"
+msgstr "您的答案"
+
+msgid "You entered a wrong answer, please answer the new question below."
+msgstr "您输入了错误的答案，请回答下面的新问题。"
+
+msgid "What is 4 + 4 ?"
+msgstr "4 + 4 等于几？"
+
+msgid "What is 10 + 4 ?"
+msgstr "10 + 4 等于几？"
+
+msgid "Write \"five\" cipher."
+msgstr "\"五\" 的数字是什么？"
+
+msgid "Please correct the indicated errors and don't forget to fill in the field \"Are you a human ?\"."
+msgstr "请更正指示的错误，别忘了填写字段 \"您是人类吗？\"。"
+
+
+
