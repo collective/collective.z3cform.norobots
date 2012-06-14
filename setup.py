@@ -16,8 +16,9 @@ long_description = "\n\n".join(
     ]
 )
 
-tests_require = ['zope.app.testing',
-                 'Products.PloneTestCase',
+tests_require = ['zope.testing',
+                 'zope.app.testing',
+                 'plone.app.testing',
                  'lxml']
 
 classifiers = [
@@ -46,8 +47,9 @@ setup(
         'plone.app.z3cform',
     ],
     tests_require=tests_require,
+    test_suite='collective.z3cform.norobots.tests.test_docs.test_suite',
     extras_require={
-        'tests': tests_require,
+        'test': tests_require,
     },
     # define there your console scripts
     entry_points="""

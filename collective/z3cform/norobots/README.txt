@@ -11,6 +11,14 @@ browser/plone_forms .
     >>> from collective.z3cform.norobots.widget import NorobotsWidget
     >>> from collective.z3cform.norobots.validator import NorobotsValidator
 
+    >>> from Products.CMFCore.utils import getToolByName
+    >>> portal_properties = getToolByName(portal, 'portal_properties')
+    >>> props = portal_properties.norobots_properties
+
+Remove default questions added when installing the product:
+
+   >>> props.manage_delProperties(['question1', 'question2', 'question3'])
+
 First, set up a simple test form and context:
 
     >>> from z3c.form import testing
@@ -71,10 +79,6 @@ A NoRobotsQuestionsError error is raised if there is no question/answer:
 
 Define a first question in the property sheet "norobots_properties". Each
 question with be a string like this: "The question::The answer".
-
-    >>> from Products.CMFCore.utils import getToolByName
-    >>> portal_properties = getToolByName(portal, 'portal_properties')
-    >>> props = portal_properties.norobots_properties
 
     >>> question_id = 'question1'
     >>> question = 'What is 10 +4 ?'
