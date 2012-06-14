@@ -4,6 +4,6 @@
  <property name="title">Norobots question::answer</property>
  <property name="question1" type="string">What is 4 + 4 ?::8</property>
  <property name="question2" type="string">What is 10 + 4 ?::14</property>
- <property name="question3" type="string">Write "five" cipher.::5</property>
+ <property name="question3" type="string">Write five cipher.::5</property>
  </object>
 </object>

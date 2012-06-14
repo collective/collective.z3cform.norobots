@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nocaptcha\n"
-"POT-Creation-Date: 2010-01-11 14:17+0000\n"
+"POT-Creation-Date: 2012-06-14 20:38+0000\n"
 "PO-Revision-Date: 2010-10-09 12:32+0100\n"
 "Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
 "Language-Team: Czech <info@dms4u.cz>\n"
@@ -14,66 +14,91 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.z3cform.norobots\n"
 
-msgid "Contact form"
-msgstr "Kontaktní formulář"
-
-msgid "Name"
-msgstr "Jméno"
-
-msgid "Please enter your full name."
-msgstr "Zadejte prosím vaše jméno"
-
-msgid "E-Mail"
-msgstr "E-Mail"
-
-msgid "Please enter your e-mail address."
-msgstr "Zadejte prosím vaši email adresu"
-
-msgid "Subject"
-msgstr "Předmět"
-
-msgid "Please enter the subject of the message you want to send."
-msgstr "Zadejte prosím předmět zprávy, kterou chcete odeslat."
-
-msgid "Message"
-msgstr "Zpráva"
-
-msgid "Please enter the message you want to send."
-msgstr "Zadejte prosím zprávu."
-
-msgid "Mail sent"
-msgstr "Email byl odeslán"
-
-msgid "Send"
-msgstr "Odeslat"
-
-msgid "Unable to send mail: ${exception}"
-msgstr "Nepodařilo se odeslat email: ${exception}"
-
+#: ./plone_forms/contact_info.py:32
 msgid "Are you a human ?"
 msgstr "Jste člověk?"
 
+#: ./plone_forms/contact_info.py:41
+msgid "Contact form"
+msgstr "Kontaktní formulář"
+
+#: ./plone_forms/contact_info.py:19
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: ./plone_forms/contact_info.py:33
 msgid "In order to avoid spam, please answer the question below."
 msgstr "Zadejte prosím odpověď na níže uvedenou otázku. Jedná se o ochranu proti nevyžádaným příspěvkům."
 
+#: ./plone_forms/contact_info.py:131
+msgid "Mail sent."
+msgstr "Email byl odeslán"
+
+#: ./plone_forms/contact_info.py:28
+msgid "Message"
+msgstr "Zpráva"
+
+#: ./plone_forms/contact_info.py:15
+msgid "Name"
+msgstr "Jméno"
+
+#: ./plone_forms/contact_info.py:82
+msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
+msgstr """Opravte prosím vyznačené chyby a nezapoměňte vyplnit pole "Jste člověk?" """
+
+#: ./plone_forms/contact_info.py:29
+msgid "Please enter the message you want to send."
+msgstr "Zadejte prosím zprávu."
+
+#: ./plone_forms/contact_info.py:25
+msgid "Please enter the subject of the message you want to send."
+msgstr "Zadejte prosím předmět zprávy, kterou chcete odeslat."
+
+#: ./plone_forms/contact_info.py:20
+msgid "Please enter your e-mail address."
+msgstr "Zadejte prosím vaši email adresu"
+
+#: ./plone_forms/contact_info.py:16
+msgid "Please enter your full name."
+msgstr "Zadejte prosím vaše jméno"
+
+#: ./norobots_input.pt:13
 msgid "Question"
 msgstr "Otázka"
 
-msgid "Your answer"
-msgstr "Vaše odpověď"
+#: ./plone_forms/contact_info.py:77
+msgid "Send"
+msgstr "Odeslat"
 
-msgid "You entered a wrong answer, please answer the new question below."
-msgstr "Nesprávná odpověď. Odpovězte prosím na další otázku."
+#: ./plone_forms/contact_info.py:24
+msgid "Subject"
+msgstr "Předmět"
 
-msgid "What is 4 + 4 ?"
-msgstr "Kolik je 4+4 ?"
+#: ./plone_forms/contact_info.py:126
+msgid "Unable to send mail: ${exception}"
+msgstr "Nepodařilo se odeslat email: ${exception}"
 
+#: ./i18n.py:8
 msgid "What is 10 + 4 ?"
 msgstr "Kolik je 10 + 4?"
 
-msgid "Write \"five\" cipher."
-msgstr "Zapište číslici \"pět\"."
+#: ./i18n.py:7
+msgid "What is 4 + 4 ?"
+msgstr "Kolik je 4+4 ?"
 
-msgid "Please correct the indicated errors and don't forget to fill in the field \"Are you a human ?\"."
-msgstr "Opravte prosím vyznačené chyby a nezapoměňte vyplnit pole \"Jste člověk?\""
+#: ./i18n.py:9
+msgid "Write five cipher."
+msgstr """Zapište číslici "pět"."""
+
+#: ./validator.py:12
+msgid "You entered a wrong answer, please answer the new question below."
+msgstr "Nesprávná odpověď. Odpovězte prosím na další otázku."
+
+#: ./plone_forms/constraints.py:10
+msgid "You entered an invalid email address."
+msgstr ""
+
+#: ./norobots_input.pt:17
+msgid "Your answer"
+msgstr "Vaše odpověď"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2010-01-11 14:17+0000\n"
+"POT-Creation-Date: 2012-06-14 20:38+0000\n"
 "PO-Revision-Date: 2010-11-05 08:13+0100\n"
 "Last-Translator: Peter Mathis <peter.mathis@kombinat.at>\n"
 "Language-Team: petschki @ kombinat <peter.mathis@kombinat.at>\n"
@@ -16,66 +16,91 @@ msgstr ""
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: Austria\n"
 
+#: ./plone_forms/contact_info.py:32
 msgid "Are you a human ?"
 msgstr "Sind Sie ein Mensch?"
 
+#: ./plone_forms/contact_info.py:41
 msgid "Contact form"
 msgstr "Kontaktformular"
 
+#: ./plone_forms/contact_info.py:19
 msgid "E-Mail"
 msgstr "E-Mail"
 
+#: ./plone_forms/contact_info.py:33
 msgid "In order to avoid spam, please answer the question below."
 msgstr "Beantworten Sie folgende Frage um Spam zu vermeiden."
 
-msgid "Mail sent"
+#: ./plone_forms/contact_info.py:131
+msgid "Mail sent."
 msgstr "E-Mail versendet"
 
+#: ./plone_forms/contact_info.py:28
 msgid "Message"
 msgstr "Nachricht"
 
+#: ./plone_forms/contact_info.py:15
 msgid "Name"
 msgstr "Name"
 
-msgid "Please correct the indicated errors and don't forget to fill in the field \"Are you a human ?\"."
-msgstr "Fehler bei der Eingabe. Prüfen Sie die Felder und geben Sie die richtige Antwort im Feld \"Sind Sie ein Mensch?\" an"
+#: ./plone_forms/contact_info.py:82
+msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
+msgstr """Fehler bei der Eingabe. Prüfen Sie die Felder und geben Sie die richtige Antwort im Feld "Sind Sie ein Mensch?" an"""
 
+#: ./plone_forms/contact_info.py:29
 msgid "Please enter the message you want to send."
 msgstr "Geben Sie Ihre Nachricht ein"
 
+#: ./plone_forms/contact_info.py:25
 msgid "Please enter the subject of the message you want to send."
 msgstr "Geben Sie einen Betreff für Ihre Nachricht an"
 
+#: ./plone_forms/contact_info.py:20
 msgid "Please enter your e-mail address."
 msgstr "Geben Sie Ihre E-Mail Adresse an"
 
+#: ./plone_forms/contact_info.py:16
 msgid "Please enter your full name."
 msgstr "Geben Sie Ihren vollständigen Namen an"
 
+#: ./norobots_input.pt:13
 msgid "Question"
 msgstr "Frage"
 
+#: ./plone_forms/contact_info.py:77
 msgid "Send"
 msgstr "Senden"
 
+#: ./plone_forms/contact_info.py:24
 msgid "Subject"
 msgstr "Betreff"
 
+#: ./plone_forms/contact_info.py:126
 msgid "Unable to send mail: ${exception}"
 msgstr "E-Mail konnte nicht versendet werden: ${exception}"
 
+#: ./i18n.py:8
 msgid "What is 10 + 4 ?"
 msgstr "Wieviel ist 10 + 4?"
 
+#: ./i18n.py:7
 msgid "What is 4 + 4 ?"
 msgstr "Wieviel ist 4 + 4?"
 
-msgid "Write \"five\" cipher."
-msgstr "Schreiben Sie die Zahl \"5\""
+#: ./i18n.py:9
+msgid "Write five cipher."
+msgstr """Schreiben Sie die Zahl "5" """
 
+#: ./validator.py:12
 msgid "You entered a wrong answer, please answer the new question below."
 msgstr "Ihre Antwort war leider falsch, bitte beantworten Sie nachstehend die neue Frage."
 
+#: ./plone_forms/constraints.py:10
+msgid "You entered an invalid email address."
+msgstr ""
+
+#: ./norobots_input.pt:17
 msgid "Your answer"
 msgstr "Ergebnis"
 

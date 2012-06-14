@@ -1,10 +1,7 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2010-01-11 14:17+0000\n"
+"POT-Creation-Date: 2012-06-14 20:38+0000\n"
 "PO-Revision-Date: 2012-05-29 17:04+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
@@ -18,66 +15,91 @@ msgstr ""
 "Domain: collective.z3cform.norobots\n"
 "X-Poedit-Language: Basque\n"
 
-msgid "Contact form"
-msgstr "Kontaktu formularioa"
-
-msgid "Name"
-msgstr "Izena"
-
-msgid "Please enter your full name."
-msgstr "Idatzi zure izena"
-
-msgid "E-Mail"
-msgstr "E-posta"
-
-msgid "Please enter your e-mail address."
-msgstr "Idatzi zzure e-posta"
-
-msgid "Subject"
-msgstr "Gaia"
-
-msgid "Please enter the subject of the message you want to send."
-msgstr "Bidali nahi duzun mezuaren gaia idatzi"
-
-msgid "Message"
-msgstr "Mezua"
-
-msgid "Please enter the message you want to send."
-msgstr "Bidali beharrekoa"
-
-msgid "Mail sent"
-msgstr "Mezua ondo bidali da"
-
-msgid "Send"
-msgstr "Bidali"
-
-msgid "Unable to send mail: ${exception}"
-msgstr "Ezin izan da mezua bidali: ${exception}"
-
+#: ./plone_forms/contact_info.py:32
 msgid "Are you a human ?"
 msgstr "Gizakia zara?"
 
+#: ./plone_forms/contact_info.py:41
+msgid "Contact form"
+msgstr "Kontaktu formularioa"
+
+#: ./plone_forms/contact_info.py:19
+msgid "E-Mail"
+msgstr "E-posta"
+
+#: ./plone_forms/contact_info.py:33
 msgid "In order to avoid spam, please answer the question below."
 msgstr "Spama ekiditeko metodoa da hau, erantzun beheko galderari mesedez."
 
+#: ./plone_forms/contact_info.py:131
+msgid "Mail sent."
+msgstr "Mezua ondo bidali da"
+
+#: ./plone_forms/contact_info.py:28
+msgid "Message"
+msgstr "Mezua"
+
+#: ./plone_forms/contact_info.py:15
+msgid "Name"
+msgstr "Izena"
+
+#: ./plone_forms/contact_info.py:82
+msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
+msgstr """Zuzendu adierazten diren erroreak eta ez ahaztu "Gizakia zara?" galderari erantzutea."""
+
+#: ./plone_forms/contact_info.py:29
+msgid "Please enter the message you want to send."
+msgstr "Bidali beharrekoa"
+
+#: ./plone_forms/contact_info.py:25
+msgid "Please enter the subject of the message you want to send."
+msgstr "Bidali nahi duzun mezuaren gaia idatzi"
+
+#: ./plone_forms/contact_info.py:20
+msgid "Please enter your e-mail address."
+msgstr "Idatzi zzure e-posta"
+
+#: ./plone_forms/contact_info.py:16
+msgid "Please enter your full name."
+msgstr "Idatzi zure izena"
+
+#: ./norobots_input.pt:13
 msgid "Question"
 msgstr "Galdera"
 
-msgid "Your answer"
-msgstr "Erantzuna"
+#: ./plone_forms/contact_info.py:77
+msgid "Send"
+msgstr "Bidali"
 
-msgid "You entered a wrong answer, please answer the new question below."
-msgstr "Okerreko erantzuna eman duzu. "
+#: ./plone_forms/contact_info.py:24
+msgid "Subject"
+msgstr "Gaia"
 
-msgid "What is 4 + 4 ?"
-msgstr "Zenbat da 4+4?"
+#: ./plone_forms/contact_info.py:126
+msgid "Unable to send mail: ${exception}"
+msgstr "Ezin izan da mezua bidali: ${exception}"
 
+#: ./i18n.py:8
 msgid "What is 10 + 4 ?"
 msgstr "Zenbat da 10+4?"
 
-msgid "Write \"five\" cipher."
-msgstr "Idatzi \"bost\" zenbakiak erabiliz."
+#: ./i18n.py:7
+msgid "What is 4 + 4 ?"
+msgstr "Zenbat da 4+4?"
 
-msgid "Please correct the indicated errors and don't forget to fill in the field \"Are you a human ?\"."
-msgstr "Zuzendu adierazten diren erroreak eta ez ahaztu \"Gizakia zara?\" galderari erantzutea."
+#: ./i18n.py:9
+msgid "Write five cipher."
+msgstr """Idatzi "bost" zenbakiak erabiliz."""
+
+#: ./validator.py:12
+msgid "You entered a wrong answer, please answer the new question below."
+msgstr "Okerreko erantzuna eman duzu. "
+
+#: ./plone_forms/constraints.py:10
+msgid "You entered an invalid email address."
+msgstr ""
+
+#: ./norobots_input.pt:17
+msgid "Your answer"
+msgstr "Erantzuna"
 

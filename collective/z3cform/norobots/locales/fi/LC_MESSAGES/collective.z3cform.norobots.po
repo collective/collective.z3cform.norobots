@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: z 3cform\n"
-"POT-Creation-Date: 2010-01-11 14:17+0000\n"
+"POT-Creation-Date: 2012-06-14 20:38+0000\n"
 "PO-Revision-Date: 2010-09-14 13:15+0300\n"
 "Last-Translator: Petri Savolainen <>\n"
 "Language-Team: Finnish\n"
@@ -16,65 +16,91 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.z3cform.norobots\n"
 
-msgid "Contact form"
-msgstr "Yhteydenotto"
-
-msgid "Name"
-msgstr "Nimi"
-
-msgid "Please enter your full name."
-msgstr "Ole hyvä ja anna koko nimesi."
-
-msgid "E-Mail"
-msgstr "Sähköpostiosoite"
-
-msgid "Please enter your e-mail address."
-msgstr "Ole hyvä ja anna sähköpostiosoitteesi."
-
-msgid "Subject"
-msgstr "Aihe"
-
-msgid "Please enter the subject of the message you want to send."
-msgstr "Anna viestillesi otsikko"
-
-msgid "Message"
-msgstr "Viesti"
-
-msgid "Please enter the message you want to send."
-msgstr "Kirjoita sisältö viestille jonka haluat lähettää"
-
-msgid "Mail sent"
-msgstr "Viesti lähetetty"
-
-msgid "Send"
-msgstr "Lähetä"
-
-msgid "Unable to send mail: ${exception}"
-msgstr "Viestiä ei voitu lähettää: ${exception}"
-
+#: ./plone_forms/contact_info.py:32
 msgid "Are you a human ?"
 msgstr "Varmistuskysymys"
 
+#: ./plone_forms/contact_info.py:41
+msgid "Contact form"
+msgstr "Yhteydenotto"
+
+#: ./plone_forms/contact_info.py:19
+msgid "E-Mail"
+msgstr "Sähköpostiosoite"
+
+#: ./plone_forms/contact_info.py:33
 msgid "In order to avoid spam, please answer the question below."
 msgstr "Olethan ihminen etkä roskapostitin? Varmistaaksemme asian, ole hyvä ja vastaa allaolevaan kysymykseen."
 
+#: ./plone_forms/contact_info.py:131
+msgid "Mail sent."
+msgstr "Viesti lähetetty"
+
+#: ./plone_forms/contact_info.py:28
+msgid "Message"
+msgstr "Viesti"
+
+#: ./plone_forms/contact_info.py:15
+msgid "Name"
+msgstr "Nimi"
+
+#: ./plone_forms/contact_info.py:82
+msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
+msgstr "Ole hyvä ja korjaa osoitetut virheet. Muista myös vastata varmistuskysymykseen."
+
+#: ./plone_forms/contact_info.py:29
+msgid "Please enter the message you want to send."
+msgstr "Kirjoita sisältö viestille jonka haluat lähettää"
+
+#: ./plone_forms/contact_info.py:25
+msgid "Please enter the subject of the message you want to send."
+msgstr "Anna viestillesi otsikko"
+
+#: ./plone_forms/contact_info.py:20
+msgid "Please enter your e-mail address."
+msgstr "Ole hyvä ja anna sähköpostiosoitteesi."
+
+#: ./plone_forms/contact_info.py:16
+msgid "Please enter your full name."
+msgstr "Ole hyvä ja anna koko nimesi."
+
+#: ./norobots_input.pt:13
 msgid "Question"
 msgstr "Kysymys"
 
-msgid "Your answer"
-msgstr "Vastauksesi"
+#: ./plone_forms/contact_info.py:77
+msgid "Send"
+msgstr "Lähetä"
 
-msgid "You entered a wrong answer, please answer the new question below."
-msgstr "Vastauksesi oli virheellinen, ole hyvä ja yritä uudestaan."
+#: ./plone_forms/contact_info.py:24
+msgid "Subject"
+msgstr "Aihe"
 
-msgid "What is 4 + 4 ?"
-msgstr "Paljonko on 4 + 4?"
+#: ./plone_forms/contact_info.py:126
+msgid "Unable to send mail: ${exception}"
+msgstr "Viestiä ei voitu lähettää: ${exception}"
 
+#: ./i18n.py:8
 msgid "What is 10 + 4 ?"
 msgstr "Paljonko on 10 + 4?"
 
-msgid "Write \"five\" cipher."
-msgstr "Kirjoita \"viisi\" numerona."
+#: ./i18n.py:7
+msgid "What is 4 + 4 ?"
+msgstr "Paljonko on 4 + 4?"
 
-msgid "Please correct the indicated errors and don't forget to fill in the field \"Are you a human ?\"."
-msgstr "Ole hyvä ja korjaa osoitetut virheet. Muista myös vastata varmistuskysymykseen."
+#: ./i18n.py:9
+msgid "Write five cipher."
+msgstr """Kirjoita "viisi" numerona."""
+
+#: ./validator.py:12
+msgid "You entered a wrong answer, please answer the new question below."
+msgstr "Vastauksesi oli virheellinen, ole hyvä ja yritä uudestaan."
+
+#: ./plone_forms/constraints.py:10
+msgid "You entered an invalid email address."
+msgstr ""
+
+#: ./norobots_input.pt:17
+msgid "Your answer"
+msgstr "Vastauksesi"
+

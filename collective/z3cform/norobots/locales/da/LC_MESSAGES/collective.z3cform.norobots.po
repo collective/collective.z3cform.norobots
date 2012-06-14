@@ -1,11 +1,11 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2011-03-25 12:30+0100\n"
+"POT-Creation-Date: 2012-06-14 20:38+0000\n"
 "PO-Revision-Date: 2011-03-25 12:56+0100\n"
 "Last-Translator: Thomas Clement Mogensen <tmog@headnet.dk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,7 +47,7 @@ msgid "Name"
 msgstr "Navn"
 
 #: ./plone_forms/contact_info.py:82
-msgid "Please correct the indicated errors and don't forget to fill in the field \"Are you a human ?\"."
+msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr "Vær venlig at rette markerede fejl"
 
 #: ./plone_forms/contact_info.py:29
@@ -83,7 +83,19 @@ msgstr "Emne"
 msgid "Unable to send mail: ${exception}"
 msgstr "E-mail kunne ikke afsendes: ${exception}"
 
-#: ./validator.py:11
+#: ./i18n.py:8
+msgid "What is 10 + 4 ?"
+msgstr ""
+
+#: ./i18n.py:7
+msgid "What is 4 + 4 ?"
+msgstr ""
+
+#: ./i18n.py:9
+msgid "Write five cipher."
+msgstr ""
+
+#: ./validator.py:12
 msgid "You entered a wrong answer, please answer the new question below."
 msgstr "Det indtastede svar er desværre forkert. Besvar venligst det nye spørgsmål herunder."
 

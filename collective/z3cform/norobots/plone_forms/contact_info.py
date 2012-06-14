@@ -79,7 +79,7 @@ class ContactInfoForm(form.Form):
         data, errors = self.extractData()
 
         if errors:
-            portal_msg = _(u"""Please correct the indicated errors and don't forget to fill in the field "Are you a human ?".""")
+            portal_msg = _(u"""Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'.""")
             self.context.plone_utils.addPortalMessage(portal_msg, 'error')
 
         else:
