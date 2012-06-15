@@ -50,9 +50,7 @@ class Norobots(BrowserView):
 
     def verify(self, input):
         # See interfaces/INorobotsView
-        if input is None:
-            return False
-        input = input.lower()
+        input = str(input).lower()
         form = self.request.form
         question_id = form['question_id']
         id_check = form['id_check']
