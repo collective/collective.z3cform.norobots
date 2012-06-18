@@ -79,8 +79,7 @@ A NoRobotsQuestionsError error is raised if there is no question/answer:
     ...
     NoRobotsQuestionsError
 
-Define a first question in the property sheet "norobots_properties". Each
-question with be a string like this: "The question::The answer".
+Define a first question. Each question with be a string like this: "The question::The answer".
 
     >>> question_1 = u'What is 10 + 4?'
     >>> answer_1 = u'14'

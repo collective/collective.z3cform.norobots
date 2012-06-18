@@ -12,7 +12,7 @@ from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettin
 
 
 class NoRobotsQuestionsError(Exception):
-    """ Raised when no questions have been created in portal_properties/norobots_properties """
+    """ Raised when no questions have been created """
 
 
 class Norobots(BrowserView):
