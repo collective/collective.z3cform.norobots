@@ -5,10 +5,12 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:meta="http://namespaces.zope.org/meta"
+    xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.z3cform.norobots">
 
   <includeDependencies package="." /><!-- Else tests are broken -->
   
+  <include package="plone.app.registry" />
   <include package="plone.app.z3cform" />
   <include package=".browser" />
 
@@ -20,18 +22,24 @@
   <class class=".widget.NorobotsWidget">
     <require
         permission="zope.Public"
-        interface="collective.z3cform.norobots.interfaces.INorobotsWidget"
+        interface="collective.z3cform.norobots.widget.INorobotsWidget"
         />
   </class>
 
   <!-- this widget is not configured for any field by default -->
   <z3c:widgetTemplate
       mode="input"
-      widget="collective.z3cform.norobots.interfaces.INorobotsWidget"
+      widget="collective.z3cform.norobots.widget.INorobotsWidget"
       layer="z3c.form.interfaces.IFormLayer"
       template="norobots_input.pt"
       />
 
+  <!-- Static resources at /++resources++collective.z3cform.norobots -->
+  <browser:resourceDirectory
+        name="collective.z3cform.norobots"
+        directory="static"
+        />
+  
   <!-- Register the installation GenericSetup extension profile -->
   <genericsetup:registerProfile
       name="default"
@@ -41,9 +49,9 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
       
-    <!-- Declare that plone.formwidget.captcha provides a Captcha field that
-         can be used by plone.app.discussion to add a Captcha field to comment
-         forms. -->
-    <meta:provides feature="plone.app.discussion-captcha" />
+  <!-- Declare that plone.formwidget.captcha provides a Captcha field that
+       can be used by plone.app.discussion to add a Captcha field to comment
+       forms. -->
+  <meta:provides feature="plone.app.discussion-captcha" />
 
 </configure>

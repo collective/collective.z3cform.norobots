@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2012-06-14 20:38+0000\n"
+"POT-Creation-Date: 2012-06-18 07:58+0000\n"
 "PO-Revision-Date: 2010-11-05 08:13+0100\n"
 "Last-Translator: Peter Mathis <peter.mathis@kombinat.at>\n"
 "Language-Team: petschki @ kombinat <peter.mathis@kombinat.at>\n"
@@ -44,6 +44,15 @@ msgstr "Nachricht"
 msgid "Name"
 msgstr "Name"
 
+#: ./browser/interfaces.py:9
+msgid "Norobots question::answer"
+msgstr ""
+
+#: ./browser/controlpanel.py:17
+#: ./profiles/default/controlpanel.xml
+msgid "Norobots widget settings"
+msgstr ""
+
 #: ./plone_forms/contact_info.py:82
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr """Fehler bei der Eingabe. Prüfen Sie die Felder und geben Sie die richtige Antwort im Feld "Sind Sie ein Mensch?" an"""
@@ -68,6 +77,10 @@ msgstr "Geben Sie Ihren vollständigen Namen an"
 msgid "Question"
 msgstr "Frage"
 
+#: ./browser/interfaces.py:10
+msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
+msgstr ""
+
 #: ./plone_forms/contact_info.py:77
 msgid "Send"
 msgstr "Senden"
@@ -80,15 +93,15 @@ msgstr "Betreff"
 msgid "Unable to send mail: ${exception}"
 msgstr "E-Mail konnte nicht versendet werden: ${exception}"
 
-#: ./i18n.py:8
+#: ./browser/interfaces.py:15
 msgid "What is 10 + 4 ?"
 msgstr "Wieviel ist 10 + 4?"
 
-#: ./i18n.py:7
+#: ./browser/interfaces.py:14
 msgid "What is 4 + 4 ?"
 msgstr "Wieviel ist 4 + 4?"
 
-#: ./i18n.py:9
+#: ./browser/interfaces.py:16
 msgid "Write five cipher."
 msgstr """Schreiben Sie die Zahl "5" """
 

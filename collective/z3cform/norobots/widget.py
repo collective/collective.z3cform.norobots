@@ -1,12 +1,14 @@
 from zope.component import getMultiAdapter
 import zope.interface
+from z3c.form import interfaces as z3cFormInterfaces
 
 from Acquisition import aq_inner
 from z3c.form.browser import text
 from z3c.form import widget
 
-from interfaces import INorobotsWidget
-
+class INorobotsWidget(z3cFormInterfaces.IWidget):
+    """Marker interface for th norobots widget
+    """
 
 class NorobotsWidget(text.TextWidget):
     maxlength = 200

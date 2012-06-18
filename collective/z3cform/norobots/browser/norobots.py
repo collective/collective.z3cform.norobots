@@ -1,11 +1,14 @@
 import md5
 import random
 
+from zope.component import getUtility
 from zope.interface import implements
 from Products.Five import BrowserView
-from Products.CMFCore.utils import getToolByName
+from plone.registry.interfaces import IRegistry
 
 from interfaces import INorobotsView
+
+from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
 
 
 class NoRobotsQuestionsError(Exception):
@@ -17,16 +20,22 @@ class Norobots(BrowserView):
 
     def _get_questions_list(self):
         # [('question_id', 'question', 'answer'), ...]
-        portal_properties = getToolByName(self.context, 'portal_properties')
-        props = portal_properties.norobots_properties
+        registry = getUtility(IRegistry)
+        norobots_settings = registry.forInterface(INorobotsWidgetSettings)
+        norobots_questions = norobots_settings.questions
 
         questions = []
-        for item in props.propertyItems():
+        
+        for i in range(len(norobots_questions)):
             # values must be "question::answer1;answer2;...;answerN"
-            if item[0] != 'title' and '::' in item[1]:
-                question, answer = item[1].split('::')
+            item = norobots_questions[i]
+            
+            if '::' in item:
+                question_id = 'question%d' % i
+                question, answer = item.split('::')
+                question, answer = question.strip(), answer.strip()
                 answers = [a.strip().lower() for a in answer.split(';') if a.strip()]
-                questions.append((item[0], question, answers))
+                questions.append((question_id, question, answers))
 
         if not questions:
             raise NoRobotsQuestionsError

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: z 3cform\n"
-"POT-Creation-Date: 2012-06-14 20:38+0000\n"
+"POT-Creation-Date: 2012-06-18 07:58+0000\n"
 "PO-Revision-Date: 2010-09-14 13:15+0300\n"
 "Last-Translator: Petri Savolainen <>\n"
 "Language-Team: Finnish\n"
@@ -44,6 +44,15 @@ msgstr "Viesti"
 msgid "Name"
 msgstr "Nimi"
 
+#: ./browser/interfaces.py:9
+msgid "Norobots question::answer"
+msgstr ""
+
+#: ./browser/controlpanel.py:17
+#: ./profiles/default/controlpanel.xml
+msgid "Norobots widget settings"
+msgstr ""
+
 #: ./plone_forms/contact_info.py:82
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr "Ole hyvä ja korjaa osoitetut virheet. Muista myös vastata varmistuskysymykseen."
@@ -68,6 +77,10 @@ msgstr "Ole hyvä ja anna koko nimesi."
 msgid "Question"
 msgstr "Kysymys"
 
+#: ./browser/interfaces.py:10
+msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
+msgstr ""
+
 #: ./plone_forms/contact_info.py:77
 msgid "Send"
 msgstr "Lähetä"
@@ -80,15 +93,15 @@ msgstr "Aihe"
 msgid "Unable to send mail: ${exception}"
 msgstr "Viestiä ei voitu lähettää: ${exception}"
 
-#: ./i18n.py:8
+#: ./browser/interfaces.py:15
 msgid "What is 10 + 4 ?"
 msgstr "Paljonko on 10 + 4?"
 
-#: ./i18n.py:7
+#: ./browser/interfaces.py:14
 msgid "What is 4 + 4 ?"
 msgstr "Paljonko on 4 + 4?"
 
-#: ./i18n.py:9
+#: ./browser/interfaces.py:16
 msgid "Write five cipher."
 msgstr """Kirjoita "viisi" numerona."""
 

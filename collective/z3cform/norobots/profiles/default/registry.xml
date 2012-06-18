@@ -1,0 +1,6 @@
+<registry>
+
+    <!-- Norobots Widget Settings -->
+    <records interface="collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings" />
+
+</registry>

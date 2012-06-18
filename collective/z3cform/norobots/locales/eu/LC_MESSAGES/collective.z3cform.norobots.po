@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2012-06-14 20:38+0000\n"
+"POT-Creation-Date: 2012-06-18 07:58+0000\n"
 "PO-Revision-Date: 2012-05-29 17:04+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
@@ -43,6 +43,15 @@ msgstr "Mezua"
 msgid "Name"
 msgstr "Izena"
 
+#: ./browser/interfaces.py:9
+msgid "Norobots question::answer"
+msgstr ""
+
+#: ./browser/controlpanel.py:17
+#: ./profiles/default/controlpanel.xml
+msgid "Norobots widget settings"
+msgstr ""
+
 #: ./plone_forms/contact_info.py:82
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr """Zuzendu adierazten diren erroreak eta ez ahaztu "Gizakia zara?" galderari erantzutea."""
@@ -67,6 +76,10 @@ msgstr "Idatzi zure izena"
 msgid "Question"
 msgstr "Galdera"
 
+#: ./browser/interfaces.py:10
+msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
+msgstr ""
+
 #: ./plone_forms/contact_info.py:77
 msgid "Send"
 msgstr "Bidali"
@@ -79,15 +92,15 @@ msgstr "Gaia"
 msgid "Unable to send mail: ${exception}"
 msgstr "Ezin izan da mezua bidali: ${exception}"
 
-#: ./i18n.py:8
+#: ./browser/interfaces.py:15
 msgid "What is 10 + 4 ?"
 msgstr "Zenbat da 10+4?"
 
-#: ./i18n.py:7
+#: ./browser/interfaces.py:14
 msgid "What is 4 + 4 ?"
 msgstr "Zenbat da 4+4?"
 
-#: ./i18n.py:9
+#: ./browser/interfaces.py:16
 msgid "Write five cipher."
 msgstr """Idatzi "bost" zenbakiak erabiliz."""
 

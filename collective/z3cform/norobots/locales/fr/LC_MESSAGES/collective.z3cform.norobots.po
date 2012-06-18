@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2012-06-14 20:38+0000\n"
+"POT-Creation-Date: 2012-06-18 07:58+0000\n"
 "PO-Revision-Date: 2010-01-11 14:51+0200\n"
 "Last-Translator: Sylvain Boureliou <sylvain.boureliou@makina-corpus.com>\n"
 "Language-Team: French\n"
@@ -45,6 +45,15 @@ msgstr "Message"
 msgid "Name"
 msgstr "Nom"
 
+#: ./browser/interfaces.py:9
+msgid "Norobots question::answer"
+msgstr "Questions/réponses"
+
+#: ./browser/controlpanel.py:17
+#: ./profiles/default/controlpanel.xml
+msgid "Norobots widget settings"
+msgstr "Configuration de collective.z3cform.norobots"
+
 #: ./plone_forms/contact_info.py:82
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr """Merci de corriger les erreurs indiquées et n'oubliez pas de remplir le champ "Etes-vous un être humain ?"."""
@@ -69,6 +78,10 @@ msgstr "Veuillez saisir votre nom complet."
 msgid "Question"
 msgstr "Question"
 
+#: ./browser/interfaces.py:10
+msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
+msgstr """Liste de questions (une par ligne). Exemple : "Combien font 10 + 12 ?::22". Une réponse peut contenir plusieurs valeurs séparées par des point-virgules. Exemple : "Combien font 5 + 5 ?::10;dix"."""
+
 #: ./plone_forms/contact_info.py:77
 msgid "Send"
 msgstr "Envoyer"
@@ -81,15 +94,15 @@ msgstr "Sujet"
 msgid "Unable to send mail: ${exception}"
 msgstr "Impossible d'envoyer un courriel : ${exception}"
 
-#: ./i18n.py:8
+#: ./browser/interfaces.py:15
 msgid "What is 10 + 4 ?"
 msgstr "Combien font 10 + 4 ?"
 
-#: ./i18n.py:7
+#: ./browser/interfaces.py:14
 msgid "What is 4 + 4 ?"
 msgstr "Combien font 4 + 4 ?"
 
-#: ./i18n.py:9
+#: ./browser/interfaces.py:16
 msgid "Write five cipher."
 msgstr """Écrire "5" en chiffre"""
 

@@ -4,7 +4,19 @@ Changelog
 1.4dev (unreleased)
 -------------------
 
--
+- Use plone.app.registry instead of a property sheet for the questions configuration.
+  Questions can now be added using a dedicated control panel.
+  [sylvainb]
+
+- Add an upgrade step (1 -> 2) to copy questions from the old property sheet to plone.app.registry.
+  [sylvainb]
+
+- Update translations (some new strings added).
+  [sylvainb]
+
+- Add Basque translation
+  [erral]
+
 
 1.3.1 (2012-03-28)
 -------------------

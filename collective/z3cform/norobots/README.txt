@@ -10,14 +10,16 @@ browser/plone_forms .
     >>> from collective.z3cform.norobots.widget import NorobotsFieldWidget
     >>> from collective.z3cform.norobots.widget import NorobotsWidget
     >>> from collective.z3cform.norobots.validator import NorobotsValidator
+    >>> from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
 
-    >>> from Products.CMFCore.utils import getToolByName
-    >>> portal_properties = getToolByName(portal, 'portal_properties')
-    >>> props = portal_properties.norobots_properties
+	>>> from zope.component import getUtility
+    >>> from plone.registry.interfaces import IRegistry
+    >>> registry = getUtility(IRegistry)
+    >>> norobots_settings = registry.forInterface(INorobotsWidgetSettings)
 
 Remove default questions added when installing the product:
 
-   >>> props.manage_delProperties(['question1', 'question2', 'question3'])
+   >>> norobots_settings.questions = ()
 
 First, set up a simple test form and context:
 
@@ -80,10 +82,9 @@ A NoRobotsQuestionsError error is raised if there is no question/answer:
 Define a first question in the property sheet "norobots_properties". Each
 question with be a string like this: "The question::The answer".
 
-    >>> question_id = 'question1'
-    >>> question = 'What is 10 +4 ?'
-    >>> answer = '14'
-    >>> props.manage_addProperty(question_id, '%s::%s'%(question, answer), 'string')
+    >>> question_1 = u'What is 10 + 4?'
+    >>> answer_1 = u'14'
+    >>> norobots_settings.questions = (u'%s::%s' % (question_1, answer_1),)
 
 Render the widget:
 
@@ -92,16 +93,16 @@ question, but we actually have only one question, so:
 
     # In Plone 4 with plone.app.z3cform 0.5.0 the widget is rendered differently but it is always the same (this is the second one in the list bellow)
     >>> foo_form.widgets['norobots'].render() in [
-    ...       u'\n\n  <input type="hidden" name="question_id" value="question1" />\n  <input type="hidden" name="id_check"\n         value="741a211ffff0a652efa89fb89c790fc6" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 +4 ?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots"\n         name="form.widgets.norobots"\n         class="text-widget required textline-field"\n         size="30" maxlength="200" value="" />\n\n\n',
-    ...       u'\n\n  <input type="hidden" name="question_id" value="question1" />\n  <input type="hidden" name="id_check" value="741a211ffff0a652efa89fb89c790fc6" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 +4 ?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n\n\n'
+    ...       u'\n\n  <input type="hidden" name="question_id" value="question0" />\n  <input type="hidden" name="id_check"\n         value="3695617e2ff7d4255c88de0b857e5b9f" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 + 4?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots"\n         name="form.widgets.norobots"\n         class="text-widget required textline-field"\n         size="30" maxlength="200" value="" />\n\n\n',
+    ...       u'\n\n  <input type="hidden" name="question_id" value="question0" />\n  <input type="hidden" name="id_check" value="3695617e2ff7d4255c88de0b857e5b9f" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 + 4?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n\n\n'
     ...       ]
     True
 
 Submit the form with a bad answer:
 
     >>> request = TestRequest(form={
-    ...     'question_id': 'question1',
-    ...     'id_check': '741a211ffff0a652efa89fb89c790fc6',
+    ...     'question_id': 'question0',
+    ...     'id_check': '3695617e2ff7d4255c88de0b857e5b9f',
     ...     'form.widgets.norobots': u'bad answer'}
     ...     )
     >>> alsoProvides(request, IAttributeAnnotatable)
@@ -117,8 +118,8 @@ Submit the form with a bad answer:
 Submit the form with a good answer:
 
     >>> request = TestRequest(form={
-    ...     'question_id': 'question1',
-    ...     'id_check': '741a211ffff0a652efa89fb89c790fc6',
+    ...     'question_id': 'question0',
+    ...     'id_check': '3695617e2ff7d4255c88de0b857e5b9f',
     ...     'form.widgets.norobots': u'14'}
     ...     )
     >>> alsoProvides(request, IAttributeAnnotatable)
@@ -132,8 +133,8 @@ Submit the form with a good answer:
 Submit the form with a bad id_check:
 
     >>> request = TestRequest(form={
-    ...     'question_id': 'question1',
-    ...     'id_check': 'BAD-741a211ffff0a652efa89fb89c790fc6',
+    ...     'question_id': 'question0',
+    ...     'id_check': 'BAD-3695617e2ff7d4255c88de0b857e5b9f',
     ...     'form.widgets.norobots': u'14'}
     ...     )
     >>> alsoProvides(request, IAttributeAnnotatable)
@@ -148,12 +149,13 @@ Submit the form with a bad id_check:
 
 Test that the rendered question is not always the same:
 
-    >>> # add 20 questions
+    >>> # add 20 questions (we already have one question, so add question1 -> question20)
+    >>> questions = list(norobots_settings.questions)
     >>> for i in range(20):
-    ...     question_id = 'q%d' % i
-    ...     question = 'question %d' % i
-    ...     answer = 'answer %d' % i
-    ...     props.manage_addProperty(question_id, '%s::%s'%(question, answer), 'string')
+    ...     question = u'question %d' % (i+1)
+    ...     answer = u'answer %d' % (i+1)
+    ...     questions.append(u'%s::%s' % (question, answer))
+    >>> norobots_settings.questions = tuple(questions)
 
     >>> # render the widget 20 times and check that it is not always the same
     >>> L = []
@@ -169,18 +171,18 @@ Test that the rendered question is not always the same:
     >>> len(L) > 1
     True
 
-Let's define a question in different formats which supports more than one answer per question.
+Let's define a question (id=question21) in different formats which supports more than one answer per question.
 Answers must be semicolon delimited and are case-normalized to lowercase before validation.
 Example: "What is 5+5?::10; ten".
 
-    >>> question_id = 'question2'
-    >>> question = 'What is 5+5 ?'
-    >>> 
-    >>> answer = '10; ten'
-    >>> props.manage_addProperty(question_id, '%s::%s'%(question, answer), 'string')
+    >>> question = u'What is 5+5 ?'
+    >>> answer = u'10; ten'
+    >>> questions = list(norobots_settings.questions)
+    >>> questions.append(u'%s::%s' % (question, answer))
+    >>> norobots_settings.questions = tuple(questions)
 
     >>> request = TestRequest(form={
-    ...     'question_id': 'question2',
+    ...     'question_id': 'question21',
     ...     'id_check': 'd18f7fcb669087ae51905a05875e94f3',
     ...     'form.widgets.norobots': u'10'}
     ...     )
@@ -193,7 +195,7 @@ Example: "What is 5+5?::10; ten".
     ()
 
     >>> request = TestRequest(form={
-    ...     'question_id': 'question2',
+    ...     'question_id': 'question21',
     ...     'id_check': 'd18f7fcb669087ae51905a05875e94f3',
     ...     'form.widgets.norobots': u'ten'}
     ...     )
@@ -206,7 +208,7 @@ Example: "What is 5+5?::10; ten".
     ()
 
     >>> request = TestRequest(form={
-    ...     'question_id': 'question2',
+    ...     'question_id': 'question21',
     ...     'id_check': 'd18f7fcb669087ae51905a05875e94f3',
     ...     'form.widgets.norobots': u'TEN'}
     ...     )

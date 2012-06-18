@@ -3,11 +3,22 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.z3cform.norobots">
 
+  <!-- For the widget -->
+
   <browser:view
       name="norobots"
       for="*"
       permission="zope2.Public"
       provides=".interfaces.INorobotsView"
       class=".norobots.Norobots" />
-
+  
+  <!-- Control panel -->
+  
+  <browser:page
+      name="norobots-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.NorobotsControlPanelView"
+      permission="cmf.ManagePortal"
+      />
+    
 </configure>
