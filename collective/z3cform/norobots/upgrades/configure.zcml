@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.z3cform.norobots">
+
+    <upgradeStep
+        source="*"
+        destination="2"
+        title="Upgrade to version 2"
+        description="Copy questions from the old property sheet to the registry, then delete the property sheet"
+        profile="collective.z3cform.norobots:default"
+        handler=".upgrades.upgrade_to_2"
+        />
+
+</configure>

@@ -48,6 +48,7 @@
       description="collective.z3cform.norobots default profile"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+  <include package=".upgrades" />
       
   <!-- Declare that plone.formwidget.captcha provides a Captcha field that
        can be used by plone.app.discussion to add a Captcha field to comment
