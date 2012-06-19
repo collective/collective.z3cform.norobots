@@ -61,11 +61,11 @@ class Norobots(BrowserView):
         # See interfaces/INorobotsView
         input = str(input).lower()
         form = self.request.form
-        question_id = form['question_id']
-        id_check = form['id_check']
+        question_id = form.get('question_id', '')
+        id_check = form.get('id_check', '')
 
         questions = self._get_questions_dict()
-        title, answers = questions[question_id]
+        title, answers = questions.get(question_id, ('', ''))
         if not (md5.new(title).hexdigest() == id_check and input in answers):
             return False
         return True
