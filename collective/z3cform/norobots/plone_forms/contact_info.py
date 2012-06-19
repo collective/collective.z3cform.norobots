@@ -14,7 +14,7 @@ class IContactInfo(interface.Interface):
 
     fullname = schema.TextLine(title=_(u'Name'),
                                description=_(u'Please enter your full name.'),
-                               required=True)
+                               required=False)
 
     email = schema.TextLine(title=_(u'E-Mail'),
                             description=_(u'Please enter your e-mail address.'),
@@ -38,6 +38,7 @@ class ContactInfoForm(form.Form):
     fields['norobots'].widgetFactory = NorobotsFieldWidget
 
     ignoreContext = True # don't use context to get widget data
+    id = 'z3cform_contact_info_form'
     label = _(u'Contact form')
 
     def updateWidgets(self):
@@ -56,8 +57,7 @@ class ContactInfoForm(form.Form):
 
         # If the current user is authenticated, hide fullname and email fields
         mtool = getToolByName(self.context, 'portal_membership')
-        sender = mtool.getAuthenticatedMember()
-        if sender.getId() is not None:
+        if not mtool.isAnonymousUser():
             self.widgets['fullname'].mode = interfaces.HIDDEN_MODE
             self.widgets['email'].mode = interfaces.HIDDEN_MODE
 
@@ -79,56 +79,57 @@ class ContactInfoForm(form.Form):
         data, errors = self.extractData()
 
         if errors:
+            #self.status = self.formErrorsMessage
             portal_msg = _(u"""Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'.""")
             self.context.plone_utils.addPortalMessage(portal_msg, 'error')
+            return
 
-        else:
-            context = self.context
-            REQUEST = self.request
-            mtool = getToolByName(self.context, 'portal_membership')
-            plone_utils = getToolByName(context, 'plone_utils')
-            urltool = getToolByName(context, 'portal_url')
-            portal = urltool.getPortalObject()
+        context = self.context
+        REQUEST = self.request
+        mtool = getToolByName(self.context, 'portal_membership')
+        plone_utils = getToolByName(context, 'plone_utils')
+        urltool = getToolByName(context, 'portal_url')
+        portal = urltool.getPortalObject()
 
-            # message
-            subject = data['subject']
-            message = data['message']
-            encoding = portal.getProperty('email_charset')
+        # message
+        subject = data['subject']
+        message = data['message']
+        encoding = portal.getProperty('email_charset')
 
-            # from
-            fullname = data['fullname']
-            send_from_address = data['email']
-            envelope_from = portal.getProperty('email_from_address') # webmaster email
-            sender = mtool.getAuthenticatedMember()
-            sender_id = "%s (%s), %s" % (fullname, sender.getId(), send_from_address)
-            referer = REQUEST.get('referer', 'unknown referer')
+        # from
+        fullname = data['fullname']
+        send_from_address = data['email']
+        envelope_from = portal.getProperty('email_from_address') # webmaster email
+        sender = mtool.getAuthenticatedMember()
+        sender_id = "%s (%s), %s" % (fullname, sender.getId(), send_from_address)
+        referer = REQUEST.get('referer', 'unknown referer')
 
-            # to
-            send_to_address = portal.getProperty('email_from_address')
+        # to
+        send_to_address = portal.getProperty('email_from_address')
 
-            # render template and send email
-            variables = {'send_from_address' : send_from_address,
-                         'sender_id'         : sender_id,
-                         'url'               : referer,
-                         'subject'           : subject,
-                         'message'           : message,
-                         'encoding'          : encoding,
-            }
+        # render template and send email
+        variables = {'send_from_address' : send_from_address,
+                     'sender_id'         : sender_id,
+                     'url'               : referer,
+                     'subject'           : subject,
+                     'message'           : message,
+                     'encoding'          : encoding,
+        }
 
-            host = context.MailHost # plone_utils.getMailHost() (is private)
-            try:
-                message = context.author_feedback_template(context, **variables)
-                result = host.secureSend(message, send_to_address, envelope_from, subject=subject, subtype='plain', charset=encoding, debug=False, From=send_from_address)
-            except ConflictError:
-                raise
-            except: # TODO Too many things could possibly go wrong. So we catch all.
-                exception = plone_utils.exceptionString()
-                message = _(u'Unable to send mail: ${exception}',
-                              mapping={u'exception' : exception})
-                plone_utils.addPortalMessage(message, 'error')
-                return False
+        host = context.MailHost # plone_utils.getMailHost() (is private)
+        try:
+            message = context.author_feedback_template(context, **variables)
+            result = host.secureSend(message, send_to_address, envelope_from, subject=subject, subtype='plain', charset=encoding, debug=False, From=send_from_address)
+        except ConflictError:
+            raise
+        except: # TODO Too many things could possibly go wrong. So we catch all.
+            exception = plone_utils.exceptionString()
+            message = _(u'Unable to send mail: ${exception}',
+                          mapping={u'exception' : exception})
+            plone_utils.addPortalMessage(message, 'error')
+            return False
 
-            plone_utils.addPortalMessage(_(u'Mail sent.'))
+        plone_utils.addPortalMessage(_(u'Mail sent.'))
 
 # wrap the form with plone.app.z3cform's Form wrapper
 ContactInfoView = wrap_form(ContactInfoForm)
