@@ -11,6 +11,10 @@ Changelog
 - Add an upgrade step (1 -> 2) to copy questions from the old property sheet to plone.app.registry.
   [sylvainb]
 
+- Fix the widget template for use with plone.app.discussion (there was no redirection to 
+  the comment form when only the captcha is wrong).
+  [sylvainb]
+  
 - Update translations (some new strings added).
   [sylvainb]
 
