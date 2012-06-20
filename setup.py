@@ -44,7 +44,8 @@ setup(
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
-        'plone.app.z3cform'
+        'plone.app.z3cform',
+        'plone.app.registry'
     ],
     tests_require=tests_require,
     test_suite='collective.z3cform.norobots.tests.test_docs.test_suite',

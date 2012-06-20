@@ -5,7 +5,7 @@ Plone's products are loaded, and a Plone site will be created. This
 happens at module level, which makes it faster to run each test, but
 slows down test runner startup.
 """
-
+    
 from Products.Five import zcml
 from Products.Five import fiveconfigure
 
@@ -13,6 +13,8 @@ from Testing import ZopeTestCase as ztc
 
 from Products.PloneTestCase import PloneTestCase as ptc
 from Products.PloneTestCase.layer import onsetup
+
+from collective.z3cform.norobots.tests.utils import PLONE_VERSION
 
 # When ZopeTestCase configures Zope, it will *not* auto-load products
 # in Products/. Instead, we have to use a statement such as:
@@ -32,6 +34,14 @@ def setup_product():
     integration tests.
     """
 
+    if PLONE_VERSION == 4.0:
+        # plone.app.registry is not include in Plone 4.0 core
+        # Load the ZCML configuration for the plone.app.registry package
+        fiveconfigure.debug_mode = True
+        import plone.app.registry
+        zcml.load_config('configure.zcml', plone.app.registry)
+        fiveconfigure.debug_mode = False
+    
     # Load the ZCML configuration for the collective.z3cform.norobots package.
     # This can of course use <include /> to include other packages.
 
@@ -50,7 +60,11 @@ def setup_product():
 
     # We may also need to load dependencies, e.g.:
     #   ztc.installPackage('borg.localrole')
-
+    
+    if PLONE_VERSION == 4.0:
+        # plone.app.registry is not include in Plone 4.0 core
+        ztc.installPackage('plone.app.registry')
+    
     ztc.installPackage('collective.z3cform.norobots')
 
 # The order here is important: We first call the (deferred) function
@@ -58,7 +72,12 @@ def setup_product():
 # PloneTestCase set up this product on installation.
 
 setup_product()
-ptc.setupPloneSite(products=['collective.z3cform.norobots'])
+if PLONE_VERSION == 4.0:
+    # plone.app.registry is not include in Plone 4.0 core
+    products = ['plone.app.registry', 'collective.z3cform.norobots']
+else:
+    products = ['collective.z3cform.norobots']
+ptc.setupPloneSite(products=products)
 
 
 class TestCase(ptc.PloneTestCase):

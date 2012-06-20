@@ -90,10 +90,9 @@ Render the widget:
 Note that the returned question is selected randomly from the available
 question, but we actually have only one question, so:
 
-    # In Plone 4 with plone.app.z3cform 0.5.0 the widget is rendered differently but it is always the same (this is the second one in the list bellow)
+    # Tthe widget may be rendered differently but it is always the same (depends on the Plone version)
     >>> foo_form.widgets['norobots'].render() in [
-    ...       u'\n\n  <input type="hidden" name="question_id" value="question0" />\n  <input type="hidden" name="id_check"\n         value="3695617e2ff7d4255c88de0b857e5b9f" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 + 4?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots"\n         name="form.widgets.norobots"\n         class="text-widget required textline-field"\n         size="30" maxlength="200" value="" />\n\n\n',
-    ...       u'\n\n  <input type="hidden" name="question_id" value="question0" />\n  <input type="hidden" name="id_check" value="3695617e2ff7d4255c88de0b857e5b9f" />\n\n  <strong><span>Question</span></strong>:\n  <span>What is 10 + 4?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n\n\n'
+    ...       u'\n\t\n  <strong><span>Question</span></strong>:\n  <span>What is 10 + 4?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  \n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n                     \n  <input type="hidden" name="question_id" value="question0" />\n  <input type="hidden" name="id_check" value="3695617e2ff7d4255c88de0b857e5b9f" />\n         \n'
     ...       ]
     True
 

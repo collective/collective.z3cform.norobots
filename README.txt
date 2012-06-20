@@ -33,7 +33,24 @@ a specific project's buildout, by having a buildout configuration such as: ::
             collective.z3cform.norobots
 
 
-In portal_setup, apply the profile collective.z3cform.norobots:default.
+*For Plone 4.1.x*:
+
+- In the Addons control panel, install "Norobots captcha field (collective.z3cform.norobots)".
+
+*For Plone 4.0.x*: 
+
+- If you want to use the captcha for anonymous comments with Plone Discussions, add plone.app.discussion < 2.0 in your buildout 
+as describe here [link:http://pypi.python.org/pypi/plone.app.discussion/1.1.4]. Plone Discussions is include in Plone 4.1.
+
+-  plone.app.registry is not include in Plone, so you need to add an extra version restriction in your buildout 
+for plone.app.registry (used by the settings control panel). 
+Example for Plone 4.0.10 : http://good-py.appspot.com/release/plone.app.registry/1.0b2?plone=4.0.10 
+
+- plone.app.z3cform is not include in Plone, so you need to add an extra version restriction in your buildout. 
+Example for Plone 4.0.10 : http://good-py.appspot.com/release/plone.app.z3cform/0.5.0?plone=4.0.10
+
+- In the Addons control panel, install "Configuration registry" then "Norobots captcha field (collective.z3cform.norobots)".
+
 
 Add a new question
 ===================
@@ -87,7 +104,7 @@ package.
 Possible problems
 -----------------
 
-  * I have the following error: "We already have: zope.schema 3.5.4 but z3c.form 2.4.1 requires 'zope.schema>=3.6.0'."
+  * Plone 4.0.x : I have the following error: "We already have: zope.schema 3.5.4 but z3c.form 2.4.1 requires 'zope.schema>=3.6.0'."
     => You should add this extra version restriction to your buildout: http://good-py.appspot.com/release/plone.app.z3cform/0.5.0
 
   * I have the following error when launching the tests: "ImportError: No module named lxml.html"
