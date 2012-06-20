@@ -43,7 +43,7 @@
   <!-- Register the installation GenericSetup extension profile -->
   <genericsetup:registerProfile
       name="default"
-      title="collective.z3cform.norobots default profile"
+      title="Norobots captcha field (collective.z3cform.norobots)"
       directory="profiles/default"
       description="collective.z3cform.norobots default profile"
       provides="Products.GenericSetup.interfaces.EXTENSION"

@@ -52,7 +52,7 @@ msgstr "Questions/réponses"
 #: ./browser/controlpanel.py:17
 #: ./profiles/default/controlpanel.xml
 msgid "Norobots widget settings"
-msgstr "Configuration de collective.z3cform.norobots"
+msgstr "Captcha Norobots"
 
 #: ./plone_forms/contact_info.py:82
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
