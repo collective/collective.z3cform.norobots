@@ -1,14 +1,14 @@
 Changelog
-=========
+------------
 
 1.4dev (unreleased)
--------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Use plone.app.registry instead of a property sheet for the questions configuration.
   Questions can now be added using a dedicated control panel.
   [sylvainb]
 
-- Add an upgrade step (1 -> 2) to copy questions from the old property sheet to plone.app.registry.
+- Add an upgrade step (1 -> 2) to copy questions from the old properties sheet to plone.app.registry.
   [sylvainb]
 
 - Fix the widget template for use with plone.app.discussion (there was no redirection to 
@@ -23,13 +23,13 @@ Changelog
 
 
 1.3.1 (2012-03-28)
--------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Add simplified chinese translation
   [Aijun Jian]
 
 1.3 (2012-02-27)
--------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Allow multiple answers for a question
   [naro]
@@ -39,14 +39,14 @@ Changelog
 
 
 1.2.1 (2010-11-05)
-------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Added german translation
   [petschki]
 
 
 1.2 (2010-10-31)
-----------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Fix tests for Plone 4
   [sylvainb]
@@ -54,8 +54,8 @@ Changelog
 - Added Czech translation
   [naro]
 
-1.1 - 2010-09-15
-----------------
+1.1 (2010-09-15)
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Support for using as a plone.app.discussion captcha plugin (Plone 4)
   [Petri Savolainen]
@@ -63,8 +63,8 @@ Changelog
 - Finnish translations
   [Petri Savolainen]
 
-1.0
-----------------
+1.0 (2010-01-13)
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Initial release
   [sylvainb]
