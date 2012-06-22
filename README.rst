@@ -47,11 +47,18 @@ Installation
 Getting the module
 ~~~~~~~~~~~~~~~~~~~~
 
-Add ``collective.z3cform.norobots`` to your ``plone.recipe.zope2instance`` buildout section's *eggs* parameter e.g.::
+Add ``collective.z3cform.norobots`` to your ``plone.recipe.zope2instance`` buildout section e.g.::
 
     [instance]
+    ...
     eggs =
         Plone
+        ...
+        collective.z3cform.norobots
+    
+    ...
+
+    zcml =
         ...
         collective.z3cform.norobots
 
@@ -176,7 +183,7 @@ Contributors
 * Sylvain Boureliou [sylvainb]
 * Mikel Larreategi [erral]
 * Aijun Jian
-* Radim Novotný [naro]
+* Radim Novotny [naro]
 * Thomas Clement Mogensen [tmog]
 * Peter Mathis [petschki]
 * Petri Savolainen [petri]

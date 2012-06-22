@@ -2,7 +2,7 @@ import os
 
 from setuptools import setup, find_packages
 
-version = '1.4.1.dev0'
+version = '1.4'
 
 
 def read(*rnames):
@@ -53,10 +53,8 @@ setup(
         'test': tests_require,
     },
     # define there your console scripts
-    entry_points="""
-      # -*- Entry points: -*-
-      [z3c.autoinclude.plugin]
-      target = plone
-      """,
+    entry_points={
+      'z3c.autoinclude.plugin': 'target = plone',
+    },
 
 )
