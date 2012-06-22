@@ -72,12 +72,30 @@ Check for the norobots widget:
     >>> foo_form.widgets['norobots'].field # doctest: +ELLIPSIS
     <zope.schema._bootstrapfields.TextLine object at ...>
 
-A NoRobotsQuestionsError error is raised if there is no question/answer:
+A widget with an empty captcha is rendered if there is no question/answer:
 
-    >>> foo_form.widgets['norobots'].render() # doctest: +ELLIPSIS
-    Traceback (most recent call last):
-    ...
-    NoRobotsQuestionsError
+    # Tthe widget may be rendered differently but it is always the same (depends on the Plone version)
+    >>> foo_form.widgets['norobots'].render() in [
+    ...       u'\n\t\n  <strong><span>Question</span></strong>:\n  <span></span><br />\n\n  <strong><span>Your answer</span></strong>:\n  \n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n                     \n  <input type="hidden" name="question_id" value="" />\n  <input type="hidden" name="id_check" value="" />\n         \n'
+    ...       ]
+    True
+
+and if the form is submitted the validation failed:
+
+    >>> request = TestRequest(form={
+    ...     'question_id': '',
+    ...     'id_check': '',
+    ...     'form.widgets.norobots': u'an answer'}
+    ...     )
+    >>> alsoProvides(request, IAttributeAnnotatable)
+    >>> foo_form = FooForm(portal, request)
+    >>> foo_form.update()
+
+    >>> data, errors = foo_form.extractData()
+    >>> errors
+    (<ErrorViewSnippet for WrongNorobotsAnswer>,)
+    >>> errors[0].message
+    u'You entered a wrong answer, please answer the new question below.'
 
 Define a first question. Each question with be a string like this: "The question::The answer".
 

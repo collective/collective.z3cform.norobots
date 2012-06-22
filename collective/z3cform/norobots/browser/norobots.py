@@ -1,5 +1,7 @@
 import md5
 import random
+import logging
+logger = logging.getLogger("collective.z3cform.norobots")
 
 from zope.component import getUtility
 from zope.interface import implements
@@ -21,8 +23,17 @@ class Norobots(BrowserView):
     def _get_questions_list(self):
         # [('question_id', 'question', 'answer'), ...]
         registry = getUtility(IRegistry)
-        norobots_settings = registry.forInterface(INorobotsWidgetSettings)
-        norobots_questions = norobots_settings.questions
+        try:
+            norobots_settings = registry.forInterface(INorobotsWidgetSettings)
+            norobots_questions = norobots_settings.questions
+        except KeyError:
+            # Can occurs for this story:
+            # 1) collective.z3cform.norobots's zcml is loaded
+            # 2) The module IS NOT installed through the addons control panel
+            # 3) The field is used in a z3c form or is configured as the plone.app.discussion's captcha
+            # => FIX : install using the addons control panel
+            logger.error("MODULE MUST BE INSTALLED")
+            norobots_questions = ()
 
         questions = []
         
@@ -38,7 +49,8 @@ class Norobots(BrowserView):
                 questions.append((question_id, question, answers))
 
         if not questions:
-            raise NoRobotsQuestionsError
+            #raise NoRobotsQuestionsError
+            logger.error("QUESTIONS MUST BE CONFIGURED IN THE DEDICATED CONTROL PANEL")
 
         return questions
 
@@ -51,11 +63,17 @@ class Norobots(BrowserView):
     def get_question(self):
         # See interfaces/INorobotsView
         questions = self._get_questions_list()
-        q_id, q_title, q_answers = random.sample(questions, 1)[0]
-        id_check = md5.new(q_title).hexdigest()
-        return {'id': q_id,
-                'title': q_title,
-                'id_check': id_check}
+        if questions:
+            q_id, q_title, q_answers = random.sample(questions, 1)[0]
+            id_check = md5.new(q_title).hexdigest()
+            return {'id': q_id,
+                    'title': q_title,
+                    'id_check': id_check}
+        else:
+            return {'id': '',
+                    'title': '',
+                    'id_check': ''}
+            
 
     def verify(self, input):
         # See interfaces/INorobotsView
