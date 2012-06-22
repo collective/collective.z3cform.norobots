@@ -53,10 +53,8 @@ setup(
         'test': tests_require,
     },
     # define there your console scripts
-    entry_points="""
-      # -*- Entry points: -*-
-      [z3c.autoinclude.plugin]
-      target = plone
-      """,
+    entry_points={
+      'z3c.autoinclude.plugin': 'target = plone',
+    },
 
 )
