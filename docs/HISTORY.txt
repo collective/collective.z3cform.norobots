@@ -1,8 +1,8 @@
 Changelog
 ------------
 
-1.4dev (unreleased)
-~~~~~~~~~~~~~~~~~~~~~~~~
+1.4 (2012-06-22)
+~~~~~~~~~~~~~~~~
 
 - Use plone.app.registry instead of a property sheet for the questions configuration.
   Questions can now be added using a dedicated control panel.
