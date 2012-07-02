@@ -20,6 +20,9 @@ class NoRobotsQuestionsError(Exception):
 class Norobots(BrowserView):
     implements(INorobotsView)
 
+    def _hashTitle(self, title):
+        return md5.new(title.encode('ascii', 'ignore')).hexdigest()
+
     def _get_questions_list(self):
         # [('question_id', 'question', 'answer'), ...]
         registry = getUtility(IRegistry)
@@ -65,7 +68,7 @@ class Norobots(BrowserView):
         questions = self._get_questions_list()
         if questions:
             q_id, q_title, q_answers = random.sample(questions, 1)[0]
-            id_check = md5.new(q_title).hexdigest()
+            id_check = self._hashTitle(q_title)
             return {'id': q_id,
                     'title': q_title,
                     'id_check': id_check}
@@ -84,6 +87,6 @@ class Norobots(BrowserView):
 
         questions = self._get_questions_dict()
         title, answers = questions.get(question_id, ('', ''))
-        if not (md5.new(title).hexdigest() == id_check and input in answers):
+        if not (self._hashTitle(title) == id_check and input in answers):
             return False
         return True

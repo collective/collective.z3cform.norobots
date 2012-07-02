@@ -187,6 +187,7 @@ Contributors
 * Thomas Clement Mogensen [tmog]
 * Peter Mathis [petschki]
 * Petri Savolainen [petri]
+* Helmut Toplitzer
 
 
 .. |makinacom| image:: http://depot.makina-corpus.org/public/logo.gif

@@ -99,7 +99,7 @@ and if the form is submitted the validation failed:
 
 Define a first question. Each question with be a string like this: "The question::The answer".
 
-    >>> question_1 = u'What is 10 + 4?'
+    >>> question_1 = u'Hé, What is 10 + 4?' # include a non-ascii char
     >>> answer_1 = u'14'
     >>> norobots_settings.questions = (u'%s::%s' % (question_1, answer_1),)
 
@@ -108,17 +108,18 @@ Render the widget:
 Note that the returned question is selected randomly from the available
 question, but we actually have only one question, so:
 
-    # Tthe widget may be rendered differently but it is always the same (depends on the Plone version)
+    # The widget may be rendered differently but it is always the same (depends on the Plone version)
     >>> foo_form.widgets['norobots'].render() in [
-    ...       u'\n\t\n  <strong><span>Question</span></strong>:\n  <span>What is 10 + 4?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  \n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n                     \n  <input type="hidden" name="question_id" value="question0" />\n  <input type="hidden" name="id_check" value="3695617e2ff7d4255c88de0b857e5b9f" />\n         \n'
+    ...       u'\n\t\n  <strong><span>Question</span></strong>:\n  <span>H\xc3\xa9, What is 10 + 4?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  \n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n                     \n  <input type="hidden" name="question_id" value="question0" />\n  <input type="hidden" name="id_check" value="d382e1617bad3a3380d355985878bf62" />\n         \n'
     ...       ]
     True
+    >>> temp_id_check = 'd382e1617bad3a3380d355985878bf62'
 
 Submit the form with a bad answer:
 
     >>> request = TestRequest(form={
     ...     'question_id': 'question0',
-    ...     'id_check': '3695617e2ff7d4255c88de0b857e5b9f',
+    ...     'id_check': temp_id_check,
     ...     'form.widgets.norobots': u'bad answer'}
     ...     )
     >>> alsoProvides(request, IAttributeAnnotatable)
@@ -135,7 +136,7 @@ Submit the form with a good answer:
 
     >>> request = TestRequest(form={
     ...     'question_id': 'question0',
-    ...     'id_check': '3695617e2ff7d4255c88de0b857e5b9f',
+    ...     'id_check': temp_id_check,
     ...     'form.widgets.norobots': u'14'}
     ...     )
     >>> alsoProvides(request, IAttributeAnnotatable)
@@ -150,7 +151,7 @@ Submit the form with a bad id_check:
 
     >>> request = TestRequest(form={
     ...     'question_id': 'question0',
-    ...     'id_check': 'BAD-3695617e2ff7d4255c88de0b857e5b9f',
+    ...     'id_check': 'BAD-%s' % temp_id_check,
     ...     'form.widgets.norobots': u'14'}
     ...     )
     >>> alsoProvides(request, IAttributeAnnotatable)
@@ -196,10 +197,11 @@ Example: "What is 5+5?::10; ten".
     >>> questions = list(norobots_settings.questions)
     >>> questions.append(u'%s::%s' % (question, answer))
     >>> norobots_settings.questions = tuple(questions)
+    >>> temp_id_check = 'd18f7fcb669087ae51905a05875e94f3'
 
     >>> request = TestRequest(form={
     ...     'question_id': 'question21',
-    ...     'id_check': 'd18f7fcb669087ae51905a05875e94f3',
+    ...     'id_check': temp_id_check,
     ...     'form.widgets.norobots': u'10'}
     ...     )
     >>> alsoProvides(request, IAttributeAnnotatable)
@@ -212,7 +214,7 @@ Example: "What is 5+5?::10; ten".
 
     >>> request = TestRequest(form={
     ...     'question_id': 'question21',
-    ...     'id_check': 'd18f7fcb669087ae51905a05875e94f3',
+    ...     'id_check': temp_id_check,
     ...     'form.widgets.norobots': u'ten'}
     ...     )
     >>> alsoProvides(request, IAttributeAnnotatable)
@@ -225,7 +227,7 @@ Example: "What is 5+5?::10; ten".
 
     >>> request = TestRequest(form={
     ...     'question_id': 'question21',
-    ...     'id_check': 'd18f7fcb669087ae51905a05875e94f3',
+    ...     'id_check': temp_id_check,
     ...     'form.widgets.norobots': u'TEN'}
     ...     )
     >>> alsoProvides(request, IAttributeAnnotatable)
