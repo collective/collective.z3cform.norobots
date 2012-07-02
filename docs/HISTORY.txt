@@ -1,7 +1,7 @@
 Changelog
 ------------
 
-1.4.1 (unreleased)
+1.4.1 (2012-07-02)
 ~~~~~~~~~~~~~~~~~~
 
 - Fix Unicode error when a question contains non-ascii char.
