@@ -1,6 +1,6 @@
 <tal:var define="question view/get_question">
 	
-  <strong><span i18n:translate="">Question</span></strong>:
+  <strong><span i18n:translate="" i18n:domain="collective.z3cform.norobots">Question</span></strong>:
   <span i18n:translate="" i18n:domain="collective.z3cform.norobots"
         tal:content="python:question['title']" /><br />
 
