@@ -9,6 +9,9 @@ from z3c.form import widget
 class INorobotsWidget(z3cFormInterfaces.IWidget):
     """Marker interface for th norobots widget
     """
+    
+    def get_question():
+        """ """
 
 class NorobotsWidget(text.TextWidget):
     maxlength = 200
