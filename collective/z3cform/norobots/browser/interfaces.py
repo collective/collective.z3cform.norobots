@@ -32,8 +32,11 @@ class INorobotsView(Interface):
     def get_question():
         """Return a random question: {'id': '...', 'title': '...', 'id_check': '...'}"""
 
-    def verify(input, question_id, id_check):
+    def verify(input, question_id=None, id_check=None):
         """Verify the user-supplied input for a question id and is corresponding id_check.
+
+        If question_id is None, the question id is find in REQUEST.form['question_id'].
+        If id_check is None, the question id is find in REQUEST.form['id_check'].
 
         Returns a boolean value indicating if the input matched
         """

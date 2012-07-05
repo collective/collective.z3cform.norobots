@@ -78,15 +78,25 @@ class Norobots(BrowserView):
                     'id_check': ''}
             
 
-    def verify(self, input):
+    def verify(self, input, question_id=None, id_check=None):
         # See interfaces/INorobotsView
+        
+        # user's answer
         input = str(input).lower()
+        
+        # question id and is corresponding id check
         form = self.request.form
-        question_id = form.get('question_id', '')
-        id_check = form.get('id_check', '')
+        
+        if question_id is None:
+            question_id = form.get('question_id', '')
+        
+        if id_check is None:
+            id_check = form.get('id_check', '')
 
+        # verify the answer
         questions = self._get_questions_dict()
         title, answers = questions.get(question_id, ('', ''))
+        
         if not (self._hashTitle(title) == id_check and input in answers):
             return False
         return True
