@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
 "POT-Creation-Date: 2012-06-18 07:58+0000\n"
-"PO-Revision-Date: 2012-05-29 17:04+0100\n"
+"PO-Revision-Date: 2012-07-12 12:22+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,16 +45,16 @@ msgstr "Izena"
 
 #: ./browser/interfaces.py:9
 msgid "Norobots question::answer"
-msgstr ""
+msgstr "Galdera::erantzuna"
 
 #: ./browser/controlpanel.py:17
 #: ./profiles/default/controlpanel.xml
 msgid "Norobots widget settings"
-msgstr ""
+msgstr "Norobots captcha sistemaren konfigurazioa"
 
 #: ./plone_forms/contact_info.py:82
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
-msgstr """Zuzendu adierazten diren erroreak eta ez ahaztu "Gizakia zara?" galderari erantzutea."""
+msgstr "Zuzendu adierazten diren erroreak eta ez ahaztu 'Gizakia zara?' galderari erantzutea."
 
 #: ./plone_forms/contact_info.py:29
 msgid "Please enter the message you want to send."
@@ -66,7 +66,7 @@ msgstr "Bidali nahi duzun mezuaren gaia idatzi"
 
 #: ./plone_forms/contact_info.py:20
 msgid "Please enter your e-mail address."
-msgstr "Idatzi zzure e-posta"
+msgstr "Idatzi zure e-posta"
 
 #: ./plone_forms/contact_info.py:16
 msgid "Please enter your full name."
@@ -78,7 +78,7 @@ msgstr "Galdera"
 
 #: ./browser/interfaces.py:10
 msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
-msgstr ""
+msgstr "Galderak (bat lerro bakoitzean). Adibidez: 'Zenbat da 10 + 12?:22'. Erantzunak balio bat baino gehiago izan dezake, puntu eta koma karakterearekin banatuta. Adibidez: 'Zenbat da 5 + 5?::10;hamar'."
 
 #: ./plone_forms/contact_info.py:77
 msgid "Send"
@@ -102,7 +102,7 @@ msgstr "Zenbat da 4+4?"
 
 #: ./browser/interfaces.py:16
 msgid "Write five cipher."
-msgstr """Idatzi "bost" zenbakiak erabiliz."""
+msgstr "Idatzi 'bost' zenbakiak erabiliz."
 
 #: ./validator.py:12
 msgid "You entered a wrong answer, please answer the new question below."
@@ -110,7 +110,7 @@ msgstr "Okerreko erantzuna eman duzu. "
 
 #: ./plone_forms/constraints.py:10
 msgid "You entered an invalid email address."
-msgstr ""
+msgstr "E-posta helbidea ez da zuzena"
 
 #: ./norobots_input.pt:17
 msgid "Your answer"
