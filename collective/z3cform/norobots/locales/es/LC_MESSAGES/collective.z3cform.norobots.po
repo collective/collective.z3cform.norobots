@@ -1,10 +1,13 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
 "POT-Creation-Date: 2012-06-18 07:58+0000\n"
-"PO-Revision-Date: 2012-07-12 12:22+0100\n"
+"PO-Revision-Date: 2012-07-12 12:43+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
-"Language-Team: eu <eu@li.org>\n"
+"Language-Team: es <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,106 +16,106 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.z3cform.norobots\n"
-"X-Poedit-Language: Basque\n"
+"X-Poedit-Language: Spanish\n"
 
 #: ./plone_forms/contact_info.py:32
 msgid "Are you a human ?"
-msgstr "Gizakia zara?"
+msgstr "¿Es humano?"
 
 #: ./plone_forms/contact_info.py:41
 msgid "Contact form"
-msgstr "Kontaktu formularioa"
+msgstr "Formulario de contacto"
 
 #: ./plone_forms/contact_info.py:19
 msgid "E-Mail"
-msgstr "E-posta"
+msgstr "E-mail"
 
 #: ./plone_forms/contact_info.py:33
 msgid "In order to avoid spam, please answer the question below."
-msgstr "Spama ekiditeko metodoa da hau, erantzun beheko galderari mesedez."
+msgstr "Para evitar el spam, responda a la siguiente pregunta por favor."
 
 #: ./plone_forms/contact_info.py:131
 msgid "Mail sent."
-msgstr "Mezua ondo bidali da"
+msgstr "Mensaje enviado."
 
 #: ./plone_forms/contact_info.py:28
 msgid "Message"
-msgstr "Mezua"
+msgstr "Mensaje"
 
 #: ./plone_forms/contact_info.py:15
 msgid "Name"
-msgstr "Izena"
+msgstr "Nombre"
 
 #: ./browser/interfaces.py:9
 msgid "Norobots question::answer"
-msgstr "Galdera::erantzuna"
+msgstr "Pregunta::respuesta"
 
 #: ./browser/controlpanel.py:17
 #: ./profiles/default/controlpanel.xml
 msgid "Norobots widget settings"
-msgstr "Norobots captcha sistemaren konfigurazioa"
+msgstr "Configuración del captcha Norobots"
 
 #: ./plone_forms/contact_info.py:82
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
-msgstr "Zuzendu adierazten diren erroreak eta ez ahaztu 'Gizakia zara?' galderari erantzutea."
+msgstr "Corrija los errores indicados y no olvide rellenar el campo '¿Es humano?'"
 
 #: ./plone_forms/contact_info.py:29
 msgid "Please enter the message you want to send."
-msgstr "Bidali beharrekoa"
+msgstr "Introduzca el mensaje que desea enviar."
 
 #: ./plone_forms/contact_info.py:25
 msgid "Please enter the subject of the message you want to send."
-msgstr "Bidali nahi duzun mezuaren gaia idatzi"
+msgstr "Introduzca el asunto del mensaje que desea enviar."
 
 #: ./plone_forms/contact_info.py:20
 msgid "Please enter your e-mail address."
-msgstr "Idatzi zure e-posta"
+msgstr "Introduzca su dirección de correo electrónico."
 
 #: ./plone_forms/contact_info.py:16
 msgid "Please enter your full name."
-msgstr "Idatzi zure izena"
+msgstr "Introduzca su nombre."
 
 #: ./norobots_input.pt:13
 msgid "Question"
-msgstr "Galdera"
+msgstr "Pregunta"
 
 #: ./browser/interfaces.py:10
 msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
-msgstr "Galderak (bat lerro bakoitzean). Adibidez: 'Zenbat da 10 + 12?:22'. Erantzunak balio bat baino gehiago izan dezake, puntu eta koma karakterearekin banatuta. Adibidez: 'Zenbat da 5 + 5?::10;hamar'."
+msgstr "Lista de preguntas (una por línea). P.ej.: '¿Cuánto es 10 + 12?::22'. La respuesta puede contener varios valores separados por punto y coma. P.ej.: '¿Cuánto es 5 + 5?::10; diez'."
 
 #: ./plone_forms/contact_info.py:77
 msgid "Send"
-msgstr "Bidali"
+msgstr "Enviar"
 
 #: ./plone_forms/contact_info.py:24
 msgid "Subject"
-msgstr "Gaia"
+msgstr "Asunto"
 
 #: ./plone_forms/contact_info.py:126
 msgid "Unable to send mail: ${exception}"
-msgstr "Ezin izan da mezua bidali: ${exception}"
+msgstr "No ha sido posible enviar el mensaje: ${exception}"
 
 #: ./browser/interfaces.py:15
 msgid "What is 10 + 4 ?"
-msgstr "Zenbat da 10+4?"
+msgstr "¿Cuánto es 10 + 4?"
 
 #: ./browser/interfaces.py:14
 msgid "What is 4 + 4 ?"
-msgstr "Zenbat da 4+4?"
+msgstr "¿Cuánto es 4 + 4?"
 
 #: ./browser/interfaces.py:16
 msgid "Write five cipher."
-msgstr "Idatzi 'bost' zenbakiak erabiliz."
+msgstr "Escriba cinco utilizando números."
 
 #: ./validator.py:12
 msgid "You entered a wrong answer, please answer the new question below."
-msgstr "Okerreko erantzuna eman duzu. "
+msgstr "Ha introducido una respuesta incorrecta, responda a la siguiente pregunta por favor."
 
 #: ./plone_forms/constraints.py:10
 msgid "You entered an invalid email address."
-msgstr "E-posta helbidea ez da zuzena"
+msgstr "Ha introducido una dirección de correo electrónico no válida."
 
 #: ./norobots_input.pt:17
 msgid "Your answer"
-msgstr "Erantzuna"
+msgstr "Su respuesta"
 
