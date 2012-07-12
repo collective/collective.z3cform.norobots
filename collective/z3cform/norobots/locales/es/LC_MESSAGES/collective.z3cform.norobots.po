@@ -1,0 +1,121 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.z3cform.norobots\n"
+"POT-Creation-Date: 2012-06-18 07:58+0000\n"
+"PO-Revision-Date: 2012-07-12 12:43+0100\n"
+"Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
+"Language-Team: es <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.z3cform.norobots\n"
+"X-Poedit-Language: Spanish\n"
+
+#: ./plone_forms/contact_info.py:32
+msgid "Are you a human ?"
+msgstr "¿Es humano?"
+
+#: ./plone_forms/contact_info.py:41
+msgid "Contact form"
+msgstr "Formulario de contacto"
+
+#: ./plone_forms/contact_info.py:19
+msgid "E-Mail"
+msgstr "E-mail"
+
+#: ./plone_forms/contact_info.py:33
+msgid "In order to avoid spam, please answer the question below."
+msgstr "Para evitar el spam, responda a la siguiente pregunta por favor."
+
+#: ./plone_forms/contact_info.py:131
+msgid "Mail sent."
+msgstr "Mensaje enviado."
+
+#: ./plone_forms/contact_info.py:28
+msgid "Message"
+msgstr "Mensaje"
+
+#: ./plone_forms/contact_info.py:15
+msgid "Name"
+msgstr "Nombre"
+
+#: ./browser/interfaces.py:9
+msgid "Norobots question::answer"
+msgstr "Pregunta::respuesta"
+
+#: ./browser/controlpanel.py:17
+#: ./profiles/default/controlpanel.xml
+msgid "Norobots widget settings"
+msgstr "Configuración del captcha Norobots"
+
+#: ./plone_forms/contact_info.py:82
+msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
+msgstr "Corrija los errores indicados y no olvide rellenar el campo '¿Es humano?'"
+
+#: ./plone_forms/contact_info.py:29
+msgid "Please enter the message you want to send."
+msgstr "Introduzca el mensaje que desea enviar."
+
+#: ./plone_forms/contact_info.py:25
+msgid "Please enter the subject of the message you want to send."
+msgstr "Introduzca el asunto del mensaje que desea enviar."
+
+#: ./plone_forms/contact_info.py:20
+msgid "Please enter your e-mail address."
+msgstr "Introduzca su dirección de correo electrónico."
+
+#: ./plone_forms/contact_info.py:16
+msgid "Please enter your full name."
+msgstr "Introduzca su nombre."
+
+#: ./norobots_input.pt:13
+msgid "Question"
+msgstr "Pregunta"
+
+#: ./browser/interfaces.py:10
+msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
+msgstr "Lista de preguntas (una por línea). P.ej.: '¿Cuánto es 10 + 12?::22'. La respuesta puede contener varios valores separados por punto y coma. P.ej.: '¿Cuánto es 5 + 5?::10; diez'."
+
+#: ./plone_forms/contact_info.py:77
+msgid "Send"
+msgstr "Enviar"
+
+#: ./plone_forms/contact_info.py:24
+msgid "Subject"
+msgstr "Asunto"
+
+#: ./plone_forms/contact_info.py:126
+msgid "Unable to send mail: ${exception}"
+msgstr "No ha sido posible enviar el mensaje: ${exception}"
+
+#: ./browser/interfaces.py:15
+msgid "What is 10 + 4 ?"
+msgstr "¿Cuánto es 10 + 4?"
+
+#: ./browser/interfaces.py:14
+msgid "What is 4 + 4 ?"
+msgstr "¿Cuánto es 4 + 4?"
+
+#: ./browser/interfaces.py:16
+msgid "Write five cipher."
+msgstr "Escriba cinco utilizando números."
+
+#: ./validator.py:12
+msgid "You entered a wrong answer, please answer the new question below."
+msgstr "Ha introducido una respuesta incorrecta, responda a la siguiente pregunta por favor."
+
+#: ./plone_forms/constraints.py:10
+msgid "You entered an invalid email address."
+msgstr "Ha introducido una dirección de correo electrónico no válida."
+
+#: ./norobots_input.pt:17
+msgid "Your answer"
+msgstr "Su respuesta"
+
