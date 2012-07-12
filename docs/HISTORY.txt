@@ -4,8 +4,8 @@ Changelog
 1.4.2 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
-- Added Spanish translation [erral]
-
+- Updated basque translation and added Spanish translation.
+  [erral]
 
 1.4.1 (2012-07-02)
 ~~~~~~~~~~~~~~~~~~

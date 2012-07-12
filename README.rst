@@ -20,7 +20,7 @@ Since version 1.4, questions configuration uses a dedicated control panel (using
 instead of a simple properties sheet. An upgrade step provides migration from earlier versions.
 
 Interface is translated in the following languages: Czech [cs], Danish [da], German [de],
-Basque [eu], Suomeksi [fi], French [fr] and Simplified Chinese [zh_CN].
+Basque [eu], Spanish [es], Suomeksi [fi], French [fr] and Simplified Chinese [zh_CN].
 => Some strings have been added in 1.4, need to be translated.
 
 Requirements
