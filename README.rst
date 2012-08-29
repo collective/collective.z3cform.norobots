@@ -174,9 +174,19 @@ Credits
 -----------------
 |makinacom|_
 
-* Sylvain Boureliou [sylvainb]
+* Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <http://www.asilax.fr/>`_
 * `Planet Makina Corpus <http://www.makina-corpus.org>`_
 * `Contact us <mailto:python@makina-corpus.org>`_
+
+Source code
+-----------
+
+`Source code <https://github.com/sylvainb/collective.z3cform.norobots>`_ is hosted on Github.
+
+How to contribute and submit a patch ?
+--------------------------------------
+
+`Source code <https://github.com/sylvainb/collective.z3cform.norobots>`_ and an `issue tracker <https://github.com/sylvainb/collective.z3cform.norobots/issues>`_ is hosted on Github.
 
 Contributors
 -----------------

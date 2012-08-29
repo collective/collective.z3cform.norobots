@@ -1,8 +1,4 @@
-include test-plone-4.0.x.cfg
-include test-plone-4.1.x.cfg
-include README.rst
-include bootstrap.py
-include .gitignore
 recursive-include collective *
 recursive-include docs *
+include *
 global-exclude *pyc
