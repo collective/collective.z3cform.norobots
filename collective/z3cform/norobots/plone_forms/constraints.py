@@ -4,7 +4,7 @@ import re
 
 from zope import schema
 
-from collective.z3cform.norobots.i18n import MessageFactory as _
+from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 
 class IsEmailError(schema.ValidationError):
     __doc__ = _("""You entered an invalid email address.""")

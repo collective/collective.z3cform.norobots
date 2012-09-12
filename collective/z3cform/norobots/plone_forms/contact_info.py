@@ -5,7 +5,7 @@ from plone.app.z3cform.layout import wrap_form
 from Products.CMFCore.utils import getToolByName
 from ZODB.POSException import ConflictError
 
-from collective.z3cform.norobots.i18n import MessageFactory as _
+from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 from collective.z3cform.norobots.plone_forms import constraints
 from collective.z3cform.norobots.widget import NorobotsFieldWidget
 from collective.z3cform.norobots.validator import NorobotsValidator

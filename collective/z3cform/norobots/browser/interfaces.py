@@ -1,7 +1,7 @@
 from zope.interface import Interface
 from zope import schema
 
-from collective.z3cform.norobots.i18n import MessageFactory as _
+from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 
 class INorobotsWidgetSettings(Interface):
     """plone.app.registry settings 
