@@ -4,6 +4,8 @@ Changelog
 1.4.2 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- Change MessageFactory name to get translations picked up by Plone [erral]
+
 - Added Spanish translation [erral]
 
 
