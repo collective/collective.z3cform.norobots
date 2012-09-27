@@ -4,8 +4,21 @@ Changelog
 1.4.2 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- Add compatibility for collective.pfg.norobots : allow to use the Norobots captcha with PloneFormGen.
+  [sylvainb]
+
+- Fix widget template to allow good redirection when the answer is bad in plone.app.discussion forms.
+  [sylvainb]
+
+- Move source code in "src" directory.
+  [sylvainb]
+
+- Update tests, buildouts and add test coverage. Plone 4.0 is no longer supported.
+  [sylvainb]
+  
 - Change MessageFactory name to get translations picked up by Plone
   [erral]
+
 - Updated basque translation and added Spanish translation.
   [erral]
 

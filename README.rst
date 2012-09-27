@@ -11,8 +11,13 @@ Overview
 ``collective.z3cform.norobots`` provides a "human" captcha widget based on a list of
 question/answer(s).
 
-This captcha can be used as a ``plone.app.discussion`` (Plone Discussions) captcha 
-plugin and in all z3c forms.
+This captcha can be used : 
+
+    * as a ``plone.app.discussion`` (Plone Discussions) captcha plugin 
+    
+    * as a ``z3c form`` field
+    
+    * as a PloneFormGen field with `collective.pfg.norobots`_
 
 The widget is based on z3c.form.TextWidget.
 
@@ -21,16 +26,14 @@ instead of a simple properties sheet. An upgrade step provides migration from ea
 
 Interface is translated in the following languages: Czech [cs], Danish [da], German [de],
 Basque [eu], Spanish [es], Suomeksi [fi], French [fr] and Simplified Chinese [zh_CN].
-=> Some strings have been added in 1.4, need to be translated.
 
 Requirements
 ------------
 
-    * I have tested with Plone 4.1.5 and Plone 4.0.10 (http://plone.org/products/plone).
-    
-    * For Plone 4.0 : ``plone.app.z3form``, ``plone.app.registry``, and ``plone.app.discussion`` to 
-      use the captcha for anonymous comments in Plone Discussions. See bellow.
-    
+I have tested this release with Plone 4.1.6, Plone 4.2.1.1 and Plone 4.3a1 (http://plone.org/products/plone).
+
+See previous releases for Plone 4.0.
+
 Screenshot
 ------------
 
@@ -72,22 +75,7 @@ Or, you can add it as a dependency on your own product *setup.py*::
 Enabling the module
 ~~~~~~~~~~~~~~~~~~~~
 
-*For Plone 4.1.x*:
-
-- In the Addons control panel, install "Norobots captcha field (collective.z3cform.norobots)".
-
-*For Plone 4.0.x*: 
-
-- If you want to use the captcha for anonymous comments with Plone Discussions, add ``plone.app.discussion`` < 2.0 in your buildout. 
-  See `plone.app.discussion 1.1.4`_. Plone Discussions is include in Plone 4.1.
-
-- ``plone.app.registry`` is not include in Plone, so you need to add an extra version restriction in your buildout (used by the settings control panel). 
-  Example for Plone 4.0.10 : http://good-py.appspot.com/release/plone.app.registry/1.0b2?plone=4.0.10 
-
-- ``plone.app.z3cform`` is not include in Plone, so you need to add an extra version restriction in your buildout. 
-  Example for Plone 4.0.10 : http://good-py.appspot.com/release/plone.app.z3cform/0.5.0?plone=4.0.10
-
-- In the Addons control panel, install "Configuration registry" then "Norobots captcha field (collective.z3cform.norobots)".
+    In the Addons control panel, install "Norobots captcha field (collective.z3cform.norobots)".
 
 Add a new question
 ~~~~~~~~~~~~~~~~~~~~
@@ -111,60 +99,63 @@ Quickly test ?
 
 Download ``collective.z3cform.norobots`` and use ``virtualenv`` and ``buildout`` to test the module::
 
-	easy_install virtualenv
-	cd collective.z3cform.norobots
-	virtualenv .
-	source bin/activate
-	(collective.z3cform.norobots) easy_install zc.buildout 
-	!!! check the buildout content before running !!!
-	(collective.z3cform.norobots) ln -s test-plone-4.1.x.cfg buildout.cfg 
-	(collective.z3cform.norobots) python bootstrap.py
-	(collective.z3cform.norobots) bin/buildout
-	[...] be patient... [...]
-	(collective.z3cform.norobots) ./bin/instance fg
+    easy_install virtualenv
+    cd collective.z3cform.norobots
+    virtualenv .
+    source bin/activate
+    (collective.z3cform.norobots) easy_install zc.buildout 
+    !!! check the buildout config file ``test-plone-base.cfg`` before running !!!
+    (collective.z3cform.norobots) ln -s test-plone-4.2.x.cfg buildout.cfg 
+    (collective.z3cform.norobots) python bootstrap.py
+    (collective.z3cform.norobots) bin/buildout
+    [...] be patient... [...]
+    (collective.z3cform.norobots) ./bin/instance fg
 
 Go to http://localhost:8080, add a new Plone Site and install collective.z3cform.norobots (see above).
 
 Launch tests::
 
-	(collective.z3cform.norobots) ./bin/test -s collective.z3cform.norobots
-	
+    (collective.z3cform.norobots) ./bin/test -s collective.z3cform.norobots
+
+Launch code coverage::
+
+    (collective.z3cform.norobots) bin/coverage
+    (collective.z3cform.norobots) bin/report
+    And open with a browser htmlcov/index.html
+
 Usage in a z3c form
 -------------------
 
 You can use this widget setting the "widgetFactory" property of a form field:
 ::
 
-        from zope import interface, schema
-        from z3c.form import interfaces, form, field, button, validator
-        from plone.app.z3cform.layout import wrap_form
+    from zope import interface, schema
+    from z3c.form import interfaces, form, field, button, validator
+    from plone.app.z3cform.layout import wrap_form
 
-        from collective.z3cform.norobots.i18n import MessageFactory as _
-        from collective.z3cform.norobots.widget import NorobotsFieldWidget
-        from collective.z3cform.norobots.validator import NorobotsValidator
+    from collective.z3cform.norobots.i18n import MessageFactory as _
+    from collective.z3cform.norobots.widget import NorobotsFieldWidget
+    from collective.z3cform.norobots.validator import NorobotsValidator
 
-        class INorobotsForm(interface.Interface):
-            norobots = schema.TextLine(title=_(u'Are you a human ?'),
-                                       description=_(u'In order to avoid spam, please answer the question below.'),
-                                       required=True)
+    class INorobotsForm(interface.Interface):
+        norobots = schema.TextLine(title=_(u'Are you a human ?'),
+                                   description=_(u'In order to avoid spam, please answer the question below.'),
+                                   required=True)
 
-        class NorobotsForm(form.Form):
-            fields = field.Fields(INorobotsForm)
-            fields['norobots'].widgetFactory = NorobotsFieldWidget
+    class NorobotsForm(form.Form):
+        fields = field.Fields(INorobotsForm)
+        fields['norobots'].widgetFactory = NorobotsFieldWidget
 
-        # wrap the form with plone.app.z3cform's Form wrapper
-        NorobotsFormView = wrap_form(NorobotsForm)
+    # wrap the form with plone.app.z3cform's Form wrapper
+    NorobotsFormView = wrap_form(NorobotsForm)
 
-        # Register Norobots validator for the correponding field in the IContactInfo interface
-        validator.WidgetValidatorDiscriminators(NorobotsValidator, field=INorobotsForm['norobots'])
+    # Register Norobots validator for the correponding field in the IContactInfo interface
+    validator.WidgetValidatorDiscriminators(NorobotsValidator, field=INorobotsForm['norobots'])
 
 for more information see ``contact_info.py`` in the ``plone_forms`` directory.
 
 Possible problems
 -----------------
-
-  * Plone 4.0.x : I have the following error: "We already have: zope.schema 3.5.4 but z3c.form 2.4.1 requires 'zope.schema>=3.6.0'."
-    => You should add this extra version restriction to your buildout: http://good-py.appspot.com/release/plone.app.z3cform/0.5.0
 
   * I have the following error when launching the tests: "ImportError: No module named lxml.html"
     => In order to run the tests you need lxml. You can add for example 
@@ -172,10 +163,9 @@ Possible problems
 
 Credits
 -----------------
-|makinacom|_
 
 * Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <http://www.asilax.fr/>`_
-* `Planet Makina Corpus <http://www.makina-corpus.org>`_
+* `Planet Makina Corpus <http://www.makina-corpus.org>`_ - `Makina Corpus <http://www.makina-corpus.com>`_
 * `Contact us <mailto:python@makina-corpus.org>`_
 
 Source code
@@ -199,7 +189,5 @@ Contributors
 * Petri Savolainen [petri]
 * Helmut Toplitzer
 
-
-.. |makinacom| image:: http://depot.makina-corpus.org/public/logo.gif
-.. _makinacom:  http://www.makina-corpus.com
 .. _`plone.app.discussion 1.1.4`: http://pypi.python.org/pypi/plone.app.discussion/1.1.4
+.. _`collective.pfg.norobots`: http://pypi.python.org/pypi/collective.pfg.norobots
