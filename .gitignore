@@ -4,6 +4,8 @@
 *.EGG
 *.EGG-INFO
 .DS_STORE
+htmlcov
+.coverage
 bin
 lib
 include
