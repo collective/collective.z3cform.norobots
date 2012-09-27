@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2012-06-18 07:58+0000\n"
+"POT-Creation-Date: 2012-09-27 13:38+0000\n"
 "PO-Revision-Date: 2011-03-25 12:56+0100\n"
 "Last-Translator: Thomas Clement Mogensen <tmog@headnet.dk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Are you a human ?"
 msgstr "Bekræft at du ikke er en robot"
 
-#: ./plone_forms/contact_info.py:41
+#: ./plone_forms/contact_info.py:42
 msgid "Contact form"
 msgstr "Kontaktformular"
 
@@ -34,7 +34,7 @@ msgstr "E-mailadresse"
 msgid "In order to avoid spam, please answer the question below."
 msgstr "For at bekræfte du ikke er en robot, beder vi dig svare på nedenstående spørgsmål."
 
-#: ./plone_forms/contact_info.py:131
+#: ./plone_forms/contact_info.py:132
 msgid "Mail sent."
 msgstr "E-mail sendt."
 
@@ -46,6 +46,10 @@ msgstr "Besked"
 msgid "Name"
 msgstr "Navn"
 
+#: Profile title in configure.zcml
+msgid "Norobots captcha field (collective.z3cform.norobots)"
+msgstr ""
+
 #: ./browser/interfaces.py:9
 msgid "Norobots question::answer"
 msgstr ""
@@ -55,7 +59,7 @@ msgstr ""
 msgid "Norobots widget settings"
 msgstr ""
 
-#: ./plone_forms/contact_info.py:82
+#: ./plone_forms/contact_info.py:83
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr "Vær venlig at rette markerede fejl"
 
@@ -76,7 +80,7 @@ msgid "Please enter your full name."
 msgstr "Indtast fuldt navn"
 
 #. Default: "Question"
-#: ./norobots_input.pt:13
+#: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Spørgsmål"
 
@@ -92,7 +96,7 @@ msgstr "Send"
 msgid "Subject"
 msgstr "Emne"
 
-#: ./plone_forms/contact_info.py:126
+#: ./plone_forms/contact_info.py:127
 msgid "Unable to send mail: ${exception}"
 msgstr "E-mail kunne ikke afsendes: ${exception}"
 
@@ -117,7 +121,11 @@ msgid "You entered an invalid email address."
 msgstr "You entered an invalid email address"
 
 #. Default: "Your answer"
-#: ./norobots_input.pt:17
+#: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "Dit svar"
+
+#: Profile description in configure.zcml
+msgid "collective.z3cform.norobots default profile"
+msgstr ""
 

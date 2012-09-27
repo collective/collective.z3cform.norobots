@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nocaptcha\n"
-"POT-Creation-Date: 2012-06-18 07:58+0000\n"
+"POT-Creation-Date: 2012-09-27 13:38+0000\n"
 "PO-Revision-Date: 2010-10-09 12:32+0100\n"
 "Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
 "Language-Team: Czech <info@dms4u.cz>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Are you a human ?"
 msgstr "Jste člověk?"
 
-#: ./plone_forms/contact_info.py:41
+#: ./plone_forms/contact_info.py:42
 msgid "Contact form"
 msgstr "Kontaktní formulář"
 
@@ -30,7 +30,7 @@ msgstr "E-Mail"
 msgid "In order to avoid spam, please answer the question below."
 msgstr "Zadejte prosím odpověď na níže uvedenou otázku. Jedná se o ochranu proti nevyžádaným příspěvkům."
 
-#: ./plone_forms/contact_info.py:131
+#: ./plone_forms/contact_info.py:132
 msgid "Mail sent."
 msgstr "Email byl odeslán"
 
@@ -42,6 +42,10 @@ msgstr "Zpráva"
 msgid "Name"
 msgstr "Jméno"
 
+#: Profile title in configure.zcml
+msgid "Norobots captcha field (collective.z3cform.norobots)"
+msgstr ""
+
 #: ./browser/interfaces.py:9
 msgid "Norobots question::answer"
 msgstr ""
@@ -51,7 +55,7 @@ msgstr ""
 msgid "Norobots widget settings"
 msgstr ""
 
-#: ./plone_forms/contact_info.py:82
+#: ./plone_forms/contact_info.py:83
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr """Opravte prosím vyznačené chyby a nezapoměňte vyplnit pole "Jste člověk?" """
 
@@ -71,7 +75,7 @@ msgstr "Zadejte prosím vaši email adresu"
 msgid "Please enter your full name."
 msgstr "Zadejte prosím vaše jméno"
 
-#: ./norobots_input.pt:13
+#: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Otázka"
 
@@ -87,7 +91,7 @@ msgstr "Odeslat"
 msgid "Subject"
 msgstr "Předmět"
 
-#: ./plone_forms/contact_info.py:126
+#: ./plone_forms/contact_info.py:127
 msgid "Unable to send mail: ${exception}"
 msgstr "Nepodařilo se odeslat email: ${exception}"
 
@@ -111,7 +115,11 @@ msgstr "Nesprávná odpověď. Odpovězte prosím na další otázku."
 msgid "You entered an invalid email address."
 msgstr ""
 
-#: ./norobots_input.pt:17
+#: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "Vaše odpověď"
+
+#: Profile description in configure.zcml
+msgid "collective.z3cform.norobots default profile"
+msgstr ""
 

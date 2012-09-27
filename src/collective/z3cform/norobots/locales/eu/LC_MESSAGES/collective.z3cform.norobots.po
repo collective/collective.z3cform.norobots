@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2012-06-18 07:58+0000\n"
+"POT-Creation-Date: 2012-09-27 13:38+0000\n"
 "PO-Revision-Date: 2012-07-12 12:22+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Are you a human ?"
 msgstr "Gizakia zara?"
 
-#: ./plone_forms/contact_info.py:41
+#: ./plone_forms/contact_info.py:42
 msgid "Contact form"
 msgstr "Kontaktu formularioa"
 
@@ -31,7 +31,7 @@ msgstr "E-posta"
 msgid "In order to avoid spam, please answer the question below."
 msgstr "Spama ekiditeko metodoa da hau, erantzun beheko galderari mesedez."
 
-#: ./plone_forms/contact_info.py:131
+#: ./plone_forms/contact_info.py:132
 msgid "Mail sent."
 msgstr "Mezua ondo bidali da"
 
@@ -43,6 +43,10 @@ msgstr "Mezua"
 msgid "Name"
 msgstr "Izena"
 
+#: Profile title in configure.zcml
+msgid "Norobots captcha field (collective.z3cform.norobots)"
+msgstr ""
+
 #: ./browser/interfaces.py:9
 msgid "Norobots question::answer"
 msgstr "Galdera::erantzuna"
@@ -52,7 +56,7 @@ msgstr "Galdera::erantzuna"
 msgid "Norobots widget settings"
 msgstr "Norobots captcha sistemaren konfigurazioa"
 
-#: ./plone_forms/contact_info.py:82
+#: ./plone_forms/contact_info.py:83
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr "Zuzendu adierazten diren erroreak eta ez ahaztu 'Gizakia zara?' galderari erantzutea."
 
@@ -72,7 +76,7 @@ msgstr "Idatzi zure e-posta"
 msgid "Please enter your full name."
 msgstr "Idatzi zure izena"
 
-#: ./norobots_input.pt:13
+#: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Galdera"
 
@@ -88,7 +92,7 @@ msgstr "Bidali"
 msgid "Subject"
 msgstr "Gaia"
 
-#: ./plone_forms/contact_info.py:126
+#: ./plone_forms/contact_info.py:127
 msgid "Unable to send mail: ${exception}"
 msgstr "Ezin izan da mezua bidali: ${exception}"
 
@@ -112,7 +116,11 @@ msgstr "Okerreko erantzuna eman duzu. "
 msgid "You entered an invalid email address."
 msgstr "E-posta helbidea ez da zuzena"
 
-#: ./norobots_input.pt:17
+#: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "Erantzuna"
+
+#: Profile description in configure.zcml
+msgid "collective.z3cform.norobots default profile"
+msgstr ""
 

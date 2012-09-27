@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2012-06-18 07:58+0000\n"
+"POT-Creation-Date: 2012-09-27 13:38+0000\n"
 "PO-Revision-Date: 2012-03-27 17:27 +0800\n"
 "Last-Translator: Jian Aijun <jianaijun@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sf.net>\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Are you a human ?"
 msgstr "您是人类吗？"
 
-#: ./plone_forms/contact_info.py:41
+#: ./plone_forms/contact_info.py:42
 msgid "Contact form"
 msgstr "联系表"
 
@@ -32,7 +32,7 @@ msgstr "电子邮件"
 msgid "In order to avoid spam, please answer the question below."
 msgstr "为了避免垃圾邮件，请回答以下问题。"
 
-#: ./plone_forms/contact_info.py:131
+#: ./plone_forms/contact_info.py:132
 msgid "Mail sent."
 msgstr "发送邮件"
 
@@ -44,6 +44,10 @@ msgstr "内容"
 msgid "Name"
 msgstr "名称"
 
+#: Profile title in configure.zcml
+msgid "Norobots captcha field (collective.z3cform.norobots)"
+msgstr ""
+
 #: ./browser/interfaces.py:9
 msgid "Norobots question::answer"
 msgstr ""
@@ -53,7 +57,7 @@ msgstr ""
 msgid "Norobots widget settings"
 msgstr ""
 
-#: ./plone_forms/contact_info.py:82
+#: ./plone_forms/contact_info.py:83
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr """请更正指示的错误，别忘了填写字段 "您是人类吗？"。"""
 
@@ -73,7 +77,7 @@ msgstr "请输入您的电子邮件地址。"
 msgid "Please enter your full name."
 msgstr "请输入您的全名。"
 
-#: ./norobots_input.pt:13
+#: ./norobots_input.pt:3
 msgid "Question"
 msgstr "问题"
 
@@ -89,7 +93,7 @@ msgstr "发送"
 msgid "Subject"
 msgstr "主题"
 
-#: ./plone_forms/contact_info.py:126
+#: ./plone_forms/contact_info.py:127
 msgid "Unable to send mail: ${exception}"
 msgstr "无法发送邮件： ${exception}"
 
@@ -113,7 +117,11 @@ msgstr "您输入了错误的答案，请回答下面的新问题。"
 msgid "You entered an invalid email address."
 msgstr ""
 
-#: ./norobots_input.pt:17
+#: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "您的答案"
+
+#: Profile description in configure.zcml
+msgid "collective.z3cform.norobots default profile"
+msgstr ""
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-18 07:58+0000\n"
+"POT-Creation-Date: 2012-09-27 13:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.z3cform.norobots\n"
+"Domain: collective.pfg.norobots\n"
 
 #: ./plone_forms/contact_info.py:32
 msgid "Are you a human ?"
 msgstr ""
 
-#: ./plone_forms/contact_info.py:41
+#: ./plone_forms/contact_info.py:42
 msgid "Contact form"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 msgid "In order to avoid spam, please answer the question below."
 msgstr ""
 
-#: ./plone_forms/contact_info.py:131
+#: ./plone_forms/contact_info.py:132
 msgid "Mail sent."
 msgstr ""
 
@@ -45,6 +45,10 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
+#: Profile title in configure.zcml
+msgid "Norobots captcha field (collective.z3cform.norobots)"
+msgstr ""
+
 #: ./browser/interfaces.py:9
 msgid "Norobots question::answer"
 msgstr ""
@@ -54,7 +58,7 @@ msgstr ""
 msgid "Norobots widget settings"
 msgstr ""
 
-#: ./plone_forms/contact_info.py:82
+#: ./plone_forms/contact_info.py:83
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr ""
 
@@ -74,7 +78,7 @@ msgstr ""
 msgid "Please enter your full name."
 msgstr ""
 
-#: ./norobots_input.pt:13
+#: ./norobots_input.pt:3
 msgid "Question"
 msgstr ""
 
@@ -90,7 +94,7 @@ msgstr ""
 msgid "Subject"
 msgstr ""
 
-#: ./plone_forms/contact_info.py:126
+#: ./plone_forms/contact_info.py:127
 msgid "Unable to send mail: ${exception}"
 msgstr ""
 
@@ -114,7 +118,11 @@ msgstr ""
 msgid "You entered an invalid email address."
 msgstr ""
 
-#: ./norobots_input.pt:17
+#: ./norobots_input.pt:7
 msgid "Your answer"
+msgstr ""
+
+#: Profile description in configure.zcml
+msgid "collective.z3cform.norobots default profile"
 msgstr ""
 

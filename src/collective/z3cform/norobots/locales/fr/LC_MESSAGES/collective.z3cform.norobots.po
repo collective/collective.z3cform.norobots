@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2012-06-18 07:58+0000\n"
+"POT-Creation-Date: 2012-09-27 13:38+0000\n"
 "PO-Revision-Date: 2010-01-11 14:51+0200\n"
 "Last-Translator: Sylvain Boureliou <sylvain.boureliou@makina-corpus.com>\n"
 "Language-Team: French\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Are you a human ?"
 msgstr "Etes-vous un être humain ?"
 
-#: ./plone_forms/contact_info.py:41
+#: ./plone_forms/contact_info.py:42
 msgid "Contact form"
 msgstr "Formulaire de contact"
 
@@ -33,7 +33,7 @@ msgstr "Courriel"
 msgid "In order to avoid spam, please answer the question below."
 msgstr "Dans le but d'éviter l'envoi de spams, merci de répondre à la question ci-dessous."
 
-#: ./plone_forms/contact_info.py:131
+#: ./plone_forms/contact_info.py:132
 msgid "Mail sent."
 msgstr "Courriel envoyé"
 
@@ -45,6 +45,10 @@ msgstr "Message"
 msgid "Name"
 msgstr "Nom"
 
+#: Profile title in configure.zcml
+msgid "Norobots captcha field (collective.z3cform.norobots)"
+msgstr "Champ captcha Norobots (collective.z3cform.norobots)"
+
 #: ./browser/interfaces.py:9
 msgid "Norobots question::answer"
 msgstr "Questions/réponses"
@@ -54,7 +58,7 @@ msgstr "Questions/réponses"
 msgid "Norobots widget settings"
 msgstr "Captcha Norobots"
 
-#: ./plone_forms/contact_info.py:82
+#: ./plone_forms/contact_info.py:83
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr """Merci de corriger les erreurs indiquées et n'oubliez pas de remplir le champ "Etes-vous un être humain ?"."""
 
@@ -74,7 +78,7 @@ msgstr "Veuillez saisir votre adresse courriel."
 msgid "Please enter your full name."
 msgstr "Veuillez saisir votre nom complet."
 
-#: ./norobots_input.pt:13
+#: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Question"
 
@@ -90,7 +94,7 @@ msgstr "Envoyer"
 msgid "Subject"
 msgstr "Sujet"
 
-#: ./plone_forms/contact_info.py:126
+#: ./plone_forms/contact_info.py:127
 msgid "Unable to send mail: ${exception}"
 msgstr "Impossible d'envoyer un courriel : ${exception}"
 
@@ -114,7 +118,11 @@ msgstr "Vous avez entré une réponse fausse, merci de répondre à la nouvelle 
 msgid "You entered an invalid email address."
 msgstr "Vous avez entré une adresse e-mail invalide."
 
-#: ./norobots_input.pt:17
+#: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "Votre réponse"
+
+#: Profile description in configure.zcml
+msgid "collective.z3cform.norobots default profile"
+msgstr "Installe le module collective.z3cform.norobots"
 
