@@ -14,6 +14,11 @@ browser/plone_forms .
 
 	>>> from zope.component import getUtility
     >>> from plone.registry.interfaces import IRegistry
+    
+    >>> app = layer['app']
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+    
     >>> registry = getUtility(IRegistry)
     >>> norobots_settings = registry.forInterface(INorobotsWidgetSettings)
 

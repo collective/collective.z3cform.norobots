@@ -1,21 +1,21 @@
 import unittest
 import doctest
 
-from Testing import ZopeTestCase as ztc
+from plone.testing import layered
 
-from collective.z3cform.norobots.tests import base
+from collective.z3cform.norobots.testing import NOROBOTS_INTEGRATION_TESTING
 
 
 def test_suite():
-    return unittest.TestSuite([
-
-        ztc.ZopeDocFileSuite(
-            'README.txt', package='collective.z3cform.norobots',
-            test_class=base.FunctionalTestCase,
-            optionflags=doctest.REPORT_ONLY_FIRST_FAILURE |
-                doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS),
-
-        ])
+    suite = unittest.TestSuite()
+    suite.addTests([
+        layered(doctest.DocFileSuite('doctests.rst',
+                                     optionflags=doctest.REPORT_ONLY_FIRST_FAILURE |
+                                                 doctest.NORMALIZE_WHITESPACE | 
+                                                 doctest.ELLIPSIS), 
+                layer=NOROBOTS_INTEGRATION_TESTING),
+    ])
+    return suite
 
 if __name__ == '__main__':
     unittest.main(defaultTest='test_suite')
