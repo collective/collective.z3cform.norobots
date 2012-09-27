@@ -1,9 +1,7 @@
 import os
-
 from setuptools import setup, find_packages
 
 version = '1.4.2.dev0'
-
 
 def read(*rnames):
     return open(
@@ -28,7 +26,6 @@ classifiers = [
 
 setup(
     name='collective.z3cform.norobots',
-    namespace_packages=['collective', 'collective.z3cform'],
     version=version,
     description='Human readable captcha for z3cform',
     long_description=long_description,
@@ -38,7 +35,9 @@ setup(
     author_email='sylvain.boureliou@makina-corpus.com',
     url='http://www.makina-corpus.com',
     license='GPL',
-    packages=find_packages(exclude=['ez_setup']),
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
+    namespace_packages=['collective', 'collective.z3cform'],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
