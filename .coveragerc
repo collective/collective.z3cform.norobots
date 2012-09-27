@@ -16,4 +16,9 @@ exclude_lines =
     if 0:
     if __name__ == .__main__.:
 
+omit = 
+    *collective/z3cform/norobots/testing.py
+    *collective/z3cform/norobots/tests/*
+    *collective/z3cform/norobots/plone_forms/*
+
 ignore_errors = True

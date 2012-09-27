@@ -1,4 +1,4 @@
-def getPloneVersion(): #pragma: no cover
+def getPloneVersion():
     try:
         # Plone 4.1 and higher 
         import plone.app.caching
