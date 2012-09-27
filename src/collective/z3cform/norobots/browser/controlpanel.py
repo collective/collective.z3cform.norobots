@@ -4,7 +4,7 @@ from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
 from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
 from plone.z3cform import layout
 
-from collective.z3cform.norobots.i18n import MessageFactory as _
+from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 
 class NorobotsControlPanelForm(RegistryEditForm):
     schema = INorobotsWidgetSettings

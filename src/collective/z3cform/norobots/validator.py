@@ -5,7 +5,7 @@ from zope.schema import ValidationError
 
 from z3c.form import validator
 
-from collective.z3cform.norobots.i18n import MessageFactory as _
+from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 
 
 class WrongNorobotsAnswer(ValidationError):
