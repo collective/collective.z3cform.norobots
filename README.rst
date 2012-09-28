@@ -30,7 +30,7 @@ Basque [eu], Spanish [es], Suomeksi [fi], French [fr] and Simplified Chinese [zh
 Requirements
 ------------
 
-I have tested this release with Plone 4.1.6, Plone 4.2.1.1 and Plone 4.3a1 (http://plone.org/products/plone).
+I have tested this release with Plone 4.3a1, Plone 4.2.1.1 and Plone 4.1.6 (http://plone.org/products/plone).
 
 See previous releases for Plone 4.0.
 
