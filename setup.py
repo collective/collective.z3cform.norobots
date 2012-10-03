@@ -20,9 +20,11 @@ tests_require = ['zope.testing',
                  'lxml']
 
 classifiers = [
+    "Framework :: Plone",
+    "Framework :: Plone :: 4.1",
+    "Framework :: Plone :: 4.2",
     "Programming Language :: Python",
-    "Topic :: Software Development",
-    "Topic :: Software Development :: Libraries :: Python Modules"]
+    "Topic :: Software Development :: Libraries :: Python Modules",]
 
 setup(
     name='collective.z3cform.norobots',
