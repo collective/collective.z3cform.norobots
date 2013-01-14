@@ -48,12 +48,12 @@ msgstr ""
 
 #: ./browser/interfaces.py:9
 msgid "Norobots question::answer"
-msgstr ""
+msgstr "Norobots vraag::antwoord"
 
 #: ./browser/controlpanel.py:17
 #: ./profiles/default/controlpanel.xml
 msgid "Norobots widget settings"
-msgstr ""
+msgstr "Norobots widget instellingen"
 
 #: ./plone_forms/contact_info.py:83
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
@@ -81,7 +81,7 @@ msgstr "Vraag"
 
 #: ./browser/interfaces.py:10
 msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
-msgstr "Vragen lijst (een per regel). Voorbeeld : 'Wat is 10 + 12 ?::22'. Antwoord kan meerdere antwoorden hebben door een puntkomma. Voorbeeld: 'Wat is 5 + 5 ?::10;tien'."
+msgstr "Vragen lijst (een per regel). Voorbeeld : 'Wat is 10 + 12 ?::22'. Vraag kan meerdere antwoorden hebben door de waarden te splitten met een puntkomma. Voorbeeld: 'Wat is 5 + 5 ?::10;tien'."
 
 #: ./plone_forms/contact_info.py:77
 msgid "Send"
