@@ -4,8 +4,8 @@ Changelog
 1.4.3 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
-- Nothing changed yet.
-
+- add Dutch Translations
+  [maartenkling]
 
 1.4.2 (2012-10-03)
 ~~~~~~~~~~~~~~~~~~
@@ -21,7 +21,7 @@ Changelog
 
 - Update tests, buildouts and add test coverage. Plone 4.0 is no longer supported.
   [sylvainb]
-  
+
 - Change MessageFactory name to get translations picked up by Plone
   [erral]
 
@@ -44,10 +44,10 @@ Changelog
 - Add an upgrade step (1 -> 2) to copy questions from the old properties sheet to plone.app.registry.
   [sylvainb]
 
-- Fix the widget template for use with plone.app.discussion (there was no redirection to 
+- Fix the widget template for use with plone.app.discussion (there was no redirection to
   the comment form when only the captcha is wrong).
   [sylvainb]
-  
+
 - Update translations (some new strings added).
   [sylvainb]
 
@@ -101,4 +101,3 @@ Changelog
 
 - Initial release
   [sylvainb]
-
