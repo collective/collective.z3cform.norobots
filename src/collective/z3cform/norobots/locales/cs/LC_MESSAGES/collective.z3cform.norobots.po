@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nocaptcha\n"
-"POT-Creation-Date: 2012-09-27 13:38+0000\n"
+"POT-Creation-Date: 2013-04-09 10:58+0000\n"
 "PO-Revision-Date: 2010-10-09 12:32+0100\n"
 "Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
 "Language-Team: Czech <info@dms4u.cz>\n"
@@ -75,6 +75,10 @@ msgstr "Zadejte prosím vaši email adresu"
 msgid "Please enter your full name."
 msgstr "Zadejte prosím vaše jméno"
 
+#: Profile description in configure.zcml
+msgid "Provides a human captcha widget based on a list of questions/answers."
+msgstr ""
+
 #: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Otázka"
@@ -118,8 +122,4 @@ msgstr ""
 #: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "Vaše odpověď"
-
-#: Profile description in configure.zcml
-msgid "collective.z3cform.norobots default profile"
-msgstr ""
 

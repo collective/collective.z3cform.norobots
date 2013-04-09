@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-09-27 13:38+0000\n"
+"POT-Creation-Date: 2013-04-09 10:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,6 +78,10 @@ msgstr ""
 msgid "Please enter your full name."
 msgstr ""
 
+#: Profile description in configure.zcml
+msgid "Provides a human captcha widget based on a list of questions/answers."
+msgstr ""
+
 #: ./norobots_input.pt:3
 msgid "Question"
 msgstr ""
@@ -120,9 +124,5 @@ msgstr ""
 
 #: ./norobots_input.pt:7
 msgid "Your answer"
-msgstr ""
-
-#: Profile description in configure.zcml
-msgid "collective.z3cform.norobots default profile"
 msgstr ""
 

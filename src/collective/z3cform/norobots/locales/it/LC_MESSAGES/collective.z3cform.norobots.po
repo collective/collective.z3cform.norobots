@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-09-27 13:38+0000\n"
+"POT-Creation-Date: 2013-04-09 10:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Luca Fabbri <keul@redturtle.it>\n"
 "Language-Team: RedTurtle Technology <sviluppoplone@redturtle.it>\n"
@@ -78,6 +78,10 @@ msgstr "Prego inserisci il tuo indirizzo e-mail."
 msgid "Please enter your full name."
 msgstr "Prego inserisci il tuo nome completo"
 
+#: Profile description in configure.zcml
+msgid "Provides a human captcha widget based on a list of questions/answers."
+msgstr "Fornisce un campo captcha basato su una lista di domande/risposte."
+
 #: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Domanda"
@@ -121,8 +125,4 @@ msgstr "Hai inserito un messaggio e-mail non valido."
 #: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "La tua risposta"
-
-#: Profile description in configure.zcml
-msgid "collective.z3cform.norobots default profile"
-msgstr "profilo predefinito di collective.z3cform.norobots"
 

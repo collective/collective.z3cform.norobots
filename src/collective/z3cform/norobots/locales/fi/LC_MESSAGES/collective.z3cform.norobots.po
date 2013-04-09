@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: z 3cform\n"
-"POT-Creation-Date: 2012-09-27 13:38+0000\n"
+"POT-Creation-Date: 2013-04-09 10:58+0000\n"
 "PO-Revision-Date: 2010-09-14 13:15+0300\n"
 "Last-Translator: Petri Savolainen <>\n"
 "Language-Team: Finnish\n"
@@ -77,6 +77,10 @@ msgstr "Ole hyvä ja anna sähköpostiosoitteesi."
 msgid "Please enter your full name."
 msgstr "Ole hyvä ja anna koko nimesi."
 
+#: Profile description in configure.zcml
+msgid "Provides a human captcha widget based on a list of questions/answers."
+msgstr ""
+
 #: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Kysymys"
@@ -120,8 +124,4 @@ msgstr ""
 #: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "Vastauksesi"
-
-#: Profile description in configure.zcml
-msgid "collective.z3cform.norobots default profile"
-msgstr ""
 
