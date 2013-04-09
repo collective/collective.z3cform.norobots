@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2012-09-27 13:38+0000\n"
+"POT-Creation-Date: 2013-04-09 10:58+0000\n"
 "PO-Revision-Date: 2012-07-12 12:22+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
@@ -76,6 +76,10 @@ msgstr "Idatzi zure e-posta"
 msgid "Please enter your full name."
 msgstr "Idatzi zure izena"
 
+#: Profile description in configure.zcml
+msgid "Provides a human captcha widget based on a list of questions/answers."
+msgstr ""
+
 #: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Galdera"
@@ -119,8 +123,4 @@ msgstr "E-posta helbidea ez da zuzena"
 #: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "Erantzuna"
-
-#: Profile description in configure.zcml
-msgid "collective.z3cform.norobots default profile"
-msgstr ""
 

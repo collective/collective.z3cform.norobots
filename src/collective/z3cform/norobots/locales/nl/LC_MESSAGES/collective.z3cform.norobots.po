@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-01-14 18:12+0000\n"
+"POT-Creation-Date: 2013-04-09 10:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Maarten Kling <maarten@fourdigits.nl>\n"
 "Language-Team: Nederlands\n"
@@ -75,6 +75,10 @@ msgstr "Geef je email adres."
 msgid "Please enter your full name."
 msgstr "Geef je volledige naam."
 
+#: Profile description in configure.zcml
+msgid "Provides a human captcha widget based on a list of questions/answers."
+msgstr ""
+
 #: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Vraag"
@@ -119,6 +123,3 @@ msgstr "Je hebt een verkeerd email adres gegeven."
 msgid "Your answer"
 msgstr "Je antwoord"
 
-#: Profile description in configure.zcml
-msgid "collective.z3cform.norobots default profile"
-msgstr ""
