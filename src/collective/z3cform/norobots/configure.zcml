@@ -45,7 +45,7 @@
       name="default"
       title="Norobots captcha field (collective.z3cform.norobots)"
       directory="profiles/default"
-      description="collective.z3cform.norobots default profile"
+      description="Provides a human captcha widget based on a list of questions/answers."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
   <include package=".upgrades" />

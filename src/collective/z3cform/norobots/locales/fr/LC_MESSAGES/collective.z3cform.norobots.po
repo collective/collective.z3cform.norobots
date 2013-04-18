@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2012-09-27 13:38+0000\n"
+"POT-Creation-Date: 2013-04-09 10:58+0000\n"
 "PO-Revision-Date: 2010-01-11 14:51+0200\n"
 "Last-Translator: Sylvain Boureliou <sylvain.boureliou@makina-corpus.com>\n"
 "Language-Team: French\n"
@@ -78,6 +78,10 @@ msgstr "Veuillez saisir votre adresse courriel."
 msgid "Please enter your full name."
 msgstr "Veuillez saisir votre nom complet."
 
+#: Profile description in configure.zcml
+msgid "Provides a human captcha widget based on a list of questions/answers."
+msgstr ""
+
 #: ./norobots_input.pt:3
 msgid "Question"
 msgstr "Question"
@@ -121,8 +125,4 @@ msgstr "Vous avez entré une adresse e-mail invalide."
 #: ./norobots_input.pt:7
 msgid "Your answer"
 msgstr "Votre réponse"
-
-#: Profile description in configure.zcml
-msgid "collective.z3cform.norobots default profile"
-msgstr "Installe le module collective.z3cform.norobots"
 

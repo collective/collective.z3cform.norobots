@@ -22,5 +22,5 @@ msgid "Norobots captcha field (collective.z3cform.norobots)"
 msgstr ""
 
 #: Profile description in configure.zcml
-msgid "collective.z3cform.norobots default profile"
+msgid "Provides a human captcha widget based on a list of questions/answers."
 msgstr ""
