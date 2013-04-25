@@ -29,7 +29,6 @@ if [ ! -f bin/python ]; then
     virtualenv .
     source bin/activate
     easy_install -U zc.buildout
-    easy_install -U setuptools
     easy_install -U distribute
 fi
 
