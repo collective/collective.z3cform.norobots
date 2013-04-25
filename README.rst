@@ -30,7 +30,7 @@ Basque [eu], Spanish [es], Suomeksi [fi], French [fr], Dutch [nl], Simplified Ch
 Requirements
 ------------
 
-I have tested this release with Plone 4.3a1, Plone 4.2.1.1 and Plone 4.1.6 (http://plone.org/products/plone).
+I have tested this release with Plone 4.3, Plone 4.2.5 and Plone 4.1.6 (http://plone.org/products/plone).
 
 See previous releases for Plone 4.0.
 
@@ -164,7 +164,7 @@ Possible problems
 Credits
 -----------------
 
-* Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <http://www.asilax.fr/>`_
+* Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <http://www.boureliou.com/>`_
 * `Planet Makina Corpus <http://www.makina-corpus.org>`_ - `Makina Corpus <http://www.makina-corpus.com>`_
 * `Contact us <mailto:python@makina-corpus.org>`_
 
@@ -188,6 +188,7 @@ Contributors
 * Peter Mathis [petschki]
 * Petri Savolainen [petri]
 * Helmut Toplitzer
+* Luca Fabbri [keul]
 
 .. _`plone.app.discussion 1.1.4`: http://pypi.python.org/pypi/plone.app.discussion/1.1.4
 .. _`collective.pfg.norobots`: http://pypi.python.org/pypi/collective.pfg.norobots
