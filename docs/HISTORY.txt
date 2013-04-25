@@ -1,8 +1,8 @@
 Changelog
 ------------
 
-1.4.3 (unreleased)
-~~~~~~~~~~~~~~~~~~
+1.4.2.2 (2013-04-25)
+~~~~~~~~~~~~~~~~~~~~
 
 - added italian translation
   [keul]
