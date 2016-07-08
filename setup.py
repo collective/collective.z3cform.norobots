@@ -21,10 +21,10 @@ tests_require = ['zope.testing',
 
 classifiers = [
     "Framework :: Plone",
-    "Framework :: Plone :: 4.1",
-    "Framework :: Plone :: 4.2",
+    "Framework :: Plone :: 5.0",
     "Framework :: Plone :: 4.3",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 2.7",
     "Topic :: Software Development :: Libraries :: Python Modules",]
 
 setup(
