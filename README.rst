@@ -130,7 +130,7 @@ Usage as a ``plone.app.discussion`` (Plone Discussions) captcha plugin
 ----------------------------------------------------------------------
 
 In the Discussion control panel, activate anonymous comments then select "Norobots" for the captcha.
-This enable the captcha for anonnymous users.
+This enable the captcha for anonymous users.
 
 
 Usage in a z3c form
