@@ -2,3 +2,8 @@ recursive-include src *
 recursive-include docs *
 include *
 global-exclude *pyc
+exclude .Python
+exclude .coverage
+exclude .installed.cfg
+exclude buildout.cfg
+exclude pip-selfcheck.json

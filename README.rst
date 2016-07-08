@@ -77,7 +77,7 @@ Or, you can add it as a dependency on your own product *setup.py*::
 Enabling the module
 ~~~~~~~~~~~~~~~~~~~~
 
-    In the Addons control panel, install "Norobots captcha field (collective.z3cform.norobots)".
+In the Addons control panel, install "Norobots captcha field (collective.z3cform.norobots)".
 
 Add a new question
 ~~~~~~~~~~~~~~~~~~~~
@@ -187,7 +187,7 @@ Credits
 -----------------
 
 * Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <http://www.boureliou.com/>`_
-* `Makina Corpus `Makina Corpus <http://www.makina-corpus.com>`_
+* Makina Corpus `Makina Corpus <http://www.makina-corpus.com>`_
 
 Source code
 -----------
