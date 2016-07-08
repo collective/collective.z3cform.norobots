@@ -56,10 +56,10 @@ class ContactInfoForm(form.Form):
         self.widgets['message'].rows = 8
 
         # If the current user is authenticated, hide fullname and email fields
-        mtool = getToolByName(self.context, 'portal_membership')
-        if not mtool.isAnonymousUser():
-            self.widgets['fullname'].mode = interfaces.HIDDEN_MODE
-            self.widgets['email'].mode = interfaces.HIDDEN_MODE
+        # mtool = getToolByName(self.context, 'portal_membership')
+        # if not mtool.isAnonymousUser():
+        #     self.widgets['fullname'].mode = interfaces.HIDDEN_MODE
+        #     self.widgets['email'].mode = interfaces.HIDDEN_MODE
 
     def update(self):
         mtool = getToolByName(self.context, 'portal_membership')
@@ -107,6 +107,7 @@ class ContactInfoForm(form.Form):
         # to
         send_to_address = portal.getProperty('email_from_address')
 
+        """
         # render template and send email
         variables = {'send_from_address' : send_from_address,
                      'sender_id'         : sender_id,
@@ -128,8 +129,9 @@ class ContactInfoForm(form.Form):
                           mapping={u'exception' : exception})
             plone_utils.addPortalMessage(message, 'error')
             return False
+        """
 
-        plone_utils.addPortalMessage(_(u'Mail sent.'))
+        plone_utils.addPortalMessage(u'[FAKE] %s' % _(u'Mail sent.'))
 
 # wrap the form with plone.app.z3cform's Form wrapper
 ContactInfoView = wrap_form(ContactInfoForm)

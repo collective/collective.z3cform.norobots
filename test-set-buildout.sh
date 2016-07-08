@@ -1,10 +1,12 @@
 #!/bin/bash
-# ./test-set-buildout.sh 4.2.x
+# ./test-set-buildout.sh 5.0.x
+# ./test-set-buildout.sh 4.3.x
 # ===> change and execute buildout
-# ./test-set-buildout.sh 4.2.x clean
+# ./test-set-buildout.sh 5.0.x clean
+# ./test-set-buildout.sh 4.3.x clean
 # ===> ATTENTION: remove the Data.fs file, remove virtualenv files, change and execute buildout
 
-function print() 
+function print()
 {
     echo ''
     echo '================================================'
@@ -13,7 +15,7 @@ function print()
     echo ''
 }
 
-if [ $2 == clean ]; then 
+if [ $2 == clean ]; then
     if [ -f var/filestorage/Data.fs ]; then
         print "Remove Data.fs file"
         rm var/filestorage/Data.fs
