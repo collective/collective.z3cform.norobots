@@ -5,13 +5,21 @@
 
   <!-- For the widget -->
 
-  <browser:view
+  <browser:page
       name="norobots"
       for="*"
-      permission="zope2.Public"
-      provides=".interfaces.INorobotsView"
+      permission="zope2.View"
+      allowed_interface=".interfaces.INorobotsView"
       class=".norobots.Norobots" />
   
+  <!-- html field macro -->
+  <browser:page
+        name="norobots_macro"
+        for="*"
+        template="norobots_macro.pt"
+        permission="zope2.View"
+        />
+
   <!-- Control panel -->
   
   <browser:page
