@@ -4,7 +4,8 @@ Changelog
 1.4.3 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
-- Nothing changed yet.
+- Add macro for html forms
+  [cekk]
 
 
 1.4.2.2 (2013-04-25)

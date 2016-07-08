@@ -4,19 +4,21 @@ collective.z3cform.norobots
 
 .. contents:: Table of Contents
    :depth: 2
-   
+
 Overview
 --------
 
 ``collective.z3cform.norobots`` provides a "human" captcha widget based on a list of
 question/answer(s).
 
-This captcha can be used : 
+This captcha can be used :
 
-    * as a ``plone.app.discussion`` (Plone Discussions) captcha plugin 
-    
+    * as a ``plone.app.discussion`` (Plone Discussions) captcha plugin
+
     * as a ``z3c form`` field
-    
+
+    * as a macro in a custom form
+
     * as a PloneFormGen field with `collective.pfg.norobots`_
 
 The widget is based on z3c.form.TextWidget.
@@ -30,9 +32,9 @@ Basque [eu], Spanish [es], Suomeksi [fi], French [fr], Dutch [nl], Simplified Ch
 Requirements
 ------------
 
-I have tested this release with Plone 4.3, Plone 4.2.5 and Plone 4.1.6 (http://plone.org/products/plone).
+I have tested this release with Plone 4.3.10, Plone 5.0.5.
 
-See previous releases for Plone 4.0.
+See previous releases for old Plone versions.
 
 Screenshot
 ------------
@@ -43,7 +45,7 @@ Screenshot
    :scale: 100 %
    :alt: Screenshot
    :align: center
-   
+
 Installation
 ------------
 
@@ -58,7 +60,7 @@ Add ``collective.z3cform.norobots`` to your ``plone.recipe.zope2instance`` build
         Plone
         ...
         collective.z3cform.norobots
-    
+
     ...
 
     zcml =
@@ -83,15 +85,15 @@ Add a new question
 In the "Norobots widget settings" control panel, add a new line in the field "Norobots question::answer":
 ::
 
-   your_question::the_answer 
-   
+   your_question::the_answer
+
    Example : What is 10 + 12 ?::22
-   
+
 Answer can contain multiple values delimited by semicolon:
 ::
 
    your_question::the_answer;another_answer
-   
+
    Example : What is 5 + 5 ?::10;ten
 
 Quickly test ?
@@ -103,9 +105,9 @@ Download ``collective.z3cform.norobots`` and use ``virtualenv`` and ``buildout``
     cd collective.z3cform.norobots
     virtualenv .
     source bin/activate
-    (collective.z3cform.norobots) easy_install zc.buildout 
+    (collective.z3cform.norobots) easy_install zc.buildout
     !!! check the buildout config file ``test-plone-base.cfg`` before running !!!
-    (collective.z3cform.norobots) ln -s test-plone-4.2.x.cfg buildout.cfg 
+    (collective.z3cform.norobots) ln -s test-plone-5.0.x.cfg buildout.cfg
     (collective.z3cform.norobots) python bootstrap.py
     (collective.z3cform.norobots) bin/buildout
     [...] be patient... [...]
@@ -115,6 +117,7 @@ Go to http://localhost:8080, add a new Plone Site and install collective.z3cform
 
 Launch tests::
 
+    (collective.z3cform.norobots) pip install unittest2
     (collective.z3cform.norobots) ./bin/test -s collective.z3cform.norobots
 
 Launch code coverage::
@@ -122,6 +125,13 @@ Launch code coverage::
     (collective.z3cform.norobots) bin/coverage
     (collective.z3cform.norobots) bin/report
     And open with a browser htmlcov/index.html
+
+Usage as a ``plone.app.discussion`` (Plone Discussions) captcha plugin
+----------------------------------------------------------------------
+
+In the Discussion control panel, activate anonymous comments then select "Norobots" for the captcha.
+This enable the captcha for anonnymous users.
+
 
 Usage in a z3c form
 -------------------
@@ -152,21 +162,32 @@ You can use this widget setting the "widgetFactory" property of a form field:
     # Register Norobots validator for the correponding field in the IContactInfo interface
     validator.WidgetValidatorDiscriminators(NorobotsValidator, field=INorobotsForm['norobots'])
 
-for more information see ``contact_info.py`` in the ``plone_forms`` directory.
+For more information see ``contact_info.py`` in the ``plone_forms`` directory.
+
+To activate this example, add ``<include package=".plone_forms" />`` in the package's
+``configure.zml`` file and open http://localhost:8080/Plone/@@z3cform-contact-info
+
+Usage as a macro in a custom form
+----------------------------------
+
+See ``browser/norobots_macro.pt`` available through @@norobots_macro browser page.
 
 Possible problems
 -----------------
 
+  * In a fresh Plone 5.0.5 the captcha widget does not appear in the comments form even if ``Norobots``
+    is the selected captcha. Installing an other captcha like ``plone.formwidget.captcha`` solve
+    this problem (sic!). In my website, updated from Plone 5.0.4 to 5.0.5, all is ok.
+
   * I have the following error when launching the tests: "ImportError: No module named lxml.html"
-    => In order to run the tests you need lxml. You can add for example 
+    => In order to run the tests you need lxml. You can add for example
     "z3c.form [test]" to your buildout. See http://plone.293351.n2.nabble.com/Custom-Dexterity-Widgets-td5594532.html for more details.
 
 Credits
 -----------------
 
 * Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <http://www.boureliou.com/>`_
-* `Planet Makina Corpus <http://www.makina-corpus.org>`_ - `Makina Corpus <http://www.makina-corpus.com>`_
-* `Contact us <mailto:python@makina-corpus.org>`_
+* `Makina Corpus `Makina Corpus <http://www.makina-corpus.com>`_
 
 Source code
 -----------
@@ -189,6 +210,6 @@ Contributors
 * Petri Savolainen [petri]
 * Helmut Toplitzer
 * Luca Fabbri [keul]
+* Andrea Cecchi [cekk]
 
-.. _`plone.app.discussion 1.1.4`: http://pypi.python.org/pypi/plone.app.discussion/1.1.4
 .. _`collective.pfg.norobots`: http://pypi.python.org/pypi/collective.pfg.norobots
