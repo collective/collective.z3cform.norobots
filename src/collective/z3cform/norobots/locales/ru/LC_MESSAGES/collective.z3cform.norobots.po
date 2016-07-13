@@ -50,7 +50,7 @@ msgstr "Имя"
 
 #: Profile title in configure.zcml
 msgid "Norobots captcha field (collective.z3cform.norobots)"
-msgstr "Поле капчи Norobots (collective.z3cform.norobots)"
+msgstr "Капча Norobots"
 
 #: browser/interfaces.py:9
 msgid "Norobots question::answer"
@@ -58,15 +58,14 @@ msgstr "Norobots вопрос::ответ"
 
 #: browser/controlpanel.py:17 profiles/default/controlpanel.xml
 msgid "Norobots widget settings"
-msgstr "Настройки виджета Norobots"
+msgstr "Настройки Norobots"
 
 #: plone_forms/contact_info.py:83
 msgid ""
 "Please correct the indicated errors and don't forget to fill in the field "
 "'Are you a human ?'."
 msgstr ""
-"Пожалуйста, исправьте указанные ошибки, и не забудьте заполнить поле 'Вы "
-"человек?'."
+"Пожалуйста, исправьте указанные ошибки, и не забудьте заполнить поле 'Вы человек?'."
 
 #: plone_forms/contact_info.py:29
 msgid "Please enter the message you want to send."
@@ -86,7 +85,7 @@ msgstr "Пожалуйста, введите ваше ФИО."
 
 #: Profile description in configure.zcml
 msgid "Provides a human captcha widget based on a list of questions/answers."
-msgstr "Представляет виджет капчи для человека на основе списка вопрос-ответ."
+msgstr "Капча на основе списка вопрос-ответ."
 
 #: norobots_input.pt:3
 msgid "Question"
