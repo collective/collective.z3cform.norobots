@@ -5,6 +5,7 @@ Changelog
 ~~~~~~~~~~~~~~~~~~
 
 - Nothing changed yet.
+- added russian translation
 
 
 1.4.3 (2016-07-08)
