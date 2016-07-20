@@ -27,7 +27,8 @@ Since version 1.4, questions configuration uses a dedicated control panel (using
 instead of a simple properties sheet. An upgrade step provides migration from earlier versions.
 
 Interface is translated in the following languages: Czech [cs], Danish [da], German [de],
-Basque [eu], Spanish [es], Suomeksi [fi], French [fr], Dutch [nl], Simplified Chinese [zh_CN] and Italian [it].
+Basque [eu], Spanish [es], Suomeksi [fi], French [fr], Dutch [nl], Simplified Chinese [zh_CN],
+Italian [it] and Russian [ru].
 
 Requirements
 ------------
@@ -186,7 +187,7 @@ Possible problems
 Credits
 -----------------
 
-* Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <http://www.boureliou.com/>`_
+* Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <https://www.boureliou.com/>`_
 * Makina Corpus `Makina Corpus <http://www.makina-corpus.com>`_
 
 Source code
@@ -211,5 +212,6 @@ Contributors
 * Helmut Toplitzer
 * Luca Fabbri [keul]
 * Andrea Cecchi [cekk]
+* [serge73]
 
 .. _`collective.pfg.norobots`: http://pypi.python.org/pypi/collective.pfg.norobots
