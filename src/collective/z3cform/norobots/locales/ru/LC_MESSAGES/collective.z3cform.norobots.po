@@ -1,0 +1,138 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-07-12 16:15+0500\n"
+"PO-Revision-Date: 2016-07-12 17:53+0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.pfg.norobots\n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: \n"
+"Language: ru_RU\n"
+
+#: plone_forms/contact_info.py:32
+msgid "Are you a human ?"
+msgstr "Вы человек?"
+
+#: plone_forms/contact_info.py:42
+msgid "Contact form"
+msgstr "Контактная форма"
+
+#: plone_forms/contact_info.py:19
+msgid "E-Mail"
+msgstr "Адрес эл.почты"
+
+#: plone_forms/contact_info.py:33
+msgid "In order to avoid spam, please answer the question below."
+msgstr "Во избежание спама, пожалуйста, ответьте на вопрос ниже."
+
+#: plone_forms/contact_info.py:132
+msgid "Mail sent."
+msgstr "Письмо отправлено."
+
+#: plone_forms/contact_info.py:28
+msgid "Message"
+msgstr "Сообщение"
+
+#: plone_forms/contact_info.py:15
+msgid "Name"
+msgstr "Имя"
+
+#: Profile title in configure.zcml
+msgid "Norobots captcha field (collective.z3cform.norobots)"
+msgstr "Капча Norobots"
+
+#: browser/interfaces.py:9
+msgid "Norobots question::answer"
+msgstr "Norobots вопрос::ответ"
+
+#: browser/controlpanel.py:17 profiles/default/controlpanel.xml
+msgid "Norobots widget settings"
+msgstr "Настройки Norobots"
+
+#: plone_forms/contact_info.py:83
+msgid ""
+"Please correct the indicated errors and don't forget to fill in the field "
+"'Are you a human ?'."
+msgstr ""
+"Пожалуйста, исправьте указанные ошибки, и не забудьте заполнить поле 'Вы человек?'."
+
+#: plone_forms/contact_info.py:29
+msgid "Please enter the message you want to send."
+msgstr "Пожалуйста, введите сообщение, которое вы хотите отправить."
+
+#: plone_forms/contact_info.py:25
+msgid "Please enter the subject of the message you want to send."
+msgstr "Пожалуйста, введите тему сообщения, которое вы хотите отправить."
+
+#: plone_forms/contact_info.py:20
+msgid "Please enter your e-mail address."
+msgstr "Пожалуйста, введите адрес Ващей электронной почты."
+
+#: plone_forms/contact_info.py:16
+msgid "Please enter your full name."
+msgstr "Пожалуйста, введите ваше ФИО."
+
+#: Profile description in configure.zcml
+msgid "Provides a human captcha widget based on a list of questions/answers."
+msgstr "Капча на основе списка вопрос-ответ."
+
+#: norobots_input.pt:3
+msgid "Question"
+msgstr "Вопрос"
+
+#: browser/interfaces.py:10
+msgid ""
+"Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can "
+"contain multiple values delimited by semicolon. Example : 'What is 5 + "
+"5 ?::10;ten'."
+msgstr ""
+"Список вопросов (по одному в строке). Пример: 'Сколько будет 10 + 12 ?::22'. "
+"Ответ может содержать несколько значений, разделенных точкой с запятой. "
+"Пример: 'Сколько будет  5 + 5 ?::10;десять."
+
+#: plone_forms/contact_info.py:77
+msgid "Send"
+msgstr "Отправить"
+
+#: plone_forms/contact_info.py:24
+msgid "Subject"
+msgstr "Тема сообщения"
+
+#: plone_forms/contact_info.py:127
+msgid "Unable to send mail: ${exception}"
+msgstr "Невозможно отправить почту: ${exception}"
+
+#: browser/interfaces.py:15
+msgid "What is 10 + 4 ?"
+msgstr "Сколько будет 10 + 4 ?"
+
+#: browser/interfaces.py:14
+msgid "What is 4 + 4 ?"
+msgstr "Сколько будет 4 + 4 ?"
+
+#: browser/interfaces.py:16
+msgid "Write five cipher."
+msgstr "Напишите пять цифрой"
+
+#: validator.py:12
+msgid "You entered a wrong answer, please answer the new question below."
+msgstr "Вы ввели неправильный ответ, пожалуйста, ответьте на вопрос ниже."
+
+#: plone_forms/constraints.py:10
+msgid "You entered an invalid email address."
+msgstr "Вы ввели неправильный адрес электронной почты."
+
+#: norobots_input.pt:7
+msgid "Your answer"
+msgstr "Ваш ответ"
