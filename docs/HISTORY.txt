@@ -1,7 +1,7 @@
 Changelog
 ------------
 
-1.4.4 (unreleased)
+1.4.4 (2016-07-20)
 ~~~~~~~~~~~~~~~~~~
 
 - Add Russian translation
