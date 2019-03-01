@@ -1,3 +1,2 @@
 # make me a module
-
-from widget import NorobotsFieldWidget
+from collective.z3cform.norobots.widget import NorobotsFieldWidget
