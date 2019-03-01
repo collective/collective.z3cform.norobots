@@ -24,11 +24,20 @@ before_install:
   - mkdir -p buildout-cache/downloads
   - mkdir -p buildout-cache/eggs
 install:
-  - pip install -r requirements-$PLONE_VERSION.txt
-  - buildout -Nc test-plone-$PLONE_VERSION.cfg
+  - virtualenv -p `which python` .
+  - bin/pip install -r requirements-$PLONE_VERSION.txt
+  - bin/buildout -N -c buildout-$PLONE_VERSION.cfg buildout:download-cache=downloads code-analysis:return-status-codes=True annotate
+  - bin/buildout -N -c buildout-$PLONE_VERSION.cfg buildout:download-cache=downloads code-analysis:return-status-codes=True
+before_script:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- firefox -v
 script:
+  - bin/code-analysis
   - bin/test
 after_success:
-  - bin/coverage.sh
+  - bin/createcoverage
+  - bin/pip install coverage
+  - bin/python -m coverage.pickle2json
   - pip install coveralls
   - coveralls

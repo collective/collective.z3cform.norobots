@@ -1,2 +1,2 @@
-zc.buildout==2.9.5
-plone.recipe.zope2instance == 4.2.10
+setuptools==38.2.4
+zc.buildout==2.11.4

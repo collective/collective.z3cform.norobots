@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 from setuptools import setup
 from setuptools import find_packages
@@ -11,7 +12,7 @@ def read(*rnames):
 
 long_description = "\n\n".join(
     [read('README.rst'),
-     read('docs', 'HISTORY.txt'),
+     read('CHANGES.rst'),
     ]
 )
 
@@ -62,5 +63,4 @@ setup(
     entry_points={
       'z3c.autoinclude.plugin': 'target = plone',
     },
-
 )
