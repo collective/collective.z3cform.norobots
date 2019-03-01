@@ -1,14 +1,20 @@
 import string
-import unittest2 as unittest
+import unittest
 
-from Products.CMFCore.utils import getToolByName
 from zope.component import getUtility
+from plone.registry.interfaces import IRegistry
+from Products.CMFCore.utils import getToolByName
 
 from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
-from plone.registry.interfaces import IRegistry
-
 from collective.z3cform.norobots.testing import NOROBOTS_INTEGRATION_TESTING
 
+try:
+    from Products.CMFPlone.utils import get_installer
+except ImportError:
+    # BBB for Plone 5.0 and lower.
+    get_installer = None
+
+PROJECTNAME = 'collective.z3cform.norobots'
 
 class TestInstall(unittest.TestCase):
 
@@ -23,21 +29,24 @@ class TestInstall(unittest.TestCase):
         """ Validate that our products GS profile has been run and the product 
             installed
         """
-        portal_quickinstaller = getToolByName(self.portal, 'portal_quickinstaller')
-        self.assertTrue(portal_quickinstaller.isProductInstalled('collective.z3cform.norobots'),
+        if get_installer is None:
+            qi = self.portal['portal_quickinstaller']
+        else:
+            qi = get_installer(self.portal)
+        self.assertTrue(qi.isProductInstalled(PROJECTNAME),
                         'package appears not to have been installed')
 
     def test_registry(self):
         registry = getUtility(IRegistry)
-        
         # Check 'question' entry is in the registry
-        self.assertTrue(registry.get('collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings.questions', None is not None),
-                         'record in the registry appears to be not properly installed')
+        self.assertTrue(
+            registry.get('collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings.questions', False),
+            'record in the registry appears to be not properly installed')
 
     def test_control_panel_is_installed(self):
         portal_controlpanel = getToolByName(self.portal, 'portal_controlpanel')
-        configlets = [ai['id'] for ai in portal_controlpanel.listActionInfos(check_permissions=0)]
-        self.assertTrue('collective.z3cform.norobots.settings' in configlets)
+        actions = [i.id for i in portal_controlpanel.listActions()]
+        self.assertTrue('collective.z3cform.norobots.settings' in actions)
 
 class TestUninstall(unittest.TestCase):
 
@@ -47,29 +56,32 @@ class TestUninstall(unittest.TestCase):
         self.app = self.layer['app']
         self.portal = self.layer['portal']
         self.request = self.layer['request']
-        
-        # Remove the product using the Quick Installer tool
-        portal_quickinstaller = getToolByName(self.portal, 'portal_quickinstaller')
-        portal_quickinstaller.uninstallProducts( ('collective.z3cform.norobots',) )
+
+        if get_installer is None:
+            qi = self.portal['portal_quickinstaller']
+        else:
+            qi = get_installer(self.portal)
+
+        qi.uninstallProducts( (PROJECTNAME,) )
         
     def test_product_is_not_installed(self):
         """ Validate that our products is not yet installed
         """
-        portal_quickinstaller = getToolByName(self.portal, 'portal_quickinstaller')
-        self.assertFalse(portal_quickinstaller.isProductInstalled('collective.z3cform.norobots'),
-                        'package appears to be already installed')
+        if get_installer is None:
+            qi = self.portal['portal_quickinstaller']
+        else:
+            qi = get_installer(self.portal)
+
+        self.assertFalse(
+            qi.isProductInstalled(PROJECTNAME),
+            'package appears to be already installed')
 
     def test_registry(self):
         registry = getUtility(IRegistry)
-        norobots_settings = registry.forInterface(INorobotsWidgetSettings)
-        
-        # Check 'question' entry is again in the registry, 
-        # i.e. not removed when the module is uninstalled
-        self.assertTrue(registry.get('collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings.questions', None is not None),
-                         'record in the registry must be kept when the module is uninstalled')
+        self.assertNotIn("collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings.questions", registry)
 
     def test_control_panel_is_not_installed(self):
         portal_controlpanel = getToolByName(self.portal, 'portal_controlpanel')
-        configlets = [ai['id'] for ai in portal_controlpanel.listActionInfos(check_permissions=0)]
-        self.assertFalse('collective.z3cform.norobots.settings' in configlets)
+        actions = [i.id for i in portal_controlpanel.listActions()]
+        self.assertFalse('collective.z3cform.norobots.settings' in actions)
     
