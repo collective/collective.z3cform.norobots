@@ -1,30 +1,28 @@
-from zope.component import getMultiAdapter
-import zope.interface
-from z3c.form import interfaces as z3cFormInterfaces
-
 from Acquisition import aq_inner
-from z3c.form.browser import text
-from z3c.form import widget
+from zope.component import getMultiAdapter
+from zope.interface import implementer_only
 
-class INorobotsWidget(z3cFormInterfaces.IWidget):
+from z3c.form.interfaces import IWidget
+from z3c.form.widget import FieldWidget
+from z3c.form.browser.text import TextWidget
+
+class INorobotsWidget(IWidget):
     """Marker interface for th norobots widget
     """
-    
+
     def get_question():
         """ """
+@implementer_only(INorobotsWidget)
+class NorobotsWidget(TextWidget):
 
-class NorobotsWidget(text.TextWidget):
     maxlength = 200
     size = 30
-
-    zope.interface.implementsOnly(INorobotsWidget)
 
     def get_question(self):
         # return a dictionary {'id': '...', 'title': '...', 'id_check': '...'}
         self.norobots = getMultiAdapter((aq_inner(self.context), self.request), name='norobots')
         return self.norobots.get_question()
 
-
 def NorobotsFieldWidget(field, request):
     """IFieldWidget factory for NorobotsWidget."""
-    return widget.FieldWidget(field, NorobotsWidget(request))
+    return FieldWidget(field, NorobotsWidget(request))

@@ -1,27 +1,26 @@
-import md5
+
 import random
 import logging
-logger = logging.getLogger("collective.z3cform.norobots")
+from hashlib import md5
 
 from zope.component import getUtility
-from zope.interface import implements
+from zope.interface import implementer
 from Products.Five import BrowserView
 from plone.registry.interfaces import IRegistry
 
-from interfaces import INorobotsView
-
+from collective.z3cform.norobots.browser.interfaces import INorobotsView
 from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
 
+logger = logging.getLogger("collective.z3cform.norobots")
 
 class NoRobotsQuestionsError(Exception):
     """ Raised when no questions have been created """
 
-
+@implementer(INorobotsView)
 class Norobots(BrowserView):
-    implements(INorobotsView)
 
     def _hashTitle(self, title):
-        return md5.new(title.encode('ascii', 'ignore')).hexdigest()
+        return md5(title.encode('ascii', 'ignore')).hexdigest()
 
     def _get_questions_list(self):
         # [('question_id', 'question', 'answer'), ...]

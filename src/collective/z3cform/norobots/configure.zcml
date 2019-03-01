@@ -9,7 +9,7 @@
     i18n_domain="collective.z3cform.norobots">
 
   <includeDependencies package="." /><!-- Else tests are broken -->
-  
+
   <include package="plone.app.registry" />
   <include package="plone.app.z3cform" />
   <include package=".browser" />
@@ -39,7 +39,7 @@
         name="collective.z3cform.norobots"
         directory="static"
         />
-  
+
   <!-- Register the installation GenericSetup extension profile -->
   <genericsetup:registerProfile
       name="default"
@@ -48,16 +48,22 @@
       description="Provides a human captcha widget based on a list of questions/answers."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
   <genericsetup:registerProfile
       name="uninstall"
       title="Norobots captcha field UNINSTALLATION"
       directory="profiles/uninstall"
       description="Removes the human usable captcha widget based on a list of questions/answers."
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
       />
 
+    <utility
+        factory=".setuphandlers.HiddenProfiles"
+        name="collective.z3cform.norobots-hiddenprofiles" />
+
   <include package=".upgrades" />
-      
+
   <!-- Declare that plone.formwidget.captcha provides a Captcha field that
        can be used by plone.app.discussion to add a Captcha field to comment
        forms. -->
