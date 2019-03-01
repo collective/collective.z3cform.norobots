@@ -27,7 +27,6 @@ install:
   - pip install -r requirements-$PLONE_VERSION.txt
   - buildout -Nc test-plone-$PLONE_VERSION.cfg
 script:
-  - bin/code-analysis
   - bin/test
 after_success:
   - bin/coverage.sh
