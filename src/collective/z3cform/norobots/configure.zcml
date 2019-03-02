@@ -48,6 +48,14 @@
       description="Provides a human captcha widget based on a list of questions/answers."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Norobots captcha field UNINSTALLATION"
+      directory="profiles/uninstall"
+      description="Removes the human usable captcha widget based on a list of questions/answers."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <include package=".upgrades" />
       
   <!-- Declare that plone.formwidget.captcha provides a Captcha field that
