@@ -1,6 +1,13 @@
 <registry>
 
     <!-- Norobots Widget Settings -->
-    <records interface="collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings" />
-
+    <records
+        prefix="collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings"
+        interface="collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings">
+        <value key="questions">
+            <element>What is 4 + 4 ?::8</element>
+            <element>Write five cipher.::5</element>
+            <element>What is 10 + 4 ?::14</element>
+        </value>
+    </records>
 </registry>

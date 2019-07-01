@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 import os
-from setuptools import setup, find_packages
+from setuptools import setup
+from setuptools import find_packages
 
 version = '1.4.5.dev0'
 
@@ -10,7 +12,7 @@ def read(*rnames):
 
 long_description = "\n\n".join(
     [read('README.rst'),
-     read('docs', 'HISTORY.txt'),
+     read('CHANGES.rst'),
     ]
 )
 
@@ -21,9 +23,12 @@ tests_require = ['zope.testing',
 
 classifiers = [
     "Framework :: Plone",
+    "Framework :: Plone :: 5.2",
+    "Framework :: Plone :: 5.1",    
     "Framework :: Plone :: 5.0",
     "Framework :: Plone :: 4.3",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 2.7",
     "Topic :: Software Development :: Libraries :: Python Modules",]
 
@@ -58,5 +63,4 @@ setup(
     entry_points={
       'z3c.autoinclude.plugin': 'target = plone',
     },
-
 )

@@ -100,7 +100,7 @@ and if the form is submitted the validation failed:
     >>> errors
     (<ErrorViewSnippet for WrongNorobotsAnswer>,)
     >>> errors[0].message
-    u'You entered a wrong answer, please answer the new question below.'
+    'You entered a wrong answer, please answer the new question below.'
 
 Define a first question. Each question with be a string like this: "The question::The answer".
 
@@ -114,9 +114,7 @@ Note that the returned question is selected randomly from the available
 question, but we actually have only one question, so:
 
     # The widget may be rendered differently but it is always the same (depends on the Plone version)
-    >>> foo_form.widgets['norobots'].render() in [
-    ...       u'\n\t\n  <strong><span>Question</span></strong>:\n  <span>H\xc3\xa9, What is 10 + 4?</span><br />\n\n  <strong><span>Your answer</span></strong>:\n  \n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n                     \n  <input type="hidden" name="question_id" value="question0" />\n  <input type="hidden" name="id_check" value="d382e1617bad3a3380d355985878bf62" />\n         \n'
-    ...       ]
+    >>> question_1 in foo_form.widgets['norobots'].render()
     True
     >>> temp_id_check = 'd382e1617bad3a3380d355985878bf62'
 
@@ -135,7 +133,7 @@ Submit the form with a bad answer:
     >>> errors
     (<ErrorViewSnippet for WrongNorobotsAnswer>,)
     >>> errors[0].message
-    u'You entered a wrong answer, please answer the new question below.'
+    'You entered a wrong answer, please answer the new question below.'
 
 Submit the form with a good answer:
 
@@ -167,7 +165,7 @@ Submit the form with a bad id_check:
     >>> errors
     (<ErrorViewSnippet for WrongNorobotsAnswer>,)
     >>> errors[0].message
-    u'You entered a wrong answer, please answer the new question below.'
+    'You entered a wrong answer, please answer the new question below.'
 
 Test that the rendered question is not always the same:
 

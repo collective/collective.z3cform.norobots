@@ -10,10 +10,7 @@ class INorobotsWidgetSettings(Interface):
                              description=_(u"Questions list (one per line). Example : 'What is 10 + 12 ?::22'. \
 Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."),
                              value_type=schema.TextLine(),
-                             required=True,
-                             default=(_(u"What is 4 + 4 ?") + "::8",
-                                      _(u"What is 10 + 4 ?") + "::14",
-                                      _(u"Write five cipher.") + "::5")
+                             required=True
                              )
 
 class INorobotsView(Interface):

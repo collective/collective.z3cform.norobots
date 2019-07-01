@@ -7,6 +7,9 @@ Changelog
 - Add uninstall profile.
   [thet]
 
+- Update to Python3
+  [1letter]
+
 
 1.4.4 (2016-07-20)
 ~~~~~~~~~~~~~~~~~~
