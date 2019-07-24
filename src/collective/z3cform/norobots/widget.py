@@ -23,6 +23,8 @@ class NorobotsWidget(TextWidget):
 
     maxlength = 200
     size = 30
+    klass = u'norobots-widget'
+    css = u'norobots'
 
     def get_question(self):
         # return a dictionary {'id': '...', 'title': '...', 'id_check': '...'}
