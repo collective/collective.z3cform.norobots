@@ -10,6 +10,10 @@ Changelog
 - Update to Python3
   [1letter]
 
+- Add plone.autoform.directives Support for Widget
+- Add css klass to Widget
+  [1letter]
+
 
 1.4.4 (2016-07-20)
 ~~~~~~~~~~~~~~~~~~

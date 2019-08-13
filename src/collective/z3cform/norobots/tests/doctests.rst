@@ -14,11 +14,11 @@ browser/plone_forms .
 
 	>>> from zope.component import getUtility
     >>> from plone.registry.interfaces import IRegistry
-    
+
     >>> app = layer['app']
     >>> portal = layer['portal']
     >>> request = layer['request']
-    
+
     >>> registry = getUtility(IRegistry)
     >>> norobots_settings = registry.forInterface(INorobotsWidgetSettings)
 
@@ -81,7 +81,7 @@ A widget with an empty captcha is rendered if there is no question/answer:
 
     # Tthe widget may be rendered differently but it is always the same (depends on the Plone version)
     >>> foo_form.widgets['norobots'].render() in [
-    ...       u'\n\t\n  <strong><span>Question</span></strong>:\n  <span></span><br />\n\n  <strong><span>Your answer</span></strong>:\n  \n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="text-widget required textline-field" size="30" maxlength="200" value="" />\n                     \n  <input type="hidden" name="question_id" value="" />\n  <input type="hidden" name="id_check" value="" />\n         \n'
+    ...       u'\n\t\n  <strong><span>Question</span></strong>:\n  <span></span><br />\n\n  <strong><span>Your answer</span></strong>:\n  \n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="norobots-widget required textline-field" size="30" maxlength="200" value="" />\n                     \n  <input type="hidden" name="question_id" value="" />\n  <input type="hidden" name="id_check" value="" />\n         \n'
     ...       ]
     True
 
