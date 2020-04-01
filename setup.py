@@ -14,7 +14,7 @@ def read(*rnames):
 
 long_description = "\n\n".join([read("README.rst"), read("CHANGES.rst"),])
 
-tests_require = ["zope.testing", "zope.app.testing", "plone.app.testing", "lxml"]
+tests_require = ["plone.app.testing"]
 
 classifiers = [
     "Framework :: Plone",
@@ -44,12 +44,7 @@ setup(
     namespace_packages=["collective", "collective.z3cform"],
     include_package_data=True,
     zip_safe=False,
-    install_requires=[
-        "setuptools",
-        # -*- Extra requirements: -*-
-        "plone.app.z3cform",
-        "plone.app.registry",
-    ],
+    install_requires=["setuptools", "plone.app.z3cform", "plone.app.registry",],
     tests_require=tests_require,
     test_suite="collective.z3cform.norobots.tests.test_docs.test_suite",
     extras_require={"test": tests_require,},
