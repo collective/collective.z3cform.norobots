@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <registry>
-  <records remove="True" interface="collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings" />
+  <records interface="collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings"
+           remove="True"
+  />
 </registry>
