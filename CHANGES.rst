@@ -4,6 +4,9 @@ Changelog
 1.4.5 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- Format code according to Plone standards: black, isort, zpretty.
+  [thet]
+
 - Add uninstall profile.
   [thet]
 

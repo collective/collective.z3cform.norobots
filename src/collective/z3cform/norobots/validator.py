@@ -1,11 +1,8 @@
 from Acquisition import aq_inner
-
+from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
+from z3c.form import validator
 from zope.component import getMultiAdapter
 from zope.schema import ValidationError
-
-from z3c.form import validator
-
-from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 
 
 class WrongNorobotsAnswer(ValidationError):
@@ -13,10 +10,11 @@ class WrongNorobotsAnswer(ValidationError):
 
 
 class NorobotsValidator(validator.SimpleFieldValidator):
-
     def validate(self, value):
         super(NorobotsValidator, self).validate(value)
-        norobots = getMultiAdapter((aq_inner(self.context), self.request), name='norobots')
+        norobots = getMultiAdapter(
+            (aq_inner(self.context), self.request), name="norobots"
+        )
         if norobots.verify(value):
             return True
         raise WrongNorobotsAnswer
