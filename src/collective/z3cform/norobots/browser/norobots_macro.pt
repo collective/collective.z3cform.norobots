@@ -1,38 +1,60 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
+<html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="collective.z3cform.norobots">
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      lang="en"
+      xml:lang="en"
+      i18n:domain="collective.z3cform.norobots"
+>
 
-<body>
+  <body>
     <tal:norobots metal:define-macro="norobots_macro"
-          i18n:domain="collective.z3cform.norobots"
-          tal:define="norobots_view nocall:context/@@norobots|nothing;
-                      question norobots_view/get_question;">
-        <label for="norobots" i18n:translate="">Are you a human ?</label>
-         <span class="fieldRequired" title="Required"
-                  i18n:domain="plone"
-                  i18n:attributes="title title_required;"
-                  i18n:translate="label_required">(Required)</span>
-        <div class="formHelp">
-          <span i18n:translate="">
+                  tal:define="
+                    norobots_view nocall:context/@@norobots|nothing;
+                    question norobots_view/get_question;
+                  "
+                  i18n:domain="collective.z3cform.norobots"
+    >
+      <label for="norobots"
+             i18n:translate=""
+      >Are you a human ?</label>
+      <span class="fieldRequired"
+            title="Required"
+            i18n:attributes="title title_required;"
+            i18n:domain="plone"
+            i18n:translate="label_required"
+      >(Required)</span>
+      <div class="formHelp">
+        <span i18n:translate="">
             In order to avoid spam, please answer the question below.
-          </span>
-        </div>
-        <strong><span i18n:translate="">Question</span></strong>:
-        <span i18n:translate=""
-              tal:content="python:question['title']" /><br />
+        </span>
+      </div>
+      <strong><span i18n:translate="">Question</span></strong>:
+      <span tal:content="python:question['title']"
+            i18n:translate=""
+      ></span><br />
 
-        <strong><span i18n:translate="">Your answer</span></strong>:
-        
-        <input type="text" 
-               id="norobots"
-               name="norobots" />
-                           
-        <input type="hidden" name="question_id" value=""
-               tal:attributes="value python:question['id']" />
-        <input type="hidden" name="id_check" value=""
-               tal:attributes="value python:question['id_check']" />
+      <strong><span i18n:translate="">Your answer</span></strong>:
+
+      <input id="norobots"
+             name="norobots"
+             type="text"
+      />
+
+      <input name="question_id"
+             type="hidden"
+             value=""
+             tal:attributes="
+               value python:question['id'];
+             "
+      />
+      <input name="id_check"
+             type="hidden"
+             value=""
+             tal:attributes="
+               value python:question['id_check'];
+             "
+      />
     </tal:norobots>
-</body>
+  </body>
 </html>
