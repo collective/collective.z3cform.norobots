@@ -4,6 +4,9 @@ Changelog
 1.4.5 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- Remove Plone 5.0 classifier as this version is not tested anymore.
+  [thet]
+
 - Format code according to Plone standards: black, isort, zpretty.
   [thet]
 
