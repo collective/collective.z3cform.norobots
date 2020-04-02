@@ -1,11 +1,11 @@
-import unittest
-import doctest
-import six
-import re
-
+from collective.z3cform.norobots.testing import NOROBOTS_INTEGRATION_TESTING
 from plone.testing import layered
 
-from collective.z3cform.norobots.testing import NOROBOTS_INTEGRATION_TESTING
+import doctest
+import re
+import six
+import unittest
+
 
 class Py23DocChecker(doctest.OutputChecker):
     def check_output(self, want, got, optionflags):
@@ -20,18 +20,18 @@ def test_suite():
         [
             layered(
                 doctest.DocFileSuite(
-                    'doctests.rst',
-                    optionflags=
-                        doctest.REPORT_ONLY_FIRST_FAILURE |
-                        doctest.NORMALIZE_WHITESPACE |
-                        doctest.ELLIPSIS,
-                    checker=Py23DocChecker()
+                    "doctests.rst",
+                    optionflags=doctest.REPORT_ONLY_FIRST_FAILURE
+                    | doctest.NORMALIZE_WHITESPACE
+                    | doctest.ELLIPSIS,
+                    checker=Py23DocChecker(),
                 ),
-                layer=NOROBOTS_INTEGRATION_TESTING
+                layer=NOROBOTS_INTEGRATION_TESTING,
             ),
         ]
     )
     return suite
 
-if __name__ == '__main__':
-    unittest.main(defaultTest='test_suite')
+
+if __name__ == "__main__":
+    unittest.main(defaultTest="test_suite")

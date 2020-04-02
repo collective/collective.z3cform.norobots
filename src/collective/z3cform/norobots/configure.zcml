@@ -1,12 +1,13 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:five="http://namespaces.zope.org/five"
-    xmlns:z3c="http://namespaces.zope.org/z3c"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:meta="http://namespaces.zope.org/meta"
-    xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="collective.z3cform.norobots">
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    i18n_domain="collective.z3cform.norobots"
+    >
 
   <includeDependencies package="." /><!-- Else tests are broken -->
 
@@ -28,39 +29,40 @@
 
   <!-- this widget is not configured for any field by default -->
   <z3c:widgetTemplate
+      template="norobots_input.pt"
+      layer="z3c.form.interfaces.IFormLayer"
       mode="input"
       widget="collective.z3cform.norobots.widget.INorobotsWidget"
-      layer="z3c.form.interfaces.IFormLayer"
-      template="norobots_input.pt"
       />
 
   <!-- Static resources at /++resources++collective.z3cform.norobots -->
   <browser:resourceDirectory
-        name="collective.z3cform.norobots"
-        directory="static"
-        />
+      name="collective.z3cform.norobots"
+      directory="static"
+      />
 
   <!-- Register the installation GenericSetup extension profile -->
   <genericsetup:registerProfile
       name="default"
       title="Norobots captcha field (collective.z3cform.norobots)"
-      directory="profiles/default"
       description="Provides a human captcha widget based on a list of questions/answers."
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
       />
 
   <genericsetup:registerProfile
       name="uninstall"
       title="Norobots captcha field UNINSTALLATION"
-      directory="profiles/uninstall"
       description="Removes the human usable captcha widget based on a list of questions/answers."
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
       post_handler=".setuphandlers.uninstall"
       />
 
-    <utility
-        factory=".setuphandlers.HiddenProfiles"
-        name="collective.z3cform.norobots-hiddenprofiles" />
+  <utility
+      name="collective.z3cform.norobots-hiddenprofiles"
+      factory=".setuphandlers.HiddenProfiles"
+      />
 
   <include package=".upgrades" />
 

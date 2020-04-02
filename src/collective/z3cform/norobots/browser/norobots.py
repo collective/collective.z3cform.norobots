@@ -1,26 +1,26 @@
-
-import random
-import logging
-from hashlib import md5
-
-from zope.component import getUtility
-from zope.interface import implementer
-from Products.Five import BrowserView
-from plone.registry.interfaces import IRegistry
-
 from collective.z3cform.norobots.browser.interfaces import INorobotsView
 from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
+from hashlib import md5
+from plone.registry.interfaces import IRegistry
+from Products.Five import BrowserView
+from zope.component import getUtility
+from zope.interface import implementer
+
+import logging
+import random
+
 
 logger = logging.getLogger("collective.z3cform.norobots")
+
 
 class NoRobotsQuestionsError(Exception):
     """ Raised when no questions have been created """
 
+
 @implementer(INorobotsView)
 class Norobots(BrowserView):
-
     def _hashTitle(self, title):
-        return md5(title.encode('ascii', 'ignore')).hexdigest()
+        return md5(title.encode("ascii", "ignore")).hexdigest()
 
     def _get_questions_list(self):
         # [('question_id', 'question', 'answer'), ...]
@@ -38,20 +38,20 @@ class Norobots(BrowserView):
             norobots_questions = ()
 
         questions = []
-        
+
         for i in range(len(norobots_questions)):
             # values must be "question::answer1;answer2;...;answerN"
             item = norobots_questions[i]
-            
-            if '::' in item:
-                question_id = 'question%d' % i
-                question, answer = item.split('::')
+
+            if "::" in item:
+                question_id = "question%d" % i
+                question, answer = item.split("::")
                 question, answer = question.strip(), answer.strip()
-                answers = [a.strip().lower() for a in answer.split(';') if a.strip()]
+                answers = [a.strip().lower() for a in answer.split(";") if a.strip()]
                 questions.append((question_id, question, answers))
 
         if not questions:
-            #raise NoRobotsQuestionsError
+            # raise NoRobotsQuestionsError
             logger.error("QUESTIONS MUST BE CONFIGURED IN THE DEDICATED CONTROL PANEL")
 
         return questions
@@ -68,34 +68,29 @@ class Norobots(BrowserView):
         if questions:
             q_id, q_title, q_answers = random.sample(questions, 1)[0]
             id_check = self._hashTitle(q_title)
-            return {'id': q_id,
-                    'title': q_title,
-                    'id_check': id_check}
+            return {"id": q_id, "title": q_title, "id_check": id_check}
         else:
-            return {'id': '',
-                    'title': '',
-                    'id_check': ''}
-            
+            return {"id": "", "title": "", "id_check": ""}
 
     def verify(self, input, question_id=None, id_check=None):
         # See interfaces/INorobotsView
-        
+
         # user's answer
         input = str(input).lower()
-        
+
         # question id and is corresponding id check
         form = self.request.form
-        
+
         if question_id is None:
-            question_id = form.get('question_id', '')
-        
+            question_id = form.get("question_id", "")
+
         if id_check is None:
-            id_check = form.get('id_check', '')
+            id_check = form.get("id_check", "")
 
         # verify the answer
         questions = self._get_questions_dict()
-        title, answers = questions.get(question_id, ('', ''))
-        
+        title, answers = questions.get(question_id, ("", ""))
+
         if not (self._hashTitle(title) == id_check and input in answers):
             return False
         return True

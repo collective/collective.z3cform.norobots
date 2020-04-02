@@ -79,10 +79,14 @@ Check for the norobots widget:
 
 A widget with an empty captcha is rendered if there is no question/answer:
 
-    # Tthe widget may be rendered differently but it is always the same (depends on the Plone version)
-    >>> foo_form.widgets['norobots'].render() in [
-    ...       u'\n\t\n  <strong><span>Question</span></strong>:\n  <span></span><br />\n\n  <strong><span>Your answer</span></strong>:\n  \n  <input type="text" id="form-widgets-norobots" name="form.widgets.norobots" class="norobots-widget required textline-field" size="30" maxlength="200" value="" />\n                     \n  <input type="hidden" name="question_id" value="" />\n  <input type="hidden" name="id_check" value="" />\n         \n'
-    ...       ]
+    >>> rendered_widget = foo_form.widgets['norobots'].render()
+    >>> 'id="form-widgets-norobots"' in rendered_widget
+    True
+    >>> 'name="form.widgets.norobots"' in rendered_widget
+    True
+    >>> "question_id" in rendered_widget
+    True
+    >>> "id_check" in rendered_widget
     True
 
 and if the form is submitted the validation failed:

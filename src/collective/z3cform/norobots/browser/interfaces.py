@@ -1,17 +1,22 @@
-from zope.interface import Interface
-from zope import schema
-
 from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
+from zope import schema
+from zope.interface import Interface
+
 
 class INorobotsWidgetSettings(Interface):
     """plone.app.registry settings 
     """
-    questions = schema.Tuple(title=_(u"Norobots question::answer"), 
-                             description=_(u"Questions list (one per line). Example : 'What is 10 + 12 ?::22'. \
-Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."),
-                             value_type=schema.TextLine(),
-                             required=True
-                             )
+
+    questions = schema.Tuple(
+        title=_(u"Norobots question::answer"),
+        description=_(
+            u"Questions list (one per line). Example : 'What is 10 + 12 ?::22'. \
+Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
+        ),
+        value_type=schema.TextLine(),
+        required=True,
+    )
+
 
 class INorobotsView(Interface):
     """Norobots question generating and verifying view

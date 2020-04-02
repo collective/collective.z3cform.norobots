@@ -1,66 +1,53 @@
 # -*- coding: utf-8 -*-
-import os
-from setuptools import setup
 from setuptools import find_packages
+from setuptools import setup
 
-version = '1.4.5.dev0'
+import os
+
+
+version = "1.4.5.dev0"
+
 
 def read(*rnames):
-    return open(
-        os.path.join('.', *rnames)
-    ).read()
+    return open(os.path.join(".", *rnames)).read()
 
-long_description = "\n\n".join(
-    [read('README.rst'),
-     read('CHANGES.rst'),
-    ]
-)
 
-tests_require = ['zope.testing',
-                 'zope.app.testing',
-                 'plone.app.testing',
-                 'lxml']
+long_description = "\n\n".join([read("README.rst"), read("CHANGES.rst"),])
+
+tests_require = ["plone.app.testing"]
 
 classifiers = [
     "Framework :: Plone",
     "Framework :: Plone :: 5.2",
-    "Framework :: Plone :: 5.1",    
+    "Framework :: Plone :: 5.1",
     "Framework :: Plone :: 5.0",
     "Framework :: Plone :: 4.3",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 2.7",
-    "Topic :: Software Development :: Libraries :: Python Modules",]
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 
 setup(
-    name='collective.z3cform.norobots',
+    name="collective.z3cform.norobots",
     version=version,
-    description='Human readable captcha for z3cform',
+    description="Human readable captcha for z3cform",
     long_description=long_description,
     classifiers=classifiers,
-    keywords='plone z3cform captcha',
-    author='Sylvain Boureliou',
-    author_email='sylvain.boureliou@makina-corpus.com',
-    url='http://www.makina-corpus.com',
-    license='GPL',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    namespace_packages=['collective', 'collective.z3cform'],
+    keywords="plone z3cform captcha",
+    author="Sylvain Boureliou",
+    author_email="sylvain.boureliou@makina-corpus.com",
+    url="http://www.makina-corpus.com",
+    license="GPL",
+    packages=find_packages("src"),
+    package_dir={"": "src"},
+    namespace_packages=["collective", "collective.z3cform"],
     include_package_data=True,
     zip_safe=False,
-    install_requires=[
-        'setuptools',
-        # -*- Extra requirements: -*-
-        'plone.app.z3cform',
-        'plone.app.registry'
-    ],
+    install_requires=["setuptools", "plone.app.z3cform", "plone.app.registry",],
     tests_require=tests_require,
-    test_suite='collective.z3cform.norobots.tests.test_docs.test_suite',
-    extras_require={
-        'test': tests_require,
-    },
+    test_suite="collective.z3cform.norobots.tests.test_docs.test_suite",
+    extras_require={"test": tests_require,},
     # define there your console scripts
-    entry_points={
-      'z3c.autoinclude.plugin': 'target = plone',
-    },
+    entry_points={"z3c.autoinclude.plugin": "target = plone",},
 )
