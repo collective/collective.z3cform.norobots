@@ -43,13 +43,14 @@ before_script:
 - firefox -v
 
 script:
-# Run code-analysis, except on Python 3.6, which mysteriously fails to find zc.buildout.
-#  - python --version 2> /dev/stdout | grep 3.6 || bin/code-analysis
+# do code-analysis only on latest plone because there's
+# a strange error with configparser in version < 5.1
+  - echo $PLONE_VERSION | grep -v 5.2.x || bin/code-analysis
   - bin/test --all
 
 after_success:
-  - bin/createcoverage --output-dir=parts/test/coverage
-  - bin/pip install coverage
-  - bin/python -m coverage.pickle2json
-  - bin/pip install -q coveralls
-  - coveralls
+  - echo $PLONE_VERSION | grep -v 5.2.x || bin/createcoverage --output-dir=parts/test/coverage
+  - echo $PLONE_VERSION | grep -v 5.2.x || bin/pip install coverage
+  - echo $PLONE_VERSION | grep -v 5.2.x || bin/python -m coverage.pickle2json
+  - echo $PLONE_VERSION | grep -v 5.2.x || bin/pip install -q coveralls
+  - echo $PLONE_VERSION | grep -v 5.2.x || coveralls
