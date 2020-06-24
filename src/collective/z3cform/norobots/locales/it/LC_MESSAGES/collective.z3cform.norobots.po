@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-04-09 10:58+0000\n"
+"POT-Creation-Date: 2020-06-24 08:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Luca Fabbri <keul@redturtle.it>\n"
 "Language-Team: RedTurtle Technology <sviluppoplone@redturtle.it>\n"
@@ -15,106 +15,113 @@ msgstr ""
 "Language-Code: it\n"
 "Language-Name: Italian\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.pfg.norobots\n"
+"Domain: collective.z3cform.norobots\n"
 
-#: ./plone_forms/contact_info.py:32
+#: ./browser/norobots_macro.pt:18
+#: ./plone_forms/contact_info.py:43
 msgid "Are you a human ?"
 msgstr "Sei un umano ?"
 
-#: ./plone_forms/contact_info.py:42
+#: ./plone_forms/contact_info.py:55
 msgid "Contact form"
 msgstr "Modulo di contatto"
 
-#: ./plone_forms/contact_info.py:19
+#: ./plone_forms/contact_info.py:24
 msgid "E-Mail"
 msgstr ""
 
-#: ./plone_forms/contact_info.py:33
+#: ./browser/norobots_macro.pt:28
+#: ./plone_forms/contact_info.py:44
 msgid "In order to avoid spam, please answer the question below."
 msgstr "Per prevenire lo spam, prego rispondi alla domanda seguente."
 
-#: ./plone_forms/contact_info.py:132
+#: ./plone_forms/contact_info.py:149
 msgid "Mail sent."
 msgstr "Messaggio inviato"
 
-#: ./plone_forms/contact_info.py:28
+#: ./plone_forms/contact_info.py:37
 msgid "Message"
 msgstr "Messaggio"
 
-#: ./plone_forms/contact_info.py:15
+#: ./plone_forms/contact_info.py:20
 msgid "Name"
 msgstr "Nome"
 
-#: Profile title in configure.zcml
+#: ./configure.zcml:51
 msgid "Norobots captcha field (collective.z3cform.norobots)"
 msgstr "Campo captcha Norobots (collective.z3cform.norobots)"
 
-#: ./browser/interfaces.py:9
+#: ./configure.zcml:60
+msgid "Norobots captcha field UNINSTALLATION"
+msgstr ""
+
+#: ./browser/interfaces.py:11
 msgid "Norobots question::answer"
 msgstr "Norobots domanda::risposta"
 
-#: ./browser/controlpanel.py:17
+#: ./browser/controlpanel.py:19
 #: ./profiles/default/controlpanel.xml
 msgid "Norobots widget settings"
 msgstr "Impostazioni widget Norobots"
 
-#: ./plone_forms/contact_info.py:83
+#: ./plone_forms/contact_info.py:96
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr "Prego correggi gli errori indicati e non dimenticare di compilare il campo 'Sei un umano ?'"
 
-#: ./plone_forms/contact_info.py:29
+#: ./plone_forms/contact_info.py:38
 msgid "Please enter the message you want to send."
 msgstr "Prego inserire il messaggio che vuoi inviare."
 
-#: ./plone_forms/contact_info.py:25
+#: ./plone_forms/contact_info.py:32
 msgid "Please enter the subject of the message you want to send."
 msgstr "Prego inserire l'oggetto del messaggio che vuoi inviare."
 
-#: ./plone_forms/contact_info.py:20
+#: ./plone_forms/contact_info.py:25
 msgid "Please enter your e-mail address."
 msgstr "Prego inserisci il tuo indirizzo e-mail."
 
-#: ./plone_forms/contact_info.py:16
+#: ./plone_forms/contact_info.py:20
 msgid "Please enter your full name."
 msgstr "Prego inserisci il tuo nome completo"
 
-#: Profile description in configure.zcml
+#: ./configure.zcml:51
 msgid "Provides a human captcha widget based on a list of questions/answers."
 msgstr "Fornisce un campo captcha basato su una lista di domande/risposte."
 
-#: ./norobots_input.pt:3
+#: ./browser/norobots_macro.pt:32
+#: ./norobots_input.pt:6
 msgid "Question"
 msgstr "Domanda"
 
-#: ./browser/interfaces.py:10
+#: ./browser/interfaces.py:12
 msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
 msgstr "Lista delle domande (una per riga). Esempio : 'Quanto fa 10 + 12 ?::22'. Le risposte possono essere più di una, deliminate dal punto-e-virgola. Esempio : 'Quanto fa 5 + 5 ?::10;dieci'."
 
-#: ./plone_forms/contact_info.py:77
+#: ./configure.zcml:60
+msgid "Removes the human usable captcha widget based on a list of questions/answers."
+msgstr ""
+
+#: ./plone_forms/contact_info.py:90
 msgid "Send"
 msgstr "Invia"
 
-#: ./plone_forms/contact_info.py:24
+#: ./plone_forms/contact_info.py:31
 msgid "Subject"
 msgstr "Oggetto"
 
-#: ./plone_forms/contact_info.py:127
-msgid "Unable to send mail: ${exception}"
-msgstr "Impossibile inviare l'e-mail: ${exception}"
-
-#: ./browser/interfaces.py:15
+#: Default question 3
 msgid "What is 10 + 4 ?"
 msgstr "Quanto fa 10 + 4 ?"
 
-#: ./browser/interfaces.py:14
+#: Default question 1
 msgid "What is 4 + 4 ?"
 msgstr "Quanto fa 4 + 4 ?"
 
-#: ./browser/interfaces.py:16
+#: Default question 2
 msgid "Write five cipher."
 msgstr "Scrivi cinque in cifre."
 
-#: ./validator.py:12
+#: ./validator.py:9
 msgid "You entered a wrong answer, please answer the new question below."
 msgstr "La tua risposta era sbagliata, prego rispondi alla domanda sottostante."
 
@@ -122,7 +129,7 @@ msgstr "La tua risposta era sbagliata, prego rispondi alla domanda sottostante."
 msgid "You entered an invalid email address."
 msgstr "Hai inserito un messaggio e-mail non valido."
 
-#: ./norobots_input.pt:7
+#: ./browser/norobots_macro.pt:37
+#: ./norobots_input.pt:14
 msgid "Your answer"
 msgstr "La tua risposta"
-

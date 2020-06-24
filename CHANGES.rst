@@ -20,6 +20,12 @@ Changelog
 - Add css klass to Widget
   [1letter]
 
+- Add missing english translation file
+  [thomasmassmann]
+
+- Update translations.
+  [thomasmassmann]
+
 
 1.4.4 (2016-07-20)
 ~~~~~~~~~~~~~~~~~~

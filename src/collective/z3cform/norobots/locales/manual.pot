@@ -15,7 +15,7 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.pfg.norobots\n"
+"Domain: collective.z3cform.norobots\n"
 
 #: Profile title in configure.zcml
 msgid "Norobots captcha field (collective.z3cform.norobots)"
@@ -24,3 +24,16 @@ msgstr ""
 #: Profile description in configure.zcml
 msgid "Provides a human captcha widget based on a list of questions/answers."
 msgstr ""
+
+#: Default question 1
+msgid "What is 4 + 4 ?"
+msgstr ""
+
+#: Default question 2
+msgid "Write five cipher."
+msgstr ""
+
+#: Default question 3
+msgid "What is 10 + 4 ?"
+msgstr ""
+
