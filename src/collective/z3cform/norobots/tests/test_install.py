@@ -1,10 +1,9 @@
-from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
+# -*- coding: utf-8 -*
 from collective.z3cform.norobots.testing import NOROBOTS_INTEGRATION_TESTING
 from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
 from zope.component import getUtility
 
-import string
 import unittest
 
 
@@ -27,7 +26,7 @@ class TestInstall(unittest.TestCase):
         self.request = self.layer["request"]
 
     def test_product_is_installed(self):
-        """ Validate that our products GS profile has been run and the product 
+        """ Validate that our products GS profile has been run and the product
             installed
         """
         if get_installer is None:

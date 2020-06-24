@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 from collective.z3cform.norobots.testing import NOROBOTS_INTEGRATION_TESTING
 from plone.testing import layered
 

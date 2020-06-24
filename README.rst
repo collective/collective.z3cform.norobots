@@ -1,3 +1,21 @@
+.. image:: https://travis-ci.org/collective/collective.z3cform.norobots.svg?branch=master
+    :target: https://travis-ci.org/collective/collective.z3cform.norobots
+
+.. image:: https://coveralls.io/repos/github/collective/collective.z3cform.norobots/badge.svg?branch=master
+    :target: https://coveralls.io/github/collective/collective.z3cform.norobots?branch=master
+    :alt: Coveralls
+
+.. image:: https://img.shields.io/pypi/v/collective.z3cform.norobots.svg
+    :target: https://pypi.python.org/pypi/collective.z3cform.norobots/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/status/collective.z3cform.norobots.svg
+    :target: https://pypi.python.org/pypi/collective.z3cform.norobots
+    :alt: Egg Status
+
+.. image:: https://img.shields.io/pypi/pyversions/collective.z3cform.norobots.svg?style=plastic   :alt: Supported - Python Versions
+
+
 ===============================================
 collective.z3cform.norobots
 ===============================================

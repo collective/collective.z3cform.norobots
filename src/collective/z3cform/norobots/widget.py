@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 from Acquisition import aq_inner
 from z3c.form.browser.text import TextWidget
 from z3c.form.interfaces import IFieldWidget

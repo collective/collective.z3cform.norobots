@@ -1,4 +1,4 @@
-from collective.z3cform.norobots.tests.utils import PLONE_VERSION
+# -*- coding: utf-8 -*-
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE

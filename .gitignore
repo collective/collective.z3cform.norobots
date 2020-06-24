@@ -37,3 +37,6 @@ report.html
 !.gitkeep
 !.travis.yml
 !src/collective
+/.coverage.py37-Plone52
+/.tox
+/reports

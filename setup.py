@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from setuptools import find_packages
-from setuptools import setup
+from setuptools import find_packages, setup
 
 import os
 
@@ -12,7 +11,7 @@ def read(*rnames):
     return open(os.path.join(".", *rnames)).read()
 
 
-long_description = "\n\n".join([read("README.rst"), read("CHANGES.rst"),])
+long_description = "\n\n".join([read("README.rst"), read("CHANGES.rst")])
 
 tests_require = ["plone.app.testing"]
 
@@ -45,10 +44,10 @@ setup(
     namespace_packages=["collective", "collective.z3cform"],
     include_package_data=True,
     zip_safe=False,
-    install_requires=["setuptools", "plone.app.z3cform", "plone.app.registry",],
+    install_requires=["setuptools", "plone.app.z3cform", "plone.app.registry"],
     tests_require=tests_require,
     test_suite="collective.z3cform.norobots.tests.test_docs.test_suite",
-    extras_require={"test": tests_require,},
+    extras_require={"test": tests_require},
     # define there your console scripts
-    entry_points={"z3c.autoinclude.plugin": "target = plone",},
+    entry_points={"z3c.autoinclude.plugin": "target = plone"},
 )
