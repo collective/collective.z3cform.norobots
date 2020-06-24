@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2013-04-09 10:58+0000\n"
+"POT-Creation-Date: 2020-06-24 07:33+0000\n"
 "PO-Revision-Date: 2010-11-05 08:13+0100\n"
 "Last-Translator: Peter Mathis <peter.mathis@kombinat.at>\n"
 "Language-Team: petschki @ kombinat <peter.mathis@kombinat.at>\n"
@@ -16,104 +16,99 @@ msgstr ""
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: Austria\n"
 
-#: ./plone_forms/contact_info.py:32
+#: ./browser/norobots_macro.pt:18
+#: ./plone_forms/contact_info.py:43
 msgid "Are you a human ?"
 msgstr "Sind Sie ein Mensch?"
 
-#: ./plone_forms/contact_info.py:42
+#: ./plone_forms/contact_info.py:55
 msgid "Contact form"
 msgstr "Kontaktformular"
 
-#: ./plone_forms/contact_info.py:19
+#: ./plone_forms/contact_info.py:24
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: ./plone_forms/contact_info.py:33
+#: ./browser/norobots_macro.pt:28
+#: ./plone_forms/contact_info.py:44
 msgid "In order to avoid spam, please answer the question below."
 msgstr "Beantworten Sie folgende Frage um Spam zu vermeiden."
 
-#: ./plone_forms/contact_info.py:132
+#: ./plone_forms/contact_info.py:149
 msgid "Mail sent."
 msgstr "E-Mail versendet"
 
-#: ./plone_forms/contact_info.py:28
+#: ./plone_forms/contact_info.py:37
 msgid "Message"
 msgstr "Nachricht"
 
-#: ./plone_forms/contact_info.py:15
+#: ./plone_forms/contact_info.py:20
 msgid "Name"
 msgstr "Name"
 
-#: Profile title in configure.zcml
+#: ./configure.zcml:51
 msgid "Norobots captcha field (collective.z3cform.norobots)"
 msgstr ""
 
-#: ./browser/interfaces.py:9
+#: ./configure.zcml:60
+msgid "Norobots captcha field UNINSTALLATION"
+msgstr ""
+
+#: ./browser/interfaces.py:11
 msgid "Norobots question::answer"
 msgstr ""
 
-#: ./browser/controlpanel.py:17
+#: ./browser/controlpanel.py:19
 #: ./profiles/default/controlpanel.xml
 msgid "Norobots widget settings"
 msgstr ""
 
-#: ./plone_forms/contact_info.py:83
+#: ./plone_forms/contact_info.py:96
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr """Fehler bei der Eingabe. Prüfen Sie die Felder und geben Sie die richtige Antwort im Feld "Sind Sie ein Mensch?" an"""
 
-#: ./plone_forms/contact_info.py:29
+#: ./plone_forms/contact_info.py:38
 msgid "Please enter the message you want to send."
 msgstr "Geben Sie Ihre Nachricht ein"
 
-#: ./plone_forms/contact_info.py:25
+#: ./plone_forms/contact_info.py:32
 msgid "Please enter the subject of the message you want to send."
 msgstr "Geben Sie einen Betreff für Ihre Nachricht an"
 
-#: ./plone_forms/contact_info.py:20
+#: ./plone_forms/contact_info.py:25
 msgid "Please enter your e-mail address."
 msgstr "Geben Sie Ihre E-Mail Adresse an"
 
-#: ./plone_forms/contact_info.py:16
+#: ./plone_forms/contact_info.py:20
 msgid "Please enter your full name."
 msgstr "Geben Sie Ihren vollständigen Namen an"
 
-#: Profile description in configure.zcml
+#: ./configure.zcml:51
 msgid "Provides a human captcha widget based on a list of questions/answers."
 msgstr ""
 
-#: ./norobots_input.pt:3
+#: ./browser/norobots_macro.pt:32
+#: ./norobots_input.pt:6
 msgid "Question"
 msgstr "Frage"
 
-#: ./browser/interfaces.py:10
+#: ./browser/interfaces.py:12
 msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
 msgstr ""
 
-#: ./plone_forms/contact_info.py:77
+#: ./configure.zcml:60
+msgid "Removes the human usable captcha widget based on a list of questions/answers."
+msgstr ""
+
+#: ./plone_forms/contact_info.py:90
 msgid "Send"
 msgstr "Senden"
 
-#: ./plone_forms/contact_info.py:24
+#: ./plone_forms/contact_info.py:31
 msgid "Subject"
 msgstr "Betreff"
 
-#: ./plone_forms/contact_info.py:127
-msgid "Unable to send mail: ${exception}"
-msgstr "E-Mail konnte nicht versendet werden: ${exception}"
-
-#: ./browser/interfaces.py:15
-msgid "What is 10 + 4 ?"
-msgstr "Wieviel ist 10 + 4?"
-
-#: ./browser/interfaces.py:14
-msgid "What is 4 + 4 ?"
-msgstr "Wieviel ist 4 + 4?"
-
-#: ./browser/interfaces.py:16
-msgid "Write five cipher."
-msgstr """Schreiben Sie die Zahl "5" """
-
-#: ./validator.py:12
+#: ./validator.py:9
 msgid "You entered a wrong answer, please answer the new question below."
 msgstr "Ihre Antwort war leider falsch, bitte beantworten Sie nachstehend die neue Frage."
 
@@ -121,7 +116,7 @@ msgstr "Ihre Antwort war leider falsch, bitte beantworten Sie nachstehend die ne
 msgid "You entered an invalid email address."
 msgstr ""
 
-#: ./norobots_input.pt:7
+#: ./browser/norobots_macro.pt:37
+#: ./norobots_input.pt:14
 msgid "Your answer"
 msgstr "Ergebnis"
-

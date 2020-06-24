@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2013-04-09 10:58+0000\n"
+"POT-Creation-Date: 2020-06-24 07:33+0000\n"
 "PO-Revision-Date: 2012-03-27 17:27 +0800\n"
 "Last-Translator: Jian Aijun <jianaijun@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sf.net>\n"
@@ -16,104 +16,99 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.z3cform.norobots\n"
 
-#: ./plone_forms/contact_info.py:32
+#: ./browser/norobots_macro.pt:18
+#: ./plone_forms/contact_info.py:43
 msgid "Are you a human ?"
 msgstr "您是人类吗？"
 
-#: ./plone_forms/contact_info.py:42
+#: ./plone_forms/contact_info.py:55
 msgid "Contact form"
 msgstr "联系表"
 
-#: ./plone_forms/contact_info.py:19
+#: ./plone_forms/contact_info.py:24
 msgid "E-Mail"
 msgstr "电子邮件"
 
-#: ./plone_forms/contact_info.py:33
+#: ./browser/norobots_macro.pt:28
+#: ./plone_forms/contact_info.py:44
 msgid "In order to avoid spam, please answer the question below."
 msgstr "为了避免垃圾邮件，请回答以下问题。"
 
-#: ./plone_forms/contact_info.py:132
+#: ./plone_forms/contact_info.py:149
 msgid "Mail sent."
 msgstr "发送邮件"
 
-#: ./plone_forms/contact_info.py:28
+#: ./plone_forms/contact_info.py:37
 msgid "Message"
 msgstr "内容"
 
-#: ./plone_forms/contact_info.py:15
+#: ./plone_forms/contact_info.py:20
 msgid "Name"
 msgstr "名称"
 
-#: Profile title in configure.zcml
+#: ./configure.zcml:51
 msgid "Norobots captcha field (collective.z3cform.norobots)"
 msgstr ""
 
-#: ./browser/interfaces.py:9
+#: ./configure.zcml:60
+msgid "Norobots captcha field UNINSTALLATION"
+msgstr ""
+
+#: ./browser/interfaces.py:11
 msgid "Norobots question::answer"
 msgstr ""
 
-#: ./browser/controlpanel.py:17
+#: ./browser/controlpanel.py:19
 #: ./profiles/default/controlpanel.xml
 msgid "Norobots widget settings"
 msgstr ""
 
-#: ./plone_forms/contact_info.py:83
+#: ./plone_forms/contact_info.py:96
 msgid "Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."
 msgstr """请更正指示的错误，别忘了填写字段 "您是人类吗？"。"""
 
-#: ./plone_forms/contact_info.py:29
+#: ./plone_forms/contact_info.py:38
 msgid "Please enter the message you want to send."
 msgstr "请输入您要发送的内容。"
 
-#: ./plone_forms/contact_info.py:25
+#: ./plone_forms/contact_info.py:32
 msgid "Please enter the subject of the message you want to send."
 msgstr "请输入您要发送的内容的主题。"
 
-#: ./plone_forms/contact_info.py:20
+#: ./plone_forms/contact_info.py:25
 msgid "Please enter your e-mail address."
 msgstr "请输入您的电子邮件地址。"
 
-#: ./plone_forms/contact_info.py:16
+#: ./plone_forms/contact_info.py:20
 msgid "Please enter your full name."
 msgstr "请输入您的全名。"
 
-#: Profile description in configure.zcml
+#: ./configure.zcml:51
 msgid "Provides a human captcha widget based on a list of questions/answers."
 msgstr ""
 
-#: ./norobots_input.pt:3
+#: ./browser/norobots_macro.pt:32
+#: ./norobots_input.pt:6
 msgid "Question"
 msgstr "问题"
 
-#: ./browser/interfaces.py:10
+#: ./browser/interfaces.py:12
 msgid "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
 msgstr ""
 
-#: ./plone_forms/contact_info.py:77
+#: ./configure.zcml:60
+msgid "Removes the human usable captcha widget based on a list of questions/answers."
+msgstr ""
+
+#: ./plone_forms/contact_info.py:90
 msgid "Send"
 msgstr "发送"
 
-#: ./plone_forms/contact_info.py:24
+#: ./plone_forms/contact_info.py:31
 msgid "Subject"
 msgstr "主题"
 
-#: ./plone_forms/contact_info.py:127
-msgid "Unable to send mail: ${exception}"
-msgstr "无法发送邮件： ${exception}"
-
-#: ./browser/interfaces.py:15
-msgid "What is 10 + 4 ?"
-msgstr "10 + 4 等于几？"
-
-#: ./browser/interfaces.py:14
-msgid "What is 4 + 4 ?"
-msgstr "4 + 4 等于几？"
-
-#: ./browser/interfaces.py:16
-msgid "Write five cipher."
-msgstr """ "五" 的数字是什么？"""
-
-#: ./validator.py:12
+#: ./validator.py:9
 msgid "You entered a wrong answer, please answer the new question below."
 msgstr "您输入了错误的答案，请回答下面的新问题。"
 
@@ -121,7 +116,7 @@ msgstr "您输入了错误的答案，请回答下面的新问题。"
 msgid "You entered an invalid email address."
 msgstr ""
 
-#: ./norobots_input.pt:7
+#: ./browser/norobots_macro.pt:37
+#: ./norobots_input.pt:14
 msgid "Your answer"
 msgstr "您的答案"
-
