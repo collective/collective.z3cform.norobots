@@ -9,6 +9,8 @@ python:
   - "2.7"
 matrix:
   include:
+    - python: "3.7"
+      env: TOXENV=py37-lint
     - python: "2.7"
       env: PLONE_VERSION=43
     - python: "2.7"
