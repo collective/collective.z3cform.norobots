@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.z3cform.norobots\n"
-"POT-Creation-Date: 2020-06-24 07:33+0000\n"
+"POT-Creation-Date: 2020-06-24 08:09+0000\n"
 "PO-Revision-Date: 2010-11-05 08:13+0100\n"
 "Last-Translator: Peter Mathis <peter.mathis@kombinat.at>\n"
 "Language-Team: petschki @ kombinat <peter.mathis@kombinat.at>\n"
@@ -107,6 +107,18 @@ msgstr "Senden"
 #: ./plone_forms/contact_info.py:31
 msgid "Subject"
 msgstr "Betreff"
+
+#: Default question 3
+msgid "What is 10 + 4 ?"
+msgstr "Wieviel ist 10 + 4?"
+
+#: Default question 1
+msgid "What is 4 + 4 ?"
+msgstr "Wieviel ist 4 + 4?"
+
+#: Default question 2
+msgid "Write five cipher."
+msgstr """Schreiben Sie die Zahl "5" """
 
 #: ./validator.py:9
 msgid "You entered a wrong answer, please answer the new question below."
