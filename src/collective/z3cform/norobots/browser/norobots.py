@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*
 from collective.z3cform.norobots.browser.interfaces import INorobotsView
 from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
 from hashlib import md5

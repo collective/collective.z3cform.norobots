@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*
 from Acquisition import aq_inner
 from z3c.form.browser.text import TextWidget
 from z3c.form.interfaces import IFieldWidget
@@ -25,8 +24,8 @@ class NorobotsWidget(TextWidget):
 
     maxlength = 200
     size = 30
-    klass = u"norobots-widget"
-    css = u"norobots"
+    klass = "norobots-widget"
+    css = "norobots"
 
     def get_question(self):
         # return a dictionary {'id': '...', 'title': '...', 'id_check': '...'}

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*
 from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 from collective.z3cform.norobots.plone_forms import constraints
 from collective.z3cform.norobots.validator import NorobotsValidator
@@ -18,31 +17,31 @@ from zope import schema
 class IContactInfo(interface.Interface):
 
     fullname = schema.TextLine(
-        title=_(u"Name"), description=_(u"Please enter your full name."), required=False
+        title=_("Name"), description=_("Please enter your full name."), required=False
     )
 
     email = schema.TextLine(
-        title=_(u"E-Mail"),
-        description=_(u"Please enter your e-mail address."),
+        title=_("E-Mail"),
+        description=_("Please enter your e-mail address."),
         required=True,
         constraint=constraints.isEmail,
     )
 
     subject = schema.TextLine(
-        title=_(u"Subject"),
-        description=_(u"Please enter the subject of the message you want to send."),
+        title=_("Subject"),
+        description=_("Please enter the subject of the message you want to send."),
         required=True,
     )
 
     message = schema.Text(
-        title=_(u"Message"),
-        description=_(u"Please enter the message you want to send."),
+        title=_("Message"),
+        description=_("Please enter the message you want to send."),
         required=True,
     )
 
     norobots = schema.TextLine(
-        title=_(u"Are you a human ?"),
-        description=_(u"In order to avoid spam, please answer the question below."),
+        title=_("Are you a human ?"),
+        description=_("In order to avoid spam, please answer the question below."),
         required=True,
     )
 
@@ -53,10 +52,10 @@ class ContactInfoForm(form.Form):
 
     ignoreContext = True  # don't use context to get widget data
     id = "z3cform_contact_info_form"
-    label = _(u"Contact form")
+    label = _("Contact form")
 
     def updateWidgets(self):
-        super(ContactInfoForm, self).updateWidgets()
+        super().updateWidgets()
         # fullname
         self.widgets["fullname"].size = 40
         self.widgets["fullname"].maxlength = 200
@@ -82,20 +81,20 @@ class ContactInfoForm(form.Form):
         # If the current user is authenticated, fill in fullname and email fields
         if sender.getId() is not None:
             fullname = sender.getProperty("fullname")
-            self.request.form["form.widgets.fullname"] = u"%s" % fullname
+            self.request.form["form.widgets.fullname"] = "%s" % fullname
             email = sender.getProperty("email")
-            self.request.form["form.widgets.email"] = u"%s" % email
+            self.request.form["form.widgets.email"] = "%s" % email
 
-        super(ContactInfoForm, self).update()
+        super().update()
 
-    @button.buttonAndHandler(_(u"Send"))
+    @button.buttonAndHandler(_("Send"))
     def handle_send(self, action):
         data, errors = self.extractData()
 
         if errors:
             # self.status = self.formErrorsMessage
             portal_msg = _(
-                u"""Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."""
+                """Please correct the indicated errors and don't forget to fill in the field 'Are you a human ?'."""
             )
             self.context.plone_utils.addPortalMessage(portal_msg, "error")
             return
@@ -117,7 +116,7 @@ class ContactInfoForm(form.Form):
         send_from_address = data["email"]
         envelope_from = portal.getProperty("email_from_address")  # webmaster email
         sender = mtool.getAuthenticatedMember()
-        sender_id = "%s (%s), %s" % (fullname, sender.getId(), send_from_address)
+        sender_id = f"{fullname} ({sender.getId()}), {send_from_address}"
         referer = REQUEST.get("referer", "unknown referer")
 
         # to
@@ -147,7 +146,7 @@ class ContactInfoForm(form.Form):
             return False
         """
 
-        plone_utils.addPortalMessage(u"[FAKE] %s" % _(u"Mail sent."))
+        plone_utils.addPortalMessage("[FAKE] %s" % _("Mail sent."))
 
 
 # wrap the form with plone.app.z3cform's Form wrapper

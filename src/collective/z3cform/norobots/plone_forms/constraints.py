@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Helper functions for fields validation
 
 from collective.z3cform.norobots.i18n import norobotsMessageFactory as _

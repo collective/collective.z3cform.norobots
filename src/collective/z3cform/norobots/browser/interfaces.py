@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*
 from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 from zope import schema
 from zope.interface import Interface
@@ -9,9 +8,9 @@ class INorobotsWidgetSettings(Interface):
     """
 
     questions = schema.Tuple(
-        title=_(u"Norobots question::answer"),
+        title=_("Norobots question::answer"),
         description=_(
-            u"Questions list (one per line). Example : 'What is 10 + 12 ?::22'. \
+            "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. \
 Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
         ),
         value_type=schema.TextLine(),

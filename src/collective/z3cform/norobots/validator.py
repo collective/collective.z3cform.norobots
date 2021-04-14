@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*
 from Acquisition import aq_inner
 from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 from z3c.form import validator
@@ -12,7 +11,7 @@ class WrongNorobotsAnswer(ValidationError):
 
 class NorobotsValidator(validator.SimpleFieldValidator):
     def validate(self, value):
-        super(NorobotsValidator, self).validate(value)
+        super().validate(value)
         norobots = getMultiAdapter(
             (aq_inner(self.context), self.request), name="norobots"
         )

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*
 from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
 from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
@@ -25,7 +24,7 @@ def upgrade_to_2(context):
         for item in props.propertyItems():
             # values must be "question::answer1;answer2;...;answerN"
             if item[0] != "title":
-                questions.append(u"%s" % item[1])
+                questions.append("%s" % item[1])
 
         # Save question in the registry
         registry = getUtility(IRegistry)
