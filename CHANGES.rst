@@ -4,6 +4,12 @@ Changelog
 1.4.5 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- Add Plone 6 support, remove <includeDependencies />
+- Update test
+- Housekeeping Code
+- Update setup, tox.ini
+  [1letter]
+
 - Remove Plone 5.0 classifier as this version is not tested anymore.
   [thet]
 
