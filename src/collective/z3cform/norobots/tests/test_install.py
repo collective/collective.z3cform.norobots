@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 from collective.z3cform.norobots.testing import NOROBOTS_INTEGRATION_TESTING
+from plone import api
 from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
 from zope.component import getUtility
@@ -20,21 +22,17 @@ class TestInstall(unittest.TestCase):
     layer = NOROBOTS_INTEGRATION_TESTING
 
     def setUp(self):
-        self.app = self.layer["app"]
+        """Custom shared utility setup for tests."""
         self.portal = self.layer["portal"]
-        self.request = self.layer["request"]
+        if get_installer:
+            self.installer = get_installer(self.portal, self.layer["request"])
+        else:
+            self.installer = api.portal.get_tool("portal_quickinstaller")
 
     def test_product_is_installed(self):
-        """ Validate that our products GS profile has been run and the product
-            installed
-        """
-        if get_installer is None:
-            qi = self.portal["portal_quickinstaller"]
-        else:
-            qi = get_installer(self.portal)
+        """Test if collective.z3cform.norobots is installed."""
         self.assertTrue(
-            qi.isProductInstalled(PROJECTNAME),
-            "package appears not to have been installed",
+            self.installer.is_product_installed("collective.z3cform.norobots")
         )
 
     def test_registry(self):
@@ -62,25 +60,16 @@ class TestUninstall(unittest.TestCase):
         self.app = self.layer["app"]
         self.portal = self.layer["portal"]
         self.request = self.layer["request"]
-
-        if get_installer is None:
-            qi = self.portal["portal_quickinstaller"]
+        if get_installer:
+            self.installer = get_installer(self.portal, self.request)
         else:
-            qi = get_installer(self.portal)
-
-        qi.uninstallProducts((PROJECTNAME,))
+            self.installer = api.portal.get_tool("portal_quickinstaller")
+        self.installer.uninstall_product("collective.z3cform.norobots")
 
     def test_product_is_not_installed(self):
-        """ Validate that our products is not yet installed
-        """
-        if get_installer is None:
-            qi = self.portal["portal_quickinstaller"]
-        else:
-            qi = get_installer(self.portal)
-
+        """Validate that our products is not yet installed"""
         self.assertFalse(
-            qi.isProductInstalled(PROJECTNAME),
-            "package appears to be already installed",
+            self.installer.is_product_installed("collective.z3cform.norobots")
         )
 
     def test_registry(self):
@@ -91,6 +80,6 @@ class TestUninstall(unittest.TestCase):
         )
 
     def test_control_panel_is_not_installed(self):
-        portal_controlpanel = getToolByName(self.portal, "portal_controlpanel")
+        portal_controlpanel = api.portal.get_tool("portal_controlpanel")
         actions = [i.id for i in portal_controlpanel.listActions()]
         self.assertFalse("collective.z3cform.norobots.settings" in actions)

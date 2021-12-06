@@ -1,15 +1,10 @@
+# -*- coding: utf-8 -*-
+from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
-from plone.testing import z2
-
-
-try:
-    from Products.CMFPlone.utils import get_installer
-except ImportError:
-    # BBB for Plone 5.0 and lower.
-    get_installer = None
+from plone.testing import zope
 
 
 class NorobotsSandboxLayer(PloneSandboxLayer):
@@ -22,27 +17,15 @@ class NorobotsSandboxLayer(PloneSandboxLayer):
         import collective.z3cform.norobots
 
         self.loadZCML(package=collective.z3cform.norobots)
-        z2.installProduct(app, "collective.z3cform.norobots")
 
     def setUpPloneSite(self, portal):
-        # Configure the products using the Quick Installer tool
-        if get_installer is None:
-            qi = portal["portal_quickinstaller"]
-        else:
-            qi = get_installer(portal)
-        qi.installProducts(("collective.z3cform.norobots",))
-
-    def tearDownZope(self, app):
-        # Uninstall products
-        z2.uninstallProduct(app, "collective.z3cform.norobots")
+        applyProfile(portal, "collective.z3cform.norobots:default")
 
     def tearDownPloneSite(self, portal):
-        # Unconfigure the products using the Quick Installer tool
-        if get_installer is None:
-            qi = portal["portal_quickinstaller"]
-        else:
-            qi = get_installer(portal)
-        qi.uninstallProducts(("collective.z3cform.norobots",))
+        applyProfile(portal, "collective.z3cform.norobots:uninstall")
+
+    def tearDownZope(self, app):
+        zope.uninstallProduct(app, "collective.z3cform.norobots")
 
 
 NOROBOTS_FIXTURE = NorobotsSandboxLayer()
