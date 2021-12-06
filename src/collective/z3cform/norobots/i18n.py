@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from zope.i18nmessageid import MessageFactory
 
 
@@ -6,4 +7,4 @@ _ = norobotsMessageFactory
 
 
 def dummy_strings():
-    """ Dummy i18n strings for default questions """
+    """Dummy i18n strings for default questions"""
