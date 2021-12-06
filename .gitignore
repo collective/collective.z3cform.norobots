@@ -4,6 +4,8 @@
 *.mo
 *.py?
 *.swp
+.coverage*
+.python-version
 # dirs
 bin/
 buildout-cache/
@@ -27,7 +29,9 @@ log.html
 output.xml
 package.json
 pip-selfcheck.json
+pyvenv.cfg
 report.html
+local.cfg
 .vscode/
 # excludes
 !.coveragerc
@@ -40,3 +44,6 @@ report.html
 /.coverage.py37-Plone52
 /.tox
 /reports
+/share
+/src-mrd
+/downloads
