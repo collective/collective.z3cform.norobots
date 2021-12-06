@@ -1,0 +1,7 @@
+-c constraints_plone60.txt
+setuptools
+zc.buildout
+tox
+isort
+flake8
+black
