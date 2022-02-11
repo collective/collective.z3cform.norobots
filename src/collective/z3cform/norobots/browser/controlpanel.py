@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*
+# -*- coding: utf-8 -*-
 from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
 from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
@@ -10,11 +10,11 @@ class NorobotsControlPanelForm(RegistryEditForm):
     schema = INorobotsWidgetSettings
 
     def updateWidgets(self):
-        super(NorobotsControlPanelForm, self).updateWidgets()
+        super().updateWidgets()
         self.widgets["questions"].rows = 15
 
 
 NorobotsControlPanelView = layout.wrap_form(
     NorobotsControlPanelForm, ControlPanelFormWrapper
 )
-NorobotsControlPanelView.label = _(u"Norobots widget settings")
+NorobotsControlPanelView.label = _("Norobots widget settings")

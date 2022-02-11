@@ -7,4 +7,4 @@ _ = norobotsMessageFactory
 
 
 def dummy_strings():
-    """ Dummy i18n strings for default questions """
+    """Dummy i18n strings for default questions"""

@@ -1,0 +1,31 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:five="http://namespaces.zope.org/five"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  xmlns:meta="http://namespaces.zope.org/meta"
+  xmlns:z3c="http://namespaces.zope.org/z3c"
+  i18n_domain="collective.z3cform.norobots">
+
+  <!-- Register the installation GenericSetup extension profile -->
+  <genericsetup:registerProfile
+    name="default"
+    title="Norobots captcha field (collective.z3cform.norobots)"
+    description="Provides a human captcha widget based on a list of questions/answers."
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    directory="profiles/default" />
+
+  <genericsetup:registerProfile
+    name="uninstall"
+    title="Norobots captcha field UNINSTALLATION"
+    description="Removes the human usable captcha widget based on a list of questions/answers."
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    directory="profiles/uninstall"
+    post_handler=".setuphandlers.uninstall" />
+
+  <utility
+    name="collective.z3cform.norobots-hiddenprofiles"
+    factory=".setuphandlers.HiddenProfiles" />
+
+</configure>

@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*
+# -*- coding: utf-8 -*-
 from collective.z3cform.norobots.browser.interfaces import INorobotsView
 from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
 from hashlib import md5
@@ -15,7 +15,7 @@ logger = logging.getLogger("collective.z3cform.norobots")
 
 
 class NoRobotsQuestionsError(Exception):
-    """ Raised when no questions have been created """
+    """Raised when no questions have been created"""
 
 
 @implementer(INorobotsView)

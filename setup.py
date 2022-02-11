@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from setuptools import find_packages, setup
+from setuptools import find_packages
+from setuptools import setup
 
 import os
 
@@ -44,7 +45,12 @@ setup(
     namespace_packages=["collective", "collective.z3cform"],
     include_package_data=True,
     zip_safe=False,
-    install_requires=["setuptools", "plone.app.z3cform", "plone.app.registry"],
+    install_requires=[
+        "setuptools",
+        "plone.app.z3cform",
+        "plone.app.registry",
+        "plone.api",
+    ],
     tests_require=tests_require,
     test_suite="collective.z3cform.norobots.tests.test_docs.test_suite",
     extras_require={"test": tests_require},
