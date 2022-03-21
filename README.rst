@@ -52,6 +52,7 @@ Requirements
 ------------
 
 I have tested this release with Plone 4.3.10, Plone 5.0.5.
+Since version 2.0 Plone 6 is supported.
 
 See previous releases for old Plone versions.
 

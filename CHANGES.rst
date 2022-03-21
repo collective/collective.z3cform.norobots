@@ -1,7 +1,7 @@
 Changelog
 ------------
 
-1.4.5 (unreleased)
+2.0 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
 - Add Plone 6 support, remove <includeDependencies />
