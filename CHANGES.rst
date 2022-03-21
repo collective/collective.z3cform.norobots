@@ -1,8 +1,8 @@
 Changelog
 ------------
 
-2.0 (unreleased)
-~~~~~~~~~~~~~~~~~~
+2.0 (2022-03-21)
+~~~~~~~~~~~~~~~~
 
 - Add Plone 6 support, remove <includeDependencies />
 - Update test
