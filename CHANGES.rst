@@ -4,7 +4,7 @@ Changelog
 2.1 (unreleased)
 ~~~~~~~~~~~~~~~~
 
-- Nothing changed yet.
+- Add label for captcha field question
 
 
 2.0 (2022-03-21)
