@@ -14,7 +14,7 @@ class NorobotsValidator(validator.SimpleFieldValidator):
     def validate(self, value):
         super().validate(value)
         norobots = getMultiAdapter(
-            (aq_inner(self.context), self.request), name="norobots"
+            (aq_inner(self.context), self.request), name="norobots",
         )
         if norobots.verify(value):
             return True

@@ -30,8 +30,8 @@ class NorobotsSandboxLayer(PloneSandboxLayer):
 
 NOROBOTS_FIXTURE = NorobotsSandboxLayer()
 NOROBOTS_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(NOROBOTS_FIXTURE,), name="collective.z3cform.norobots:Integration"
+    bases=(NOROBOTS_FIXTURE,), name="collective.z3cform.norobots:Integration",
 )
 NOROBOTS_FUNCTIONNAL_TESTING = FunctionalTesting(
-    bases=(NOROBOTS_FIXTURE,), name="collective.z3cform.norobots:Integration"
+    bases=(NOROBOTS_FIXTURE,), name="collective.z3cform.norobots:Integration",
 )
