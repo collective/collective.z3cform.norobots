@@ -71,8 +71,10 @@ Create an empty form:
 
 Check for the norobots widget:
 
-    >>> foo_form.widgets.keys()
-    ['id', 'norobots']
+    >>> 'id' in foo_form.widgets.keys()
+    True
+    >>> 'norobots' in foo_form.widgets.keys()
+    True
 
     >>> foo_form.widgets['norobots'].field # doctest: +ELLIPSIS
     <zope.schema._bootstrapfields.TextLine object at ...>

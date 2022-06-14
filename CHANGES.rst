@@ -4,7 +4,8 @@ Changelog
 2.1 (unreleased)
 ~~~~~~~~~~~~~~~~
 
-- Nothing changed yet.
+- Add an adapter to show the controlpanel in Volto
+  [erral]
 
 
 2.0 (2022-03-21)
