@@ -30,7 +30,8 @@ class NorobotsWidget(TextWidget):
     def get_question(self):
         # return a dictionary {'id': '...', 'title': '...', 'id_check': '...'}
         self.norobots = getMultiAdapter(
-            (aq_inner(self.context), self.request), name="norobots",
+            (aq_inner(self.context), self.request),
+            name="norobots",
         )
         return self.norobots.get_question()
 

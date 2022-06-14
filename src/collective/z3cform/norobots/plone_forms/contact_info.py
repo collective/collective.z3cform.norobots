@@ -30,9 +30,7 @@ class IContactInfo(interface.Interface):
 
     subject = schema.TextLine(
         title=_("Subject"),
-        description=_(
-            "Please enter the subject of the message you want to send."
-        ),
+        description=_("Please enter the subject of the message you want to send."),
         required=True,
     )
 
@@ -44,9 +42,7 @@ class IContactInfo(interface.Interface):
 
     norobots = schema.TextLine(
         title=_("Are you a human ?"),
-        description=_(
-            "In order to avoid spam, please answer the question below."
-        ),
+        description=_("In order to avoid spam, please answer the question below."),
         required=True,
     )
 
