@@ -5,21 +5,19 @@ on: [push]
 jobs:
   build:
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         include:
-          # - plone-version: '52'
-          #   python-version: 3.6
           - plone-version: "52"
             python-version: 3.7
           - plone-version: "52"
             python-version: 3.8
-          # - plone-version: '60'
-          #   python-version: 3.6
           - plone-version: "60"
             python-version: 3.7
           - plone-version: "60"
             python-version: 3.8
+          - plone-version: "60"
+            python-version: 3.9
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
