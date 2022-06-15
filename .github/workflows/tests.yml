@@ -60,5 +60,4 @@ jobs:
           PLONE_VERSION: ${{ matrix.plone-version }}
           PYTHON_VERSION: ${{ matrix.python-version }}
         run: |
-          echo $PLONE_VERSION | grep -v 52 || bin/code-analysis
           bin/test --all
