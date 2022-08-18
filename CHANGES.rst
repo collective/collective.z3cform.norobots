@@ -1,7 +1,7 @@
 Changelog
 ------------
 
-2.1 (unreleased)
+2.1 (2022-08-18)
 ~~~~~~~~~~~~~~~~
 
 - Add an adapter to show the controlpanel in Volto
