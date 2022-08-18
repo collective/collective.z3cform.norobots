@@ -32,7 +32,9 @@ class TestInstall(unittest.TestCase):
     def test_product_is_installed(self):
         """Test if collective.z3cform.norobots is installed."""
         self.assertTrue(
-            self.installer.is_product_installed("collective.z3cform.norobots")
+            self.installer.is_product_installed(
+                "collective.z3cform.norobots",
+            )
         )
 
     def test_registry(self):
@@ -69,7 +71,7 @@ class TestUninstall(unittest.TestCase):
     def test_product_is_not_installed(self):
         """Validate that our products is not yet installed"""
         self.assertFalse(
-            self.installer.is_product_installed("collective.z3cform.norobots")
+            self.installer.is_product_installed("collective.z3cform.norobots"),
         )
 
     def test_registry(self):

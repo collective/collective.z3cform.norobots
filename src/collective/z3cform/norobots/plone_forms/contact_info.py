@@ -16,7 +16,9 @@ from zope import schema
 class IContactInfo(interface.Interface):
 
     fullname = schema.TextLine(
-        title=_("Name"), description=_("Please enter your full name."), required=False
+        title=_("Name"),
+        description=_("Please enter your full name."),
+        required=False,
     )
 
     email = schema.TextLine(

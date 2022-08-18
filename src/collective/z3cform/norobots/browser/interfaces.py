@@ -10,8 +10,9 @@ class INorobotsWidgetSettings(Interface):
     questions = schema.Tuple(
         title=_("Norobots question::answer"),
         description=_(
-            "Questions list (one per line). Example : 'What is 10 + 12 ?::22'. \
-Answer can contain multiple values delimited by semicolon. Example : 'What is 5 + 5 ?::10;ten'."
+            "Questions list (one per line). Example : 'What is 10 + 12 ?::22'."
+            " Answer can contain multiple values delimited by semicolon."
+            " Example : 'What is 5 + 5 ?::10;ten'."
         ),
         value_type=schema.TextLine(),
         required=True,
