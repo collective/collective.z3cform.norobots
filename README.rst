@@ -182,6 +182,11 @@ You can use this widget setting the "widgetFactory" property of a form field:
     # Register Norobots validator for the correponding field in the IContactInfo interface
     validator.WidgetValidatorDiscriminators(NorobotsValidator, field=INorobotsForm['norobots'])
 
+In your configure.zcml you have to add the following adapter, to make the valdiation work.
+::
+
+    <adapter factory=".contact_info.NorobotsValidator" />
+
 For more information see ``contact_info.py`` in the ``plone_forms`` directory.
 
 To activate this example, add ``<include package=".plone_forms" />`` in the package's
