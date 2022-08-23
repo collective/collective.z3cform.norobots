@@ -182,7 +182,7 @@ You can use this widget setting the "widgetFactory" property of a form field:
     # Register Norobots validator for the correponding field in the IContactInfo interface
     validator.WidgetValidatorDiscriminators(NorobotsValidator, field=INorobotsForm['norobots'])
 
-In your configure.zcml you have to add the following adapter, to make the valdiation work.
+In your configure.zcml you have to add the following adapter, to make the validation work.
 ::
 
     <adapter factory=".contact_info.NorobotsValidator" />
