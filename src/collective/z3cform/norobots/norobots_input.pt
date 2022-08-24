@@ -2,7 +2,7 @@
            question view/get_question;
          "
 >
-
+  <label for="" tal:attributes="for view/id">
   <strong><span i18n:domain="collective.z3cform.norobots"
           i18n:translate=""
     >Question</span></strong>:
@@ -14,7 +14,7 @@
   <strong><span i18n:domain="collective.z3cform.norobots"
           i18n:translate=""
     >Your answer</span></strong>:
-
+  </label>
   <input class=""
          id=""
          accesskey=""
