@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <registry>
-  <records
-    interface="collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings"
-    remove="True" />
+  <records interface="collective.z3cform.norobots.browser.interfaces.INorobotsWidgetSettings"
+           remove="True"
+  />
 </registry>

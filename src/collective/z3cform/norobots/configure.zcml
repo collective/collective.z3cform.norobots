@@ -1,20 +1,24 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:five="http://namespaces.zope.org/five"
-  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-  xmlns:i18n="http://namespaces.zope.org/i18n"
-  xmlns:meta="http://namespaces.zope.org/meta"
-  xmlns:z3c="http://namespaces.zope.org/z3c"
-  xmlns:zcml="http://namespaces.zope.org/zcml"
-  i18n_domain="collective.z3cform.norobots">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:meta="http://namespaces.zope.org/meta"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="collective.z3cform.norobots"
+    >
 
   <include file="profiles.zcml" />
 
   <include package="plone.app.registry" />
   <include package="plone.app.z3cform" />
   <include package=".browser" />
-  <include package=".restapi" zcml:condition="installed plone.restapi"/>
+  <include
+      package=".restapi"
+      zcml:condition="installed plone.restapi"
+      />
 
   <!-- If you want to register z3c forms versions for common Plone forms -->
   <!--include package=".plone_forms" /-->
@@ -23,21 +27,24 @@
 
   <class class=".widget.NorobotsWidget">
     <require
-      permission="zope.Public"
-      interface="collective.z3cform.norobots.widget.INorobotsWidget" />
+        permission="zope.Public"
+        interface="collective.z3cform.norobots.widget.INorobotsWidget"
+        />
   </class>
 
   <!-- this widget is not configured for any field by default -->
   <z3c:widgetTemplate
-    template="norobots_input.pt"
-    layer="z3c.form.interfaces.IFormLayer"
-    mode="input"
-    widget="collective.z3cform.norobots.widget.INorobotsWidget" />
+      widget="collective.z3cform.norobots.widget.INorobotsWidget"
+      template="norobots_input.pt"
+      layer="z3c.form.interfaces.IFormLayer"
+      mode="input"
+      />
 
   <!-- Static resources at /++resources++collective.z3cform.norobots -->
   <browser:resourceDirectory
-    name="collective.z3cform.norobots"
-    directory="static" />
+      name="collective.z3cform.norobots"
+      directory="static"
+      />
 
   <include package=".upgrades" />
 

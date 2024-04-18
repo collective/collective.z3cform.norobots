@@ -1,7 +1,6 @@
 <tal:var define="
            question view/get_question;
-         "
->
+         ">
 
   <strong><span i18n:domain="collective.z3cform.norobots"
           i18n:translate=""
