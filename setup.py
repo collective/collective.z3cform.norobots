@@ -13,8 +13,6 @@ def read(*rnames):
 
 long_description = "\n\n".join([read("README.rst"), read("CHANGES.rst")])
 
-tests_require = ["plone.app.testing"]
-
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Framework :: Plone",
@@ -43,15 +41,29 @@ setup(
     namespace_packages=["collective", "collective.z3cform"],
     include_package_data=True,
     zip_safe=False,
+    python_requires=">=3.9",
     install_requires=[
         "setuptools",
         "plone.app.z3cform",
         "plone.app.registry",
-        "plone.api",
+        "plone.registry",
+        "plone.restapi",
+        "Zope",
+        "Products.CMFPlone",
+        "Products.GenericSetup",
+        "z3c.form",
     ],
-    tests_require=tests_require,
     test_suite="collective.z3cform.norobots.tests.test_docs.test_suite",
-    extras_require={"test": tests_require},
+    extras_require={
+        "test": [
+            "plone.app.testing",
+            "plone.api",
+            "plone.app.testing",
+            "plone.base",
+            "plone.testing>=5.0.0",
+            "six",
+        ]
+    },
     # define there your console scripts
     entry_points={"z3c.autoinclude.plugin": "target = plone"},
 )
