@@ -101,7 +101,7 @@ class ContactInfoForm(form.Form):
 # wrap the form with plone.app.z3cform's Form wrapper
 ContactInfoView = wrap_form(ContactInfoForm)
 
-# Register Norobots validator for the correponding field in the IContactInfo interface
+# Register Norobots validator for the corresponding field in the IContactInfo interface
 validator.WidgetValidatorDiscriminators(
     NorobotsValidator, field=IContactInfo["norobots"]
 )

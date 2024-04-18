@@ -56,7 +56,7 @@ NorobotsWidget factory ('NorobotsFieldWidget') as the field's widgetFactory:
     ...     ignoreContext = True
     ...     label = u'Foo form'
 
-Register Norobots validator for the correponding field in the IFooForm interface:
+Register Norobots validator for the corresponding field in the IFooForm interface:
 
     >>> from zope.component import provideAdapter
     >>> validator.WidgetValidatorDiscriminators(NorobotsValidator, field=IFooForm['norobots'])

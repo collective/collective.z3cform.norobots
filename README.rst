@@ -179,7 +179,7 @@ You can use this widget setting the "widgetFactory" property of a form field:
     # wrap the form with plone.app.z3cform's Form wrapper
     NorobotsFormView = wrap_form(NorobotsForm)
 
-    # Register Norobots validator for the correponding field in the IContactInfo interface
+    # Register Norobots validator for the corresponding field in the IContactInfo interface
     validator.WidgetValidatorDiscriminators(NorobotsValidator, field=INorobotsForm['norobots'])
 
 In your configure.zcml you have to add the following adapter, to make the validation work.
