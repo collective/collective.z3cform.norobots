@@ -59,6 +59,7 @@ setup(
             "plone.api",
             "plone.app.testing",
             "plone.base",
+            "plone.browserlayer",
             "plone.testing>=5.0.0",
             "six",
         ]
