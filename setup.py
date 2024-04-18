@@ -16,16 +16,13 @@ long_description = "\n\n".join([read("README.rst"), read("CHANGES.rst")])
 tests_require = ["plone.app.testing"]
 
 classifiers = [
+    "Development Status :: 5 - Production/Stable",
     "Framework :: Plone",
     "Framework :: Plone :: 6.0",
-    "Framework :: Plone :: 5.2",
-    "Framework :: Plone :: 5.1",
-    "Framework :: Plone :: 4.3",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 2.7",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
+    "Framework :: Plone :: 6.1",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
