@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 from collective.z3cform.norobots.plone_forms import constraints
 from collective.z3cform.norobots.validator import NorobotsValidator
