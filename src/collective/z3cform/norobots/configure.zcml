@@ -13,7 +13,7 @@
   <include file="profiles.zcml" />
 
   <include package="plone.app.registry" />
-  <include package="plone.app.z3cform" />
+  <include package="plone.z3cform" />
   <include package=".browser" />
   <include
       package=".restapi"

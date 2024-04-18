@@ -44,7 +44,6 @@ setup(
     python_requires=">=3.9",
     install_requires=[
         "setuptools",
-        "plone.app.z3cform",
         "plone.app.registry",
         "plone.registry",
         "plone.restapi",

@@ -161,7 +161,7 @@ You can use this widget setting the "widgetFactory" property of a form field:
 
     from zope import interface, schema
     from z3c.form import interfaces, form, field, button, validator
-    from plone.app.z3cform.layout import wrap_form
+    from plone.z3cform.layout import wrap_form
 
     from collective.z3cform.norobots.i18n import MessageFactory as _
     from collective.z3cform.norobots.widget import NorobotsFieldWidget
@@ -176,7 +176,7 @@ You can use this widget setting the "widgetFactory" property of a form field:
         fields = field.Fields(INorobotsForm)
         fields['norobots'].widgetFactory = NorobotsFieldWidget
 
-    # wrap the form with plone.app.z3cform's Form wrapper
+    # wrap the form with plone.z3cform's Form wrapper
     NorobotsFormView = wrap_form(NorobotsForm)
 
     # Register Norobots validator for the corresponding field in the IContactInfo interface

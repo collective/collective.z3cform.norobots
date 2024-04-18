@@ -2,7 +2,7 @@ from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 from collective.z3cform.norobots.plone_forms import constraints
 from collective.z3cform.norobots.validator import NorobotsValidator
 from collective.z3cform.norobots.widget import NorobotsFieldWidget
-from plone.app.z3cform.layout import wrap_form
+from plone.z3cform.layout import wrap_form
 from Products.CMFCore.utils import getToolByName
 from z3c.form import button
 from z3c.form import field
@@ -98,7 +98,7 @@ class ContactInfoForm(form.Form):
         plone_utils.addPortalMessage("[FAKE] %s" % _("Mail sent."))
 
 
-# wrap the form with plone.app.z3cform's Form wrapper
+# wrap the form with plone.z3cform's Form wrapper
 ContactInfoView = wrap_form(ContactInfoForm)
 
 # Register Norobots validator for the corresponding field in the IContactInfo interface

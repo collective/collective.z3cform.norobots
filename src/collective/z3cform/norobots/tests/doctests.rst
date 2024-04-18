@@ -48,7 +48,7 @@ NorobotsWidget factory ('NorobotsFieldWidget') as the field's widgetFactory:
     >>> from zope.annotation.interfaces import IAttributeAnnotatable
 
     >>> from z3c.form import form, field, validator
-    >>> from plone.app.z3cform.layout import wrap_form
+    >>> from plone.z3cform.layout import wrap_form
 
     >>> class FooForm(form.Form):
     ...     fields = field.Fields(IFooForm)
