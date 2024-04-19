@@ -35,11 +35,8 @@ jobs:
 
       - name: Install addon package, in editable mode, with pip
         run: |
-          pip install -e ".[test]"
+          pip install tox
 
       - name: Run tests (located inside src)
         run: |
-          whereis zope-testrunner
-          which zope-testrunner
-          ls -al
-          zope-testrunner --auto-color --auto-progress --test-path src/
+          tox -r
