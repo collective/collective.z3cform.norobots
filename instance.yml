@@ -1,0 +1,8 @@
+default_context:
+  initial_user_name: "admin"
+  initial_user_password: "admin"
+  wsgi_listen: "localhost:8080"
+  zcml_package_includes: collective.z3cform.norobots
+  db_storage: direct
+  debug_mode: true
+  verbose_security: true
