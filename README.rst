@@ -1,17 +1,21 @@
-.. image:: https://github.com/collective/collective.outputfilters.tinymceaccordion/actions/workflows/meta.yml/badge.svg
-    :target: https://github.com/collective/collective.outputfilters.tinymceaccordion/actions/workflows/meta.yml
-    :alt: Plone Meta Workflow
-.. image:: https://coveralls.io/repos/github/collective/collective.z3cform.norobots/badge.svg?branch=master
-    :target: https://coveralls.io/github/collective/collective.z3cform.norobots?branch=master
-    :alt: Coveralls
-.. image:: https://img.shields.io/pypi/v/collective.z3cform.norobots.svg
+image:: /img/small-banana.png
+.. |ico1| .. image:: https://github.com/collective/collective.outputfilters.tinymceaccordion/actions/workflows/meta.yml/badge.svg
+            :target: https://github.com/collective/collective.outputfilters.tinymceaccordion/actions/workflows/meta.yml
+            :alt: Plone Meta Workflow
+.. |ico2| .. image:: https://coveralls.io/repos/github/collective/collective.z3cform.norobots/badge.svg?branch=master
+            :target: https://coveralls.io/github/collective/collective.z3cform.norobots?branch=master
+            :alt: Coveralls
+.. |ico3| .. image:: https://img.shields.io/pypi/v/collective.z3cform.norobots.svg
     :target: https://pypi.python.org/pypi/collective.z3cform.norobots/
     :alt: Latest Version
-.. image:: https://img.shields.io/pypi/status/collective.z3cform.norobots.svg
+
+.. |ico4| .. image:: https://img.shields.io/pypi/status/collective.z3cform.norobots.svg
     :target: https://pypi.python.org/pypi/collective.z3cform.norobots
     :alt: Egg Status
-.. image:: https://img.shields.io/pypi/pyversions/collective.z3cform.norobots.svg?style=plastic   :alt: Supported - Python Versions
 
+.. |ico5| .. image:: https://img.shields.io/pypi/pyversions/collective.z3cform.norobots.svg?style=plastic   :alt: Supported - Python Versions
+
+|ico1| |ico2| |ico3| |ico4| |ico5|
 
 ===============================================
 collective.z3cform.norobots
