@@ -9,17 +9,17 @@
   <browser:page
       name="norobots"
       for="*"
-      permission="zope2.View"
       class=".norobots.Norobots"
       allowed_interface=".interfaces.INorobotsView"
+      permission="zope2.View"
       />
 
   <!-- html field macro -->
   <browser:page
       name="norobots_macro"
       for="*"
-      permission="zope2.View"
       template="norobots_macro.pt"
+      permission="zope2.View"
       />
 
   <!-- Control panel -->
@@ -27,8 +27,8 @@
   <browser:page
       name="norobots-controlpanel"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-      permission="cmf.ManagePortal"
       class=".controlpanel.NorobotsControlPanelView"
+      permission="cmf.ManagePortal"
       />
 
 </configure>
