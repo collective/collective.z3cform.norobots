@@ -39,4 +39,7 @@ jobs:
 
       - name: Run tests (located inside src)
         run: |
+          whereis zope-testrunner
+          which zope-testrunner
+          ls -al
           zope-testrunner --auto-color --auto-progress --test-path src/
