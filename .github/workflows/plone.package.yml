@@ -18,7 +18,11 @@ jobs:
         plone-version:
           - "6.0-dev"
           - "6.1-dev"
-        python-version: [3.9, 3.10, 3.11, 3.12]
+        python-version:
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "3.12"
 
     steps:
       - name: Setup Plone ${{ matrix.plone-version }} with Python ${{ matrix.python-version }}
