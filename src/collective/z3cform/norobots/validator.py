@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from Acquisition import aq_inner
 from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 from z3c.form import validator
