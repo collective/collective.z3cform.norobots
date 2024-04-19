@@ -1,6 +1,3 @@
-.. image:: https://travis-ci.org/collective/collective.z3cform.norobots.svg?branch=master
-    :target: https://travis-ci.org/collective/collective.z3cform.norobots
-
 .. image:: https://coveralls.io/repos/github/collective/collective.z3cform.norobots/badge.svg?branch=master
     :target: https://coveralls.io/github/collective/collective.z3cform.norobots?branch=master
     :alt: Coveralls
@@ -69,8 +66,21 @@ Screenshot
 Installation
 ------------
 
-Getting the module
-~~~~~~~~~~~~~~~~~~~~
+Getting the module - pip based
+
+Add ``collective.z3cform.norobots`` to your ``requirements.txt``
+
+Testinstallation::
+
+    python3 -m venv ./venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    pip install cookiecutter
+    cookiecutter -f --no-input --config-file instance.yml https://github.com/plone/cookiecutter-zope-instance
+    runwsgi -v instance/etc/zope.ini
+
+Getting the module - buildout based
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Add ``collective.z3cform.norobots`` to your ``plone.recipe.zope2instance`` buildout section e.g.::
 
@@ -161,7 +171,7 @@ You can use this widget setting the "widgetFactory" property of a form field:
 
     from zope import interface, schema
     from z3c.form import interfaces, form, field, button, validator
-    from plone.app.z3cform.layout import wrap_form
+    from plone.z3cform.layout import wrap_form
 
     from collective.z3cform.norobots.i18n import MessageFactory as _
     from collective.z3cform.norobots.widget import NorobotsFieldWidget
@@ -176,10 +186,10 @@ You can use this widget setting the "widgetFactory" property of a form field:
         fields = field.Fields(INorobotsForm)
         fields['norobots'].widgetFactory = NorobotsFieldWidget
 
-    # wrap the form with plone.app.z3cform's Form wrapper
+    # wrap the form with plone.z3cform's Form wrapper
     NorobotsFormView = wrap_form(NorobotsForm)
 
-    # Register Norobots validator for the correponding field in the IContactInfo interface
+    # Register Norobots validator for the corresponding field in the IContactInfo interface
     validator.WidgetValidatorDiscriminators(NorobotsValidator, field=INorobotsForm['norobots'])
 
 In your configure.zcml you have to add the following adapter, to make the validation work.
