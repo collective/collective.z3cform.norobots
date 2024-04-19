@@ -1,3 +1,7 @@
+.. image:: https://github.com/collective/collective.outputfilters.tinymceaccordion/actions/workflows/meta.yml/badge.svg
+    :target: https://github.com/collective/collective.outputfilters.tinymceaccordion/actions/workflows/meta.yml
+    :alt: Plone Meta Workflow
+
 .. image:: https://coveralls.io/repos/github/collective/collective.z3cform.norobots/badge.svg?branch=master
     :target: https://coveralls.io/github/collective/collective.z3cform.norobots?branch=master
     :alt: Coveralls
