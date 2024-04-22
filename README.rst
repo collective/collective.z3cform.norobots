@@ -59,9 +59,12 @@ See previous releases for old Plone versions.
 Screenshot
 ------------
 
-.. image:: https://github.com/sylvainb/collective.z3cform.norobots/raw/master/docs/collective-z3cform-norobots-screenshot.png
-   :height: 324px
-   :width: 499px
+.. image:: https://raw.githubusercontent.com/collective/collective.z3cform.norobots/dev/docs/collective.z3cform.norobots-screenshot-1.png
+   :scale: 100 %
+   :alt: Screenshot
+   :align: center
+
+.. image:: https://raw.githubusercontent.com/collective/collective.z3cform.norobots/dev/docs/collective.z3cform.norobots-screenshot-2.png
    :scale: 100 %
    :alt: Screenshot
    :align: center
