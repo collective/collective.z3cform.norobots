@@ -146,7 +146,8 @@ Launch tests::
 Launch code coverage::
 
     (venv) tox -e coverage
-    And open with a browser htmlcov/index.html
+    
+and open with a browser htmlcov/index.html
 
 Usage as a ``plone.app.discussion`` (Plone Discussions) captcha plugin
 ----------------------------------------------------------------------
