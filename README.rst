@@ -76,15 +76,6 @@ Getting the module - pip based
 
 Add ``collective.z3cform.norobots`` to your ``requirements.txt``
 
-Testinstallation::
-
-    python3 -m venv ./venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    pip install cookiecutter
-    cookiecutter -f --no-input --config-file instance.yml https://github.com/plone/cookiecutter-zope-instance
-    runwsgi -v instance/etc/zope.ini
-
 Getting the module - buildout based
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -135,31 +126,26 @@ Answer can contain multiple values delimited by semicolon:
 Quickly test ?
 ~~~~~~~~~~~~~~~~~~~~
 
-Download ``collective.z3cform.norobots`` and use ``virtualenv`` and ``buildout`` to test the module::
+Checkout ``collective.z3cform.norobots`` and use ``venv`` and ``pip`` to test the module::
 
-    easy_install virtualenv
-    cd collective.z3cform.norobots
-    virtualenv .
-    source bin/activate
-    (collective.z3cform.norobots) easy_install zc.buildout
-    !!! check the buildout config file ``test-plone-base.cfg`` before running !!!
-    (collective.z3cform.norobots) ln -s test-plone-5.0.x.cfg buildout.cfg
-    (collective.z3cform.norobots) python bootstrap.py
-    (collective.z3cform.norobots) bin/buildout
-    [...] be patient... [...]
-    (collective.z3cform.norobots) ./bin/instance fg
+    python3 -m venv ./venv
+    source venv/bin/activate
+    (venv) pip install mxdev
+    (venv) pip install -r requirements-mxdev.txt
+    (venv) pip install cookiecutter
+    (venv) cookiecutter -f --no-input --config-file instance.yml https://github.com/plone/cookiecutter-zope-instance
+    (venv) runwsgi -v instance/etc/zope.ini
 
 Go to http://localhost:8080, add a new Plone Site and install collective.z3cform.norobots (see above).
 
 Launch tests::
 
-    (collective.z3cform.norobots) pip install unittest2
-    (collective.z3cform.norobots) ./bin/test -s collective.z3cform.norobots
+    (venv) pip install tox
+    (venv) tox
 
 Launch code coverage::
 
-    (collective.z3cform.norobots) bin/coverage
-    (collective.z3cform.norobots) bin/report
+    (venv) tox -e coverage
     And open with a browser htmlcov/index.html
 
 Usage as a ``plone.app.discussion`` (Plone Discussions) captcha plugin
@@ -233,12 +219,12 @@ Credits
 Source code
 -----------
 
-`Source code <https://github.com/sylvainb/collective.z3cform.norobots>`_ is hosted on Github.
+`Source code <https://github.com/collective/collective.z3cform.norobots>`_ is hosted on Github.
 
 How to contribute and submit a patch ?
 --------------------------------------
 
-`Source code <https://github.com/sylvainb/collective.z3cform.norobots>`_ and an `issue tracker <https://github.com/sylvainb/collective.z3cform.norobots/issues>`_ is hosted on Github.
+`Source code <https://github.com/collective/collective.z3cform.norobots>`_ and an `issue tracker <https://github.com/collective/collective.z3cform.norobots/issues>`_ is hosted on Github.
 
 Contributors
 -----------------
