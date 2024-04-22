@@ -253,5 +253,6 @@ Contributors
 * Luca Fabbri [keul]
 * Andrea Cecchi [cekk]
 * [serge73]
+* [1letter]
 
 .. _`collective.pfg.norobots`: http://pypi.python.org/pypi/collective.pfg.norobots
