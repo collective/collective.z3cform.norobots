@@ -34,5 +34,5 @@ NOROBOTS_INTEGRATION_TESTING = IntegrationTesting(
 )
 NOROBOTS_FUNCTIONNAL_TESTING = FunctionalTesting(
     bases=(NOROBOTS_FIXTURE,),
-    name="collective.z3cform.norobots:Integration",
+    name="collective.z3cform.norobots:Functional",
 )
