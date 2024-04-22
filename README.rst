@@ -2,9 +2,8 @@
     :target: https://github.com/collective/collective.outputfilters.tinymceaccordion/actions/workflows/meta.yml
     :alt: Plone Meta Workflow
 
-.. image:: https://coveralls.io/repos/github/collective/collective.z3cform.norobots/badge.svg?branch=master
-    :target: https://coveralls.io/github/collective/collective.z3cform.norobots?branch=master
-    :alt: Coveralls
+.. image:: https://codecov.io/gh/collective/collective.z3cform.norobots/graph/badge.svg?token=DgZ7MzmVMr 
+    :target: https://codecov.io/gh/collective/collective.z3cform.norobots
 
 .. image:: https://img.shields.io/pypi/v/collective.z3cform.norobots.svg
     :target: https://pypi.python.org/pypi/collective.z3cform.norobots/
