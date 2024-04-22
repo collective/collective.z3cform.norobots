@@ -15,7 +15,7 @@ class NorobotsSandboxLayer(PloneSandboxLayer):
         # Load ZCML for this package
         import collective.z3cform.norobots
 
-        self.loadZCML(package=collective.z3cform.norobots)
+        self.loadZCML(name="testing.zcml", package=collective.z3cform.norobots)
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, "collective.z3cform.norobots:default")
