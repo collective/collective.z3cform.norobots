@@ -11,7 +11,7 @@
     >
 
   <include file="configure.zcml" />
-  
+
   <!-- Enable sample package for tests -->
   <include package=".plone_forms" />
 
