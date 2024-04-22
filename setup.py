@@ -63,6 +63,7 @@ setup(
             "plone.browserlayer",
             "plone.testing>=5.0.0",
             "six",
+            "lxml",
         ]
     },
     # define there your console scripts
