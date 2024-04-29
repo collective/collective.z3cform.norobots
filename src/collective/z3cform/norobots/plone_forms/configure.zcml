@@ -6,7 +6,7 @@
 
   <browser:page
       name="z3cform-contact-info"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      for="plone.base.interfaces.siteroot.IPloneSiteRoot"
       class=".contact_info.ContactInfoView"
       permission="zope2.View"
       />
