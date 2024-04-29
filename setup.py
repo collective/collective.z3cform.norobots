@@ -52,6 +52,7 @@ setup(
         "Products.CMFPlone",
         "Products.GenericSetup",
         "z3c.form",
+        "plone.base",
     ],
     test_suite="collective.z3cform.norobots.tests.test_docs.test_suite",
     extras_require={
@@ -59,7 +60,6 @@ setup(
             "plone.app.testing",
             "plone.api",
             "plone.app.testing",
-            "plone.base",
             "plone.browserlayer",
             "plone.testing>=5.0.0",
             "six",
