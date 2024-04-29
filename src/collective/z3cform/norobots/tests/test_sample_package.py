@@ -81,3 +81,40 @@ class TestFunctionalSamplePackage(unittest.TestCase):
             browser.contents,
             "the error message is missing!",
         )
+
+
+class TestFunctionalMacroView(unittest.TestCase):
+
+    layer = NOROBOTS_FUNCTIONNAL_TESTING
+
+    def _manager_browser(self):
+        transaction.commit()
+        # Set up browser
+        browser = Browser(self.layer["app"])
+        browser.handleErrors = False
+        browser.addHeader(
+            "Authorization",
+            "Basic {}:{}".format(
+                SITE_OWNER_NAME,
+                SITE_OWNER_PASSWORD,
+            ),
+        )
+        return browser
+
+    def setUp(self):
+        self.portal = self.layer["portal"]
+        setRoles(self.portal, TEST_USER_ID, ["Manager"])
+
+    def test_sample_package(self):
+        from io import StringIO
+        from lxml import etree
+
+        browser = self._manager_browser()
+        browser.open(f"{self.portal.absolute_url()}/simple-form-with-macro-view")
+        tree = etree.parse(StringIO(browser.contents), etree.HTMLParser())
+
+        result = tree.xpath("//input[@name='form.widgets.fullname']")
+        self.assertEqual(1, len(result), "fullname widget is not present")
+
+        result = tree.xpath("//input[@name='norobots']")
+        self.assertEqual(1, len(result), "norobots widget is not present")

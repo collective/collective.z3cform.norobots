@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      lang="en"
+      metal:use-macro="context/@@main_template/macros/master"
+      xml:lang="en"
+      i18n:domain="plone"
+>
+
+  <body>
+    <metal:main fill-slot="content">
+
+
+      <metal:block fill-slot="content-core">
+
+        <form enctype="multipart/form-data"
+              data-pat-autotoc="levels: legend; section: fieldset; className: autotabs"
+              tal:attributes="
+                id view/form_instance/id;
+                action view/form_instance/action;
+                method view/form_instance/method;
+              "
+        >
+
+          <div>
+            <tal:field tal:replace="structure view/form_instance/widgets/fullname/@@ploneform-render-widget" />
+          </div>
+
+          <div metal:use-macro="container/norobots_macro/macros/norobots_macro">
+              Norobots Macro goes here
+          </div>
+
+          <div class="formControls"
+               tal:condition="view/form_instance/actions/values|nothing"
+          >
+            <tal:block repeat="action view/form_instance/actions/values">
+              <input type="submit"
+                     tal:replace="structure action/render"
+              />
+            </tal:block>
+          </div>
+
+
+          <tal:block tal:condition="view/form_instance/enableCSRFProtection|nothing"
+                     tal:replace="structure context/@@authenticator/authenticator"
+          />
+
+        </form>
+
+
+      </metal:block>
+
+
+
+    </metal:main>
+  </body>
+
+</html>

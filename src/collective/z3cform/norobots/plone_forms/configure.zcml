@@ -11,6 +11,13 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      name="simple-form-with-macro-view"
+      for="plone.base.interfaces.siteroot.IPloneSiteRoot"
+      class=".simpleform.SimpleFormView"
+      permission="zope2.View"
+      />
+
   <!-- Norobots validator -->
   <adapter factory=".contact_info.NorobotsValidator" />
 
