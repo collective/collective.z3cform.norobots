@@ -15,32 +15,41 @@
                   "
                   i18n:domain="collective.z3cform.norobots"
     >
-      <label for="norobots"
-             i18n:translate=""
-      >Are you a human ?</label>
-      <span class="fieldRequired"
-            title="Required"
-            i18n:attributes="title title_required;"
-            i18n:domain="plone"
-            i18n:translate="label_required"
-      >(Required)</span>
-      <div class="formHelp">
-        <span i18n:translate="">
-            In order to avoid spam, please answer the question below.
-        </span>
+      <label class="form-label">
+        <span tal:omit-tag=""
+              i18n:translate=""
+        >Are you a human ?</span>
+        <span class="required"
+              title="Required"
+              i18n:attributes="title title_required;"
+        ></span>
+      </label>
+      <div class="form-floating">
+
+        <input class="required textline-field form-control"
+               id="floating-norobot-input"
+               maxlength="200"
+               name="norobots"
+               placeholder="..."
+               size="30"
+               type="text"
+        />
+
+        <label for="floating-norobot-input">
+
+          <span tal:omit-tag=""
+                i18n:translate=""
+          >Question</span>:
+          <span tal:content="python:question['title']"
+                tal:omit-tag=""
+                i18n:translate=""
+          ></span>
+
+        </label>
       </div>
-      <strong><span i18n:translate="">Question</span></strong>:
-      <span tal:content="python:question['title']"
-            i18n:translate=""
-      ></span><br />
-
-      <strong><span i18n:translate="">Your answer</span></strong>:
-
-      <input id="norobots"
-             name="norobots"
-             type="text"
-      />
-
+      <div class="form-text"
+           i18n:translate=""
+      >In order to avoid spam, please answer the question below.</div>
       <input name="question_id"
              type="hidden"
              value=""
@@ -48,6 +57,7 @@
                value python:question['id'];
              "
       />
+
       <input name="id_check"
              type="hidden"
              value=""
@@ -55,6 +65,7 @@
                value python:question['id_check'];
              "
       />
+
     </tal:norobots>
   </body>
 </html>
