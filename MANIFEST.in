@@ -6,4 +6,6 @@ include constraints.txt
 include requirements.txt
 include .gitlab-ci.yml
 include instance.yml
+exclude *.txt
 global-exclude *.pyc
+
