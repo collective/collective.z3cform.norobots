@@ -57,6 +57,8 @@ jobs:
 # os_dependencies = "git libxml2 libxslt"
 ##
 
+  plonetests:
+    uses: 1letter/workflow-plonematrix/.github/workflows/plonetest-matrix.yml@main
 
 ##
 # Specify additional jobs in .meta.toml:
