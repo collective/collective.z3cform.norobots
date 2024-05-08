@@ -58,7 +58,7 @@ jobs:
 ##
 
   plonetests:
-    uses: 1letter/workflow-plonematrix/.github/workflows/plonetest-matrix.yml@main
+    uses: collective/workflow-plonematrix/.github/workflows/plonetest-matrix.yml@main
 
 ##
 # Specify additional jobs in .meta.toml:
