@@ -8,7 +8,7 @@ commit-id = "1c2155e4"
 [github]
 extra_lines = """
   plonetests:
-    uses: 1letter/workflow-plonematrix/.github/workflows/plonetest-matrix.yml@main
+    uses: collective/workflow-plonematrix/.github/workflows/plonetest-matrix.yml@main
 """
 
 [tox]
