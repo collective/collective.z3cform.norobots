@@ -13,25 +13,27 @@ def read(*rnames):
 
 long_description = "\n\n".join([read("README.rst"), read("CHANGES.rst")])
 
-classifiers = [
-    "Development Status :: 5 - Production/Stable",
-    "Framework :: Plone",
-    "Framework :: Plone :: 6.0",
-    "Framework :: Plone :: 6.1",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "License :: OSI Approved :: GNU General Public License (GPL)",
-]
-
 setup(
     name="collective.z3cform.norobots",
     version=version,
     description="Human readable captcha for z3cform",
     long_description=long_description,
     long_description_content_type="text/x-rst",
-    classifiers=classifiers,
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Framework :: Plone",
+        "Framework :: Plone :: Addon",
+        "Framework :: Plone :: 6.0",
+        "Framework :: Plone :: 6.1",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "License :: OSI Approved :: GNU General Public License (GPL)",
+    ],
     keywords="plone z3cform captcha",
     author="Sylvain Boureliou",
     author_email="sylvain.boureliou@makina-corpus.com",
@@ -42,7 +44,7 @@ setup(
     namespace_packages=["collective", "collective.z3cform"],
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.9",
+    python_requires=">=3.8",
     install_requires=[
         "setuptools",
         "plone.app.registry",
@@ -54,7 +56,6 @@ setup(
         "z3c.form",
         "plone.base",
     ],
-    test_suite="collective.z3cform.norobots.tests.test_docs.test_suite",
     extras_require={
         "test": [
             "plone.app.testing",
@@ -66,6 +67,7 @@ setup(
             "lxml",
         ]
     },
+    test_suite="collective.z3cform.norobots.tests.test_docs.test_suite",
     # define there your console scripts
     entry_points={"z3c.autoinclude.plugin": "target = plone"},
 )
