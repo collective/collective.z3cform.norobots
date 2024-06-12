@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.z3cform.norobots.i18n import norobotsMessageFactory as _
 from zope import schema
 from zope.interface import Interface

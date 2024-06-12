@@ -1,4 +1,11 @@
 graft src/collective
 graft docs
 include *.rst
+include .coveragerc
+include constraints.txt
+include requirements.txt
+include .gitlab-ci.yml
+include instance.yml
+exclude *.txt
 global-exclude *.pyc
+

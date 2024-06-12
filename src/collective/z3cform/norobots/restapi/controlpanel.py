@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.z3cform.norobots.browser.interfaces import INorobotsWidgetSettings
 from collective.z3cform.norobots.i18n import _
 from plone.restapi.controlpanels import RegistryConfigletPanel

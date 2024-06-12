@@ -1,45 +1,56 @@
-<tal:var define="
-           question view/get_question;
-         "
+<tal:snippet xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+             xmlns:metal="http://xml.zope.org/namespaces/metal"
+             xmlns:tal="http://xml.zope.org/namespaces/tal"
+             tal:define="
+               question view/get_question;
+             "
+             tal:omit-tag=""
 >
 
-  <strong><span i18n:domain="collective.z3cform.norobots"
-          i18n:translate=""
-    >Question</span></strong>:
-  <span tal:content="python:question['title']"
-        i18n:domain="collective.z3cform.norobots"
-        i18n:translate=""
-  ></span><br />
+  <div class="form-floating">
+    <input class="form-control"
+           id="floating-norobot-input"
+           accesskey=""
+           lang=""
+           maxlength=""
+           name=""
+           placeholder="..."
+           size=""
+           style=""
+           tabindex=""
+           title=""
+           type="text"
+           value=""
+           tal:attributes="
+             id view/id;
+             name view/name;
+             class python:view.klass + ' form-control' or 'form-control';
+             style view/style;
+             title view/title;
+             lang view/lang;
+             tabindex view/tabindex;
+             accesskey view/accesskey;
+             size view/size;
+             maxlength view/maxlength;
+           "
+    />
 
-  <strong><span i18n:domain="collective.z3cform.norobots"
-          i18n:translate=""
-    >Your answer</span></strong>:
+    <label for="floating-norobot-input">
 
-  <input class=""
-         id=""
-         accesskey=""
-         lang=""
-         maxlength=""
-         name=""
-         size=""
-         style=""
-         tabindex=""
-         title=""
-         type="text"
-         value=""
-         tal:attributes="
-           id view/id;
-           name view/name;
-           class view/klass;
-           style view/style;
-           title view/title;
-           lang view/lang;
-           tabindex view/tabindex;
-           accesskey view/accesskey;
-           size view/size;
-           maxlength view/maxlength;
-         "
-  />
+      <span tal:omit-tag=""
+            i18n:domain="collective.z3cform.norobots"
+            i18n:translate=""
+      >Question</span>:
+
+      <span tal:content="python:question['title']"
+            tal:omit-tag=""
+            i18n:domain="collective.z3cform.norobots"
+            i18n:translate=""
+      ></span>
+
+    </label>
+  </div>
 
   <input name="question_id"
          type="hidden"
@@ -48,6 +59,7 @@
            value python:question['id'];
          "
   />
+
   <input name="id_check"
          type="hidden"
          value=""
@@ -56,4 +68,4 @@
          "
   />
 
-</tal:var>
+</tal:snippet>

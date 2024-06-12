@@ -6,10 +6,10 @@
   <upgradeStep
       title="Upgrade to version 2"
       description="Copy questions from the old property sheet to the registry, then delete the property sheet"
-      destination="2"
-      handler=".upgrades.upgrade_to_2"
       profile="collective.z3cform.norobots:default"
       source="*"
+      destination="2"
+      handler=".upgrades.upgrade_to_2"
       />
 
 </configure>

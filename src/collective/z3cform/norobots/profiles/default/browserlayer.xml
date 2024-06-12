@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layers>
+  <layer interface="collective.z3cform.norobots.interfaces.ICollectiveZ3CFormNorobotsBrowserlayer"
+         name="collective_z3cform_norobots"
+  />
+</layers>

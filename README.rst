@@ -1,9 +1,9 @@
-.. image:: https://travis-ci.org/collective/collective.z3cform.norobots.svg?branch=master
-    :target: https://travis-ci.org/collective/collective.z3cform.norobots
+.. image:: https://github.com/collective/collective.outputfilters.tinymceaccordion/actions/workflows/meta.yml/badge.svg
+    :target: https://github.com/collective/collective.outputfilters.tinymceaccordion/actions/workflows/meta.yml
+    :alt: Plone Meta Workflow
 
-.. image:: https://coveralls.io/repos/github/collective/collective.z3cform.norobots/badge.svg?branch=master
-    :target: https://coveralls.io/github/collective/collective.z3cform.norobots?branch=master
-    :alt: Coveralls
+.. image:: https://codecov.io/gh/collective/collective.z3cform.norobots/graph/badge.svg?token=DgZ7MzmVMr 
+    :target: https://codecov.io/gh/collective/collective.z3cform.norobots
 
 .. image:: https://img.shields.io/pypi/v/collective.z3cform.norobots.svg
     :target: https://pypi.python.org/pypi/collective.z3cform.norobots/
@@ -59,9 +59,12 @@ See previous releases for old Plone versions.
 Screenshot
 ------------
 
-.. image:: https://github.com/sylvainb/collective.z3cform.norobots/raw/master/docs/collective-z3cform-norobots-screenshot.png
-   :height: 324px
-   :width: 499px
+.. image:: https://raw.githubusercontent.com/collective/collective.z3cform.norobots/dev/docs/collective.z3cform.norobots-screenshot-1.png
+   :scale: 100 %
+   :alt: Screenshot
+   :align: center
+
+.. image:: https://raw.githubusercontent.com/collective/collective.z3cform.norobots/dev/docs/collective.z3cform.norobots-screenshot-2.png
    :scale: 100 %
    :alt: Screenshot
    :align: center
@@ -69,8 +72,12 @@ Screenshot
 Installation
 ------------
 
-Getting the module
-~~~~~~~~~~~~~~~~~~~~
+Getting the module - pip based
+
+Add ``collective.z3cform.norobots`` to your ``requirements.txt``
+
+Getting the module - buildout based
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Add ``collective.z3cform.norobots`` to your ``plone.recipe.zope2instance`` buildout section e.g.::
 
@@ -119,32 +126,28 @@ Answer can contain multiple values delimited by semicolon:
 Quickly test ?
 ~~~~~~~~~~~~~~~~~~~~
 
-Download ``collective.z3cform.norobots`` and use ``virtualenv`` and ``buildout`` to test the module::
+Checkout ``collective.z3cform.norobots`` and use ``venv`` and ``pip`` to test the module::
 
-    easy_install virtualenv
-    cd collective.z3cform.norobots
-    virtualenv .
-    source bin/activate
-    (collective.z3cform.norobots) easy_install zc.buildout
-    !!! check the buildout config file ``test-plone-base.cfg`` before running !!!
-    (collective.z3cform.norobots) ln -s test-plone-5.0.x.cfg buildout.cfg
-    (collective.z3cform.norobots) python bootstrap.py
-    (collective.z3cform.norobots) bin/buildout
-    [...] be patient... [...]
-    (collective.z3cform.norobots) ./bin/instance fg
+    python3 -m venv ./venv
+    source venv/bin/activate
+    (venv) pip install mxdev
+    (venv) pip install -r requirements-mxdev.txt
+    (venv) pip install cookiecutter
+    (venv) cookiecutter -f --no-input --config-file instance.yml https://github.com/plone/cookiecutter-zope-instance
+    (venv) runwsgi -v instance/etc/zope.ini
 
 Go to http://localhost:8080, add a new Plone Site and install collective.z3cform.norobots (see above).
 
 Launch tests::
 
-    (collective.z3cform.norobots) pip install unittest2
-    (collective.z3cform.norobots) ./bin/test -s collective.z3cform.norobots
+    (venv) pip install tox
+    (venv) tox
 
 Launch code coverage::
 
-    (collective.z3cform.norobots) bin/coverage
-    (collective.z3cform.norobots) bin/report
-    And open with a browser htmlcov/index.html
+    (venv) tox -e coverage
+    
+and open with a browser htmlcov/index.html
 
 Usage as a ``plone.app.discussion`` (Plone Discussions) captcha plugin
 ----------------------------------------------------------------------
@@ -161,7 +164,7 @@ You can use this widget setting the "widgetFactory" property of a form field:
 
     from zope import interface, schema
     from z3c.form import interfaces, form, field, button, validator
-    from plone.app.z3cform.layout import wrap_form
+    from plone.z3cform.layout import wrap_form
 
     from collective.z3cform.norobots.i18n import MessageFactory as _
     from collective.z3cform.norobots.widget import NorobotsFieldWidget
@@ -176,10 +179,10 @@ You can use this widget setting the "widgetFactory" property of a form field:
         fields = field.Fields(INorobotsForm)
         fields['norobots'].widgetFactory = NorobotsFieldWidget
 
-    # wrap the form with plone.app.z3cform's Form wrapper
+    # wrap the form with plone.z3cform's Form wrapper
     NorobotsFormView = wrap_form(NorobotsForm)
 
-    # Register Norobots validator for the correponding field in the IContactInfo interface
+    # Register Norobots validator for the corresponding field in the IContactInfo interface
     validator.WidgetValidatorDiscriminators(NorobotsValidator, field=INorobotsForm['norobots'])
 
 In your configure.zcml you have to add the following adapter, to make the validation work.
@@ -217,12 +220,12 @@ Credits
 Source code
 -----------
 
-`Source code <https://github.com/sylvainb/collective.z3cform.norobots>`_ is hosted on Github.
+`Source code <https://github.com/collective/collective.z3cform.norobots>`_ is hosted on Github.
 
 How to contribute and submit a patch ?
 --------------------------------------
 
-`Source code <https://github.com/sylvainb/collective.z3cform.norobots>`_ and an `issue tracker <https://github.com/sylvainb/collective.z3cform.norobots/issues>`_ is hosted on Github.
+`Source code <https://github.com/collective/collective.z3cform.norobots>`_ and an `issue tracker <https://github.com/collective/collective.z3cform.norobots/issues>`_ is hosted on Github.
 
 Contributors
 -----------------
@@ -237,5 +240,6 @@ Contributors
 * Luca Fabbri [keul]
 * Andrea Cecchi [cekk]
 * [serge73]
+* [1letter]
 
 .. _`collective.pfg.norobots`: http://pypi.python.org/pypi/collective.pfg.norobots

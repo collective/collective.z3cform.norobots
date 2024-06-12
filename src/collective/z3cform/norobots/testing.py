@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
@@ -16,7 +15,7 @@ class NorobotsSandboxLayer(PloneSandboxLayer):
         # Load ZCML for this package
         import collective.z3cform.norobots
 
-        self.loadZCML(package=collective.z3cform.norobots)
+        self.loadZCML(name="testing.zcml", package=collective.z3cform.norobots)
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, "collective.z3cform.norobots:default")
@@ -35,5 +34,5 @@ NOROBOTS_INTEGRATION_TESTING = IntegrationTesting(
 )
 NOROBOTS_FUNCTIONNAL_TESTING = FunctionalTesting(
     bases=(NOROBOTS_FIXTURE,),
-    name="collective.z3cform.norobots:Integration",
+    name="collective.z3cform.norobots:Functional",
 )

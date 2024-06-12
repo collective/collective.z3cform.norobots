@@ -1,10 +1,14 @@
 Changelog
 ------------
 
-2.2 (unreleased)
+3.0 (unreleased)
 ~~~~~~~~~~~~~~~~
 
-- Nothing changed yet.
+- refactoring package to pip based installation
+- update configuration via plone/meta
+- refactor norobots widget to bootstrap5 formcontrol with floating labels
+- add tests
+  [1letter]
 
 
 2.1 (2022-08-18)

@@ -1,18 +1,12 @@
-# -*- coding: utf-8 -*-
 from collective.z3cform.norobots.testing import NOROBOTS_INTEGRATION_TESTING
 from plone import api
+from plone.base.utils import get_installer
 from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
 from zope.component import getUtility
 
 import unittest
 
-
-try:
-    from Products.CMFPlone.utils import get_installer
-except ImportError:
-    # BBB for Plone 5.0 and lower.
-    get_installer = None
 
 PROJECTNAME = "collective.z3cform.norobots"
 
@@ -24,10 +18,7 @@ class TestInstall(unittest.TestCase):
     def setUp(self):
         """Custom shared utility setup for tests."""
         self.portal = self.layer["portal"]
-        if get_installer:
-            self.installer = get_installer(self.portal, self.layer["request"])
-        else:
-            self.installer = api.portal.get_tool("portal_quickinstaller")
+        self.installer = get_installer(self.portal, self.layer["request"])
 
     def test_product_is_installed(self):
         """Test if collective.z3cform.norobots is installed."""
@@ -36,6 +27,15 @@ class TestInstall(unittest.TestCase):
                 "collective.z3cform.norobots",
             )
         )
+
+    def test_browserlayer(self):
+        """Test that ICollectiveZ3CFormNorobotsBrowserlayer is registered."""
+        from collective.z3cform.norobots.interfaces import (
+            ICollectiveZ3CFormNorobotsBrowserlayer,
+        )
+        from plone.browserlayer import utils
+
+        self.assertIn(ICollectiveZ3CFormNorobotsBrowserlayer, utils.registered_layers())
 
     def test_registry(self):
         registry = getUtility(IRegistry)
@@ -62,16 +62,24 @@ class TestUninstall(unittest.TestCase):
         self.app = self.layer["app"]
         self.portal = self.layer["portal"]
         self.request = self.layer["request"]
-        if get_installer:
-            self.installer = get_installer(self.portal, self.request)
-        else:
-            self.installer = api.portal.get_tool("portal_quickinstaller")
+        self.installer = get_installer(self.portal, self.request)
         self.installer.uninstall_product("collective.z3cform.norobots")
 
     def test_product_is_not_installed(self):
         """Validate that our products is not yet installed"""
         self.assertFalse(
             self.installer.is_product_installed("collective.z3cform.norobots"),
+        )
+
+    def test_browserlayer_removed(self):
+        """Test that ICollectiveZ3CFormNorobotsBrowserlayer is removed."""
+        from collective.z3cform.norobots.interfaces import (
+            ICollectiveZ3CFormNorobotsBrowserlayer,
+        )
+        from plone.browserlayer import utils
+
+        self.assertNotIn(
+            ICollectiveZ3CFormNorobotsBrowserlayer, utils.registered_layers()
         )
 
     def test_registry(self):
