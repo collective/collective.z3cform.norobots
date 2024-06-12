@@ -1,7 +1,7 @@
 Changelog
 ------------
 
-3.0 (unreleased)
+3.0 (2024-06-12)
 ~~~~~~~~~~~~~~~~
 
 - refactoring package to pip based installation
